@@ -7,6 +7,7 @@
     Brian Ford – Development - @briantford
     Zach Carter - Developer - @zii
     Jake Hartnell - Developer - @JakeHartnell
+    Heather Arthur - Developer - @harthvader
 
 # THANKS
 
@@ -14,8 +15,3 @@
 
 # TECHNOLOGY COLOPHON
 
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> Update humans.txt
