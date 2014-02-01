@@ -47,6 +47,7 @@ Features:
 ## Prior Art
 
 * [angel.co](http://angel.co)
+* [yourrate.co](http://www.yourrate.co/)
 
 ## License
 MIT
