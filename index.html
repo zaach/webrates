@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
     <title>Theme Template for Bootstrap</title>
     <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-
-        <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
-        <script type='text/javascript' src='scripts/main.js'></script>
-
+  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  	<!-- Optional theme -->
+  	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+  	<!-- Latest compiled and minified JavaScript -->
+  	<script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
+    <script type='text/javascript' src='scripts/main.js'></script>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -31,72 +26,43 @@
   </head>
 
   <body role="document">
-
-    <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Webrates</a>
+          </div>
       </div>
     </div>
 
     <div class="container theme-showcase" role="main">
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        <div ng-hide="dataform">
+          <h1>Hello, world!</h1>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p><a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        </div>
+
+        <form ng-show="dataform">
+          <h1>Hello, world!</h1>
+          <p>Please fill out this info.</p>
+          <p>Number of whatevers<input type="text" placeholder="50"></p>
+
+          <input type="submit" class="btn btn-primary">
+
+        </form>
       </div>
-
-
-
-      <div class="page-header">
-        <h1>Buttons</h1>
-      </div>
+   <div class="row">
+  
+  <div class="col-md-4">
+    <h1>Buttons</h1>
       <p>
-        <button type="button" class="btn btn-lg btn-default">Default</button>
-        <button type="button" class="btn btn-lg btn-primary">Primary</button>
-        <button type="button" class="btn btn-lg btn-success">Success</button>
-        <button type="button" class="btn btn-lg btn-info">Info</button>
-        <button type="button" class="btn btn-lg btn-warning">Warning</button>
-        <button type="button" class="btn btn-lg btn-danger">Danger</button>
-        <button type="button" class="btn btn-lg btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-default">Default</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-link">Link</button>
+        Buttons go here.
       </p>
       <p>
         <button type="button" class="btn btn-sm btn-default">Default</button>
@@ -116,33 +82,18 @@
         <button type="button" class="btn btn-xs btn-danger">Danger</button>
         <button type="button" class="btn btn-xs btn-link">Link</button>
       </p>
+    </div>
+  <div class="col-md-8">
+    <h1>Visualization here: </h1>
 
+    <p>
+      This is where we present the data visualization.
+    </p>
 
+  </div>
+  </div>
 
-      <div class="page-header">
-        <h1>Thumbnails</h1>
-      </div>
-      <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
-
-
-
-      <div class="page-header">
-        <h1>Dropdown menus</h1>
-      </div>
-      <div class="dropdown theme-dropdown clearfix">
-        <a id="dropdownMenu1" href="#" role="button" class="sr-only dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li class="active" role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-        </ul>
-      </div>
-
-
-
-
+<!-- 
       <div class="page-header">
         <h1>Navbars</h1>
       </div>
@@ -176,8 +127,8 @@
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+          </div> --><!--/.nav-collapse -->
+       <!--  </div>
       </div>
 
       <div class="navbar navbar-inverse">
@@ -209,13 +160,13 @@
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+          </div> --><!--/.nav-collapse -->
+  <!--       </div>
+      </div> -->
 
 
 
-      <div class="page-header">
+<!--       <div class="page-header">
         <h1>Alerts</h1>
       </div>
       <div class="alert alert-success">
@@ -230,10 +181,10 @@
       <div class="alert alert-danger">
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>
+ -->
 
 
-
-      <div class="page-header">
+      <!-- <div class="page-header">
         <h1>Progress bars</h1>
       </div>
       <div class="progress">
@@ -255,11 +206,11 @@
         <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
         <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
         <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
-      </div>
+      </div> -->
 
 
 
-      <div class="page-header">
+      <!-- <div class="page-header">
         <h1>List groups</h1>
       </div>
       <div class="row">
@@ -271,8 +222,8 @@
             <li class="list-group-item">Porta ac consectetur ac</li>
             <li class="list-group-item">Vestibulum at eros</li>
           </ul>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
+        </div> --><!-- /.col-sm-4 -->
+        <!-- <div class="col-sm-4">
           <div class="list-group">
             <a href="#" class="list-group-item active">
               Cras justo odio
@@ -282,8 +233,8 @@
             <a href="#" class="list-group-item">Porta ac consectetur ac</a>
             <a href="#" class="list-group-item">Vestibulum at eros</a>
           </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
+        </div> --><!-- /.col-sm-4 -->
+        <!-- <div class="col-sm-4">
           <div class="list-group">
             <a href="#" class="list-group-item active">
               <h4 class="list-group-item-heading">List group item heading</h4>
@@ -298,8 +249,8 @@
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
             </a>
           </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
+        </div> --><!-- /.col-sm-4 -->
+      <!-- </div>
 
 
 
@@ -324,8 +275,8 @@
               Panel content
             </div>
           </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
+        </div> --><!-- /.col-sm-4 -->
+        <!-- <div class="col-sm-4">
           <div class="panel panel-success">
             <div class="panel-heading">
               <h3 class="panel-title">Panel title</h3>
@@ -342,8 +293,8 @@
               Panel content
             </div>
           </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
+        </div> --><!-- /.col-sm-4 -->
+        <!-- <div class="col-sm-4">
           <div class="panel panel-warning">
             <div class="panel-heading">
               <h3 class="panel-title">Panel title</h3>
@@ -360,8 +311,8 @@
               Panel content
             </div>
           </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
+        </div> --><!-- /.col-sm-4 -->
+     <!--  </div>
 
 
 
@@ -370,7 +321,7 @@
       </div>
       <div class="well">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div>
+      </div> -->
 
 
     </div> <!-- /container -->
