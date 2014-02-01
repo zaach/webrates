@@ -26,6 +26,8 @@
   </head>
 
   <body role="document">
+
+    <!-- Navagation / Topbar --> 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -43,25 +45,91 @@
     <div class="container theme-showcase" role="main">
       <div class="jumbotron">
         <div ng-hide="dataform">
-          <h1>Hello, world!</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+          <h1>Hello, wondering what you should be paid?</h1>
+          <p>This a description of what this site is about... blah. This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p><a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Submit data! &raquo;</a></p>
         </div>
 
         <form ng-show="dataform">
           <h1>Hello, world!</h1>
           <p>Please fill out this info.</p>
-          <p>Number of whatevers<input type="text" placeholder="50"></p>
+          <h3>Job Title</h3>
+            <li><input type="radio" name="jobtitle" value="Designer">Designer</input></li>
+            <li><input type="radio" name="jobtitle" value="Developer">Developer</input></li>
+            <li><input type="radio" name="jobtitle" value="Product">Product</input></li>
+            <li><input type="radio" name="jobtitle" value="Marketing">Marketing</input></li>
+          <h3>Gender</h3>
+            <li><input type="radio" name="sex" value="Male">Male</input></li>
+            <li><input type="radio" name="sex" value="Female">Female</input></li>
+            <li><input type="radio" name="sex" value="Other">Other</input></li>
 
-          <input type="submit" class="btn btn-primary">
+          <h3>Age</h3>
+            <!-- <input type="text"> -->
+            <input type="range" name="age" min="1" max="10">
+
+          <h3>Experience</h3>
+            <!-- <input type="text"> -->
+            <input type="range" name="age" min="1" max="10">
+
+          <h3>Location of employer</h3>
+            <button type="button" class="btn btn-xs btn-default">San Francisco</button>
+            <button type="button" class="btn btn-xs btn-primary">Chicago</button>
+            <button type="button" class="btn btn-xs btn-success">New York</button>
+            <button type="button" class="btn btn-xs btn-info">L.A.</button>
+            <button type="button" class="btn btn-xs btn-warning">London</button>
+            <button type="button" class="btn btn-xs btn-danger">Tokyo</button>
+            <input type="text" placeholder="Other">
+
+
+          <input type="submit" class="btn btn-primary" ng-click="dataform = !dataform; thankyou = true">
 
         </form>
+
+        <!-- Show this when form is submited. -->
+        <div ng-show="thankyou">
+          <p>Thank you!</p>
+        </div>  
       </div>
    <div class="row">
   
   <div class="col-md-4">
-    <h1>Buttons</h1>
-      <p>
+    <h1>Filters</h1>
+
+    <h3>Job Title</h3>
+     <li><input type="radio" name="jobtitle" value="Designer">Designer</input></li>
+     <li><input type="radio" name="jobtitle" value="Developer">Developer</input></li>
+     <li><input type="radio" name="jobtitle" value="Product">Product</input></li>
+     <li><input type="radio" name="jobtitle" value="Marketing">Marketing</input></li>
+
+    <h3>Gender</h3>
+     <li><input type="radio" name="sex" value="Male">Male</input></li>
+     <li><input type="radio" name="sex" value="Female">Female</input></li>
+     <li><input type="radio" name="sex" value="Other">Other</input></li>
+
+    <h3>Age</h3>
+      <!-- <input type="text"> -->
+      <input type="range" name="age" min="1" max="10">
+
+    <h3>Experience</h3>
+      <!-- <input type="text"> -->
+      <input type="range" name="age" min="1" max="10">
+
+    <h3>Location of employer</h3>
+      <button type="button" class="btn btn-xs btn-default">San Francisco</button>
+      <button type="button" class="btn btn-xs btn-primary">Chicago</button>
+      <button type="button" class="btn btn-xs btn-success">New York</button>
+      <button type="button" class="btn btn-xs btn-info">L.A.</button>
+      <button type="button" class="btn btn-xs btn-warning">London</button>
+      <button type="button" class="btn btn-xs btn-danger">Tokyo</button>
+      <input type="text" placeholder="Other">
+
+    <h3>Education</h3>
+
+
+
+
+
+<!--       <p>
         Buttons go here.
       </p>
       <p>
@@ -74,14 +142,8 @@
         <button type="button" class="btn btn-sm btn-link">Link</button>
       </p>
       <p>
-        <button type="button" class="btn btn-xs btn-default">Default</button>
-        <button type="button" class="btn btn-xs btn-primary">Primary</button>
-        <button type="button" class="btn btn-xs btn-success">Success</button>
-        <button type="button" class="btn btn-xs btn-info">Info</button>
-        <button type="button" class="btn btn-xs btn-warning">Warning</button>
-        <button type="button" class="btn btn-xs btn-danger">Danger</button>
-        <button type="button" class="btn btn-xs btn-link">Link</button>
-      </p>
+        
+      </p>-->
     </div>
   <div class="col-md-8">
     <h1>Visualization here: </h1>
