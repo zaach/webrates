@@ -13,4 +13,8 @@
 
 # TECHNOLOGY COLOPHON
 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> Update humans.txt
