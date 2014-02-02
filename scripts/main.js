@@ -8,7 +8,10 @@ d3.json('/scripts/mock-data.json', function(err, data) {
   var $container = $('.container_graph')
   var width = $container.innerWidth()
   var height = $container.innerHeight()
+  // space at bottom for x axis labels
+  var labelHeight = 25;
 
+  // plain list of pay rates
   var rates = data.map(function(d) {
     return d.rate
   })
@@ -17,14 +20,6 @@ d3.json('/scripts/mock-data.json', function(err, data) {
       .attr('width', width)
       .attr('height', height)
       .append('g')
-
-  var x = d3.scale.linear()
-      .domain([d3.min(rates), d3.max(rates)])
-      .range([0, width])
-
-  var xAxis = d3.svg.axis()
-      .scale(x)
-      .orient("bottom");
 
   // list of cut off points for histogram bar ranges
   // so [10, 20, 30] (I think) gives two bars taking data from the
@@ -40,7 +35,7 @@ d3.json('/scripts/mock-data.json', function(err, data) {
     .bins(thresholds)(rates)
 
   // plain list of bin sizes
-  var frequency = bins.map(function(d) {
+  var freqs = bins.map(function(d) {
     return d.length
   })
 
@@ -48,9 +43,16 @@ d3.json('/scripts/mock-data.json', function(err, data) {
   console.log('bins', bins)
 
   var y = d3.scale.linear()
-      .domain([d3.min(frequency), d3.max(frequency)])
+      .domain([d3.min(freqs), d3.max(freqs)])
       .range([0, height])
 
+  var x = d3.scale.linear()
+      .domain([d3.min(thresholds), d3.max(rates)])
+      .range([0, width])
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
 
   var barGroups = graph.selectAll('.bar')
     .data(bins)
@@ -58,9 +60,12 @@ d3.json('/scripts/mock-data.json', function(err, data) {
     .enter().append("g")
     .attr("class", "bar")
     // translate that sucka such that rects drawn at 0, 0 are in the correct place
-    .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")" })
+    .attr("transform", function(d) {
+      return "translate(" + x(d.x) + "," +
+          (y(d.y) - labelHeight) + ")"
+    })
 
-  var barWidth = width / bins.length
+  var barWidth = Math.floor(width / bins.length)
 
   barGroups.append('rect')
       .attr("x", 1)
@@ -68,14 +73,12 @@ d3.json('/scripts/mock-data.json', function(err, data) {
         return barWidth
       })
       .attr("height", function(d) {
-        console.log('data point', d)
-        console.log('height', height - y(d.y))
         return height - y(d.y)
       })
 
  graph.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0," + (height - labelHeight) + ")")
     .call(xAxis);
 
   function renderLineGraph(data) {
