@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app lang="en">
+<html ng-app="webRatesApp" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -94,7 +94,9 @@
             <input type="text" placeholder="Other">
           </fieldset>
 
-          <input type="submit" class="btn btn-primary" ng-click="dataform = !dataform; thankyou = true">
+          <input type="submit"
+                 class="btn btn-primary"
+                 ng-click="dataform = !dataform; thankyou = true">
 
         </form>
 
@@ -386,12 +388,26 @@
 
     </div> <!-- /container -->
 
+    </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script>
+      angular.module('webRatesApp', []).controller('MyCtrl', function ($scope, $http) {
+        $scope.data = {};
+        $scope.submitForm = function () {
+          $http.post('/url', $scope.data);
+        }
+      });
+    </script>
   </body>
 </html>
