@@ -104,7 +104,7 @@ h1 {
 }
 
 .header {
-  padding: 6em 0 10em 0;
+  padding: 6em 0 13em 0;
   background-color: $color_highlight;
   color: #FFF;
 }
@@ -117,7 +117,7 @@ h1 {
 .data_entry {
   width: 100%;
   max-width: 768px;
-  margin-top: -7em;
+  margin-top: -10em;
   padding: .5em 2% 1.5em;
   background-color: #FFF;
 }
@@ -136,6 +136,7 @@ h1 {
     margin-right: .5em;
   }
   label {
+    display: block;
     cursor: pointer;
     color: $color_medium;
     &:hover, &.active {

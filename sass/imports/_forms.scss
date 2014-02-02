@@ -11,7 +11,7 @@ fieldset {
 }
 
 .form_group {
-  margin: 1em 0;
+  margin: 1em 0 2em 0;
   padding: 1em 0;
   border-top: 2px solid $color_bg;
   border-bottom: 2px solid $color_bg;
@@ -24,6 +24,7 @@ input[type='number'] {
   border: 2px solid $color_medium;
   max-width: 5em;
   border-radius: .25em;
+  text-align: center;
   &.active, &:hover, &:focus, &:active {
     border-color: $color_hover;
     color: $color_hover;
@@ -34,7 +35,6 @@ input[type='number'] {
 input.input_big[type='number'] {
   font-size: 2em;
   width: 3.5em;
-  text-align: center;
 }
 
 input[type='submit'] {
@@ -50,9 +50,26 @@ input[type='submit'] {
   }
 }
 
+.slider {
+  background: #FFF;
+  border-radius: 1em;
+  padding: .75em .5em;
+  vertical-align: middle;
+  input, output {
+    vertical-align: middle;
+  }
+}
+
 input[type='range'] {
-  width: 100%;
+  width: 76%;
   max-width: 294px;
+  display: inline-block;
+}
+output {
+  width: 18%;
+  margin-left: 2%;
+  display: inline-block;
+  color: $color_highlight;
 }
 
 .tags {
