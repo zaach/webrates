@@ -136,8 +136,11 @@
         .controller('MyCtrl', function ($scope, rateService) {
           $scope.data = rateService;
           $scope.newForm = {};
+          var numericFields = ['age', 'experience'];
           $scope.submitForm = function () {
-            $scope.newForm.age = parseInt($scope.newForm.age, 10);
+            numericFields.forEach(function (field) {
+              $scope.newForm[field] = parseInt($scope.newForm[field], 10);
+            });
             $scope.data.$add($scope.newForm);
             $scope.newForm = {};
           };
