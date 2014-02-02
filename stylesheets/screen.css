@@ -74,46 +74,40 @@ dfn {
   font-style: italic;
 }
 
-/* line 55, ../sass/imports/_base.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* line 59, ../sass/imports/_base.scss */
+/* line 56, ../sass/imports/_base.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 63, ../sass/imports/_base.scss */
+/* line 60, ../sass/imports/_base.scss */
 small {
   font-size: 80%;
 }
 
-/* line 67, ../sass/imports/_base.scss */
+/* line 64, ../sass/imports/_base.scss */
 img {
   border: 0;
 }
 
-/* line 70, ../sass/imports/_base.scss */
+/* line 67, ../sass/imports/_base.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 73, ../sass/imports/_base.scss */
+/* line 70, ../sass/imports/_base.scss */
 figure {
   margin: 1em 40px;
 }
 
-/* line 76, ../sass/imports/_base.scss */
+/* line 73, ../sass/imports/_base.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 86, ../sass/imports/_base.scss */
+/* line 83, ../sass/imports/_base.scss */
 button,
 input,
 optgroup,
@@ -124,18 +118,18 @@ textarea {
   margin: 0;
 }
 
-/* line 91, ../sass/imports/_base.scss */
+/* line 88, ../sass/imports/_base.scss */
 button {
   overflow: visible;
 }
 
-/* line 95, ../sass/imports/_base.scss */
+/* line 92, ../sass/imports/_base.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 101, ../sass/imports/_base.scss */
+/* line 98, ../sass/imports/_base.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -144,38 +138,38 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 106, ../sass/imports/_base.scss */
+/* line 103, ../sass/imports/_base.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 110, ../sass/imports/_base.scss */
+/* line 107, ../sass/imports/_base.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 114, ../sass/imports/_base.scss */
+/* line 111, ../sass/imports/_base.scss */
 input {
   line-height: normal;
 }
 
-/* line 118, ../sass/imports/_base.scss */
+/* line 115, ../sass/imports/_base.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 123, ../sass/imports/_base.scss */
+/* line 120, ../sass/imports/_base.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 126, ../sass/imports/_base.scss */
+/* line 123, ../sass/imports/_base.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -183,26 +177,25 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 133, ../sass/imports/_base.scss */
+/* line 130, ../sass/imports/_base.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 136, ../sass/imports/_base.scss */
+/* line 133, ../sass/imports/_base.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  border: none;
+  padding: 0;
 }
 
-/* line 141, ../sass/imports/_base.scss */
+/* line 137, ../sass/imports/_base.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 145, ../sass/imports/_base.scss */
+/* line 141, ../sass/imports/_base.scss */
 textarea {
   overflow: auto;
 }
@@ -210,25 +203,82 @@ textarea {
 /* Colors */
 /* line 1, ../sass/imports/_forms.scss */
 fieldset {
-  margin-bottom: 1.5em;
+  padding: 0;
+  margin: 0 0 1.5em 0;
   border: none;
 }
 
-/* line 7, ../sass/imports/_forms.scss */
-.tags label {
-  display: inline-block;
-  border-radius: 1em;
-  background: #eee;
-  padding: .25em;
-  cursor: pointer;
+/* line 8, ../sass/imports/_forms.scss */
+input[type='text'],
+input[type='number'] {
+  font-size: .875em;
+  padding: .5em;
+  border: 1px solid #b7bac5;
+  max-width: 5em;
+  border-radius: .25em;
+}
+/* line 14, ../sass/imports/_forms.scss */
+input[type='text'].active, input[type='text']:hover, input[type='text']:focus,
+input[type='number'].active,
+input[type='number']:hover,
+input[type='number']:focus {
+  border-color: #b7bac5;
+  color: #b7bac5;
 }
 
-/* line 19, ../sass/imports/_forms.scss */
-.fieldset_title {
-  display: block;
+/* line 20, ../sass/imports/_forms.scss */
+input.input_big[type='number'] {
+  font-size: 1.5em;
+}
+
+/* line 24, ../sass/imports/_forms.scss */
+input[type='submit'] {
+  font-size: 1.25em;
+  padding: .5em;
+  border: none;
+  background-color: #ff1d5d;
   text-transform: uppercase;
   letter-spacing: .05em;
-  color: #1f30b0;
+  color: #efefef;
+}
+/* line 31, ../sass/imports/_forms.scss */
+input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus {
+  background-color: #b7bac5;
+}
+
+/* line 37, ../sass/imports/_forms.scss */
+.tags label {
+  font-size: .875em;
+  display: inline-block;
+  border-radius: 1em;
+  background-color: #efefef;
+  border: 1px solid #FFF;
+  margin: .25em;
+  padding: .25em .5em;
+  cursor: pointer;
+}
+/* line 46, ../sass/imports/_forms.scss */
+.tags label.active, .tags label:hover, .tags label:focus {
+  background-color: #ff1d5d;
+  color: #efefef;
+}
+/* line 50, ../sass/imports/_forms.scss */
+.tags label input {
+  margin-right: .5em;
+}
+
+/* line 57, ../sass/imports/_forms.scss */
+.fieldset_title {
+  display: block;
+  font-size: .875em;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #b7bac5;
+}
+/* line 62, ../sass/imports/_forms.scss */
+.fieldset_title i {
+  font-style: normal;
+  font-size: .75em;
 }
 
 /* line 1, ../sass/imports/_main.scss */
@@ -248,17 +298,17 @@ fieldset {
 
 /* line 12, ../sass/imports/_main.scss */
 html {
-  font-size: 75%;
+  font-size: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* line 16, ../sass/imports/_main.scss */
 body {
+  font-size: 87.5%;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: #333333;
-  background-color: white;
-  margin-top: 10em;
+  background-color: #efefef;
 }
 
 /* line 26, ../sass/imports/_main.scss */
@@ -273,14 +323,14 @@ textarea {
 
 /* line 31, ../sass/imports/_main.scss */
 a {
-  color: #1f30b0;
+  color: #b7bac5;
   text-decoration: none;
 }
 
 /* line 36, ../sass/imports/_main.scss */
 a:hover,
 a:focus {
-  color: #1f30b0;
+  color: #b7bac5;
   text-decoration: underline;
 }
 
@@ -308,87 +358,132 @@ img {
   height: auto;
 }
 
-/* line 67, ../sass/imports/_main.scss */
+/* line 60, ../sass/imports/_main.scss */
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h5 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.25;
   color: inherit;
 }
 
-/* line 85, ../sass/imports/_main.scss */
+/* line 67, ../sass/imports/_main.scss */
+h1 {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 0;
+  padding: .75em 0;
+  font-size: 1.25em;
+}
+/* line 72, ../sass/imports/_main.scss */
+h1 span {
+  font-size: .5em;
+  display: inline-block;
+}
+
+/* line 79, ../sass/imports/_main.scss */
+.img_flex {
+  width: 100%;
+  height: auto;
+}
+
+/* line 84, ../sass/imports/_main.scss */
 .container {
+  width: 96%;
+  min-width: 280px;
+  max-width: 1240px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 @media (min-width: 768px) {
-  /* line 92, ../sass/imports/_main.scss */
-  .container {
-    width: 750px;
+  /* line 96, ../sass/imports/_main.scss */
+  body {
+    font-size: 100%;
   }
 }
-/* line 98, ../sass/imports/_main.scss */
+/* line 102, ../sass/imports/_main.scss */
 .navbar {
-  background-color: #FFF;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: #FFF;
+  background-color: #ff1d5d;
+  color: #FFF;
 }
-/* line 108, ../sass/imports/_main.scss */
-.navbar h1 {
-  margin: 0;
-  padding: .5em 0 1em 0;
-}
-/* line 112, ../sass/imports/_main.scss */
+/* line 110, ../sass/imports/_main.scss */
 .navbar .container {
-  border-bottom: 3px solid;
+  border-bottom: 3px solid #ff1d5d;
 }
 
-/* line 117, ../sass/imports/_main.scss */
-.explore {
-  overflow: hidden;
+/* line 115, ../sass/imports/_main.scss */
+.header {
+  padding: 6em 0 10em 0;
+  background-color: #ff1d5d;
+  color: #FFF;
 }
 
 /* line 121, ../sass/imports/_main.scss */
+.intro {
+  font-size: 1.25em;
+  max-width: 600px;
+}
+
+/* line 126, ../sass/imports/_main.scss */
+.data_entry {
+  margin-top: -7em;
+  padding: 1.5em 2%;
+  background-color: #FFF;
+}
+
+/* line 132, ../sass/imports/_main.scss */
+.currency_list {
+  display: inline-block;
+  padding-left: .5em;
+  list-style: none;
+  font-size: .75em;
+}
+
+/* line 139, ../sass/imports/_main.scss */
+.explore {
+  overflow: hidden;
+  padding: 2em 0;
+}
+
+/* line 144, ../sass/imports/_main.scss */
 .container_filter {
   width: 30%;
   float: left;
 }
 
-/* line 126, ../sass/imports/_main.scss */
+/* line 149, ../sass/imports/_main.scss */
 .container_graph {
   width: 65%;
   float: right;
 }
 
-/* line 131, ../sass/imports/_main.scss */
+/* line 154, ../sass/imports/_main.scss */
+.graph_placeholder {
+  background-color: #FFF;
+  min-height: 20em;
+  min-width: 288px;
+}
+
+/* line 160, ../sass/imports/_main.scss */
 .footer {
   clear: both;
   margin-top: 6em;
   padding: 2em 0;
-  background-color: #1f30b0;
-  color: white;
+  background-color: #b7bac5;
+  color: #efefef;
 }
-/* line 137, ../sass/imports/_main.scss */
+/* line 166, ../sass/imports/_main.scss */
 .footer a {
-  color: white;
+  color: #efefef;
 }

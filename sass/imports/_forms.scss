@@ -1,16 +1,54 @@
 fieldset {
-  margin-bottom: 1.5em;
+  padding: 0;
+  margin: 0 0 1.5em 0;
   border: none;
+}
+
+input[type='text'],
+input[type='number'] {
+  font-size: .875em;
+  padding: .5em;
+  border: 1px solid $color_medium;
+  max-width: 5em;
+  border-radius: .25em;
+  &.active, &:hover, &:focus {
+    border-color: $color_medium;
+    color: $color_medium;
+  }
+}
+
+input.input_big[type='number'] {
+  font-size: 1.5em;
+}
+
+input[type='submit'] {
+  font-size: 1.25em;
+  padding: .5em;
+  border: none;
+  background-color: $color_highlight;
+  @include uppercase;
+  color: $color_bg;
+  &.active, &:hover, &:focus {
+    background-color: $color_medium;
+  }
 }
 
 .tags {
   label {
+    font-size: .875em;
     display: inline-block;
     border-radius: 1em;
-    background: #eee;
-    padding: .25em;
+    background-color: $color_bg;
+    border: 1px solid #FFF;
+    margin: .25em;
+    padding: .25em .5em;
     cursor: pointer;
+    &.active, &:hover, &:focus {
+      background-color: $color_highlight;
+      color: $color_bg;
+    }
     input {
+      margin-right: .5em;
      // display: none;
     }
   }
@@ -18,6 +56,11 @@ fieldset {
 
 .fieldset_title {
   display: block;
+  font-size: .875em;
   @include uppercase;
-  color: $color_blue;
+  color: $color_medium;
+  i {
+    font-style: normal;
+    font-size: .75em;
+  }
 }

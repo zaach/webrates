@@ -10,15 +10,15 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 75%;
+  font-size: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
+  font-size: 87.5%;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: $color_text;
   background-color: $color_bg;
-  margin-top: 10em;
 }
 input,
 button,
@@ -29,12 +29,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: $color_blue;
+  color: $color_medium;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: $color_blue;
+  color: $color_medium;
   text-decoration: underline;
 }
 a:focus {
@@ -57,65 +57,88 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h5 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.25;
   color: inherit;
 }
 
+h1 {
+  @include uppercase;
+  margin: 0;
+  padding: .75em 0;
+  font-size: 1.25em;
+  span {
+    font-size: .5em;
+    display: inline-block;
+  }
+}
 
 
-
-
-
-
-
-
-
-
+.img_flex {
+  width: 100%;
+  height: auto;
+}
 
 .container {
+  width: 96%;
+  min-width: 280px;
+  max-width: 1240px;
+  
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
+
 @media (min-width: 768px) {
-  .container {
-    width: 750px;
+  body {
+    font-size: 100%;
   }
 }
 
 
 .navbar {
-  background-color: #FFF;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: #FFF;
-  h1 {
-    margin: 0;
-    padding: .5em 0 1em 0;
-  }
+  background-color: $color_highlight;
+  color: #FFF;
   .container {
-    border-bottom: 3px solid;
+    border-bottom: 3px solid $color_highlight;
   }
+}
+ 
+.header {
+  padding: 6em 0 10em 0;
+  background-color: $color_highlight;
+  color: #FFF;
+}
+
+.intro {
+  font-size: 1.25em;
+  max-width: 600px;
+}
+
+.data_entry {
+  margin-top: -7em;
+  padding: 1.5em 2%;
+  background-color: #FFF;
+}
+
+.currency_list {
+  display: inline-block;
+  padding-left: .5em;
+  list-style: none;
+  font-size: .75em;
 }
 
 .explore {
   overflow: hidden;
+  padding: 2em 0;
 }
 
 .container_filter {
@@ -128,11 +151,17 @@ h6,
   float: right;
 }
 
+.graph_placeholder {
+  background-color: #FFF;
+  min-height: 20em;
+  min-width: 288px;
+}
+
 .footer {
   clear: both;
   margin-top: 6em;
   padding: 2em 0;
-  background-color: $color_blue;
+  background-color: $color_medium;
   color: $color_bg;
   a {
     color: $color_bg;
