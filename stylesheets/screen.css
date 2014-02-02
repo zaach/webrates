@@ -603,7 +603,7 @@ h1 span {
   /* line 199, ../sass/imports/_main.scss */
   .container_filter {
     width: 30%;
-    float: left;
+    float: right;
   }
 
   /* line 203, ../sass/imports/_main.scss */
@@ -611,7 +611,7 @@ h1 span {
     padding-top: 2em;
     height: 500px;
     width: 65%;
-    float: right;
+    float: left;
   }
 
   /* line 210, ../sass/imports/_main.scss */
