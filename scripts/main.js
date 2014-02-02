@@ -8,6 +8,8 @@ d3.json('/scripts/mock-data.json', function(err, data) {
   var $container = $('.container_graph')
   var width = $container.innerWidth()
   var height = $container.innerHeight()
+  // space at bottom for x axis labels
+  var labelHeight = 25;
 
   // plain list of pay rates
   var rates = data.map(function(d) {
@@ -25,14 +27,6 @@ d3.json('/scripts/mock-data.json', function(err, data) {
   var thresholds = d3.range(10, 200, 10)
 
   console.log('thresholds', thresholds)
-
-  var x = d3.scale.linear()
-      .domain([d3.min(thresholds), d3.max(rates)])
-      .range([0, width])
-
-  var xAxis = d3.svg.axis()
-      .scale(x)
-      .orient("bottom");
 
   // d3.layout.historgram allows us to transform a plain array of data
   // into an array of sets or "bins" of data
@@ -52,7 +46,13 @@ d3.json('/scripts/mock-data.json', function(err, data) {
       .domain([d3.min(freqs), d3.max(freqs)])
       .range([0, height])
 
-  var paddingBottom = 25;
+  var x = d3.scale.linear()
+      .domain([d3.min(thresholds), d3.max(rates)])
+      .range([0, width])
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
 
   var barGroups = graph.selectAll('.bar')
     .data(bins)
@@ -62,7 +62,7 @@ d3.json('/scripts/mock-data.json', function(err, data) {
     // translate that sucka such that rects drawn at 0, 0 are in the correct place
     .attr("transform", function(d) {
       return "translate(" + x(d.x) + "," +
-          (y(d.y) - paddingBottom) + ")"
+          (y(d.y) - labelHeight) + ")"
     })
 
   var barWidth = Math.floor(width / bins.length)
@@ -73,14 +73,12 @@ d3.json('/scripts/mock-data.json', function(err, data) {
         return barWidth
       })
       .attr("height", function(d) {
-        console.log('data point', d)
-        console.log('height', height - y(d.y))
         return height - y(d.y)
       })
 
  graph.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + (height - paddingBottom) + ")")
+    .attr("transform", "translate(0," + (height - labelHeight) + ")")
     .call(xAxis);
 
   function renderLineGraph(data) {
