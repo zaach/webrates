@@ -92,7 +92,7 @@ angular.module('webRatesApp', ["firebase"])
 
           var y = d3.scale.linear()
               .domain([d3.min(freqs), d3.max(freqs)])
-              .range([0, height - paddingTop])
+              .range([1, height - paddingTop])
           yScale = y
 
           var x = d3.scale.ordinal()
@@ -132,16 +132,17 @@ angular.module('webRatesApp', ["firebase"])
               .data(bins)
               .enter()
               .append('text')
+              .attr('class', 'label')
               .attr('width', function(d, i) {
                 return x.rangeBand()
               })
-              .attr('transform', function(d, i) {
-                return 'translate(' + x(i) + ', 0)'
+              .attr('x', function(d, i) {
+                return x(i) + x.rangeBand() / 2
               })
               .text(function(d, i) {
                 if (i === 0)
                   return '< $' + thresholds[i]
-                else if (i === thresholds.length - 1)
+                else if (i === bins.length - 1)
                   return '> $' + thresholds[i]
                 else
                   return '$' + thresholds[i] + ' - ' + '$' + thresholds[i + 1]

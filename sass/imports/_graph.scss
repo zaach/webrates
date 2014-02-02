@@ -5,3 +5,7 @@ svg .bar rect {
 svg g {
   fill: $color_medium;
 }
+svg .label {
+  text-anchor: middle;
+  font-size: 12px;
+}

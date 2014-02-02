@@ -625,3 +625,9 @@ svg .bar rect {
 svg g {
   fill: #b7bac5;
 }
+
+/* line 8, ../sass/imports/_graph.scss */
+svg .label {
+  text-anchor: middle;
+  font-size: 12px;
+}
