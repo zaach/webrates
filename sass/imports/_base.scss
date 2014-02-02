@@ -52,10 +52,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 mark {
   background: #ff0;
   color: #000;
@@ -134,9 +131,8 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  border: none;
+  padding: 0;
 }
 legend {
   border: 0;
