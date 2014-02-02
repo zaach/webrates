@@ -28,22 +28,29 @@ d3.json('/scripts/mock-data.json', function(err, data) {
 
   // d3.layout.historgram allows us to transform a plain array of data
   // into an array of sets or "bins" of data
-  // soo, takes out pay rate list and groups all the common pay rates together
+  // soo, takes our pay rate list and groups all the common pay rates together
   var bins = d3.layout.histogram()
     .bins(thresholds)(rates)
+
+  // plain list of bin sizes
+  var frequency = bins.map(function(d) {
+    return d.length
+  })
 
   console.log('rates', rates)
   console.log('bins', bins)
 
   var y = d3.scale.linear()
-      .domain([0, 50])
+      .domain([d3.min(frequency), d3.max(frequency)])
       .range([0, height])
 
 
   var barGroups = graph.selectAll('.bar')
     .data(bins)
+    // each bar will be in an svg group
     .enter().append("g")
     .attr("class", "bar")
+    // translate that sucka such that rects drawn at 0, 0 are in the correct place
     .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")" })
 
   barGroups.append('rect')
@@ -52,6 +59,7 @@ d3.json('/scripts/mock-data.json', function(err, data) {
         return d.dx
       })
       .attr("height", function(d) {
+        console.log('y', d.y)
         console.log('height', height - y(d.y))
         return height - y(d.y)
       })
