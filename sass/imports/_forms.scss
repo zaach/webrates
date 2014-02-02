@@ -6,7 +6,7 @@ fieldset {
 
 input[type='text'],
 input[type='number'] {
-  font-size: .875em;
+  font-size: 1.25em;
   padding: .5em;
   border: 2px solid $color_medium;
   max-width: 5em;
@@ -25,11 +25,12 @@ input.input_big[type='number'] {
 
 input[type='submit'] {
   font-size: 1.25em;
-  padding: .5em;
+  padding: .5em 1em;
   border: none;
-  background-color: $color_highlight;
-  @include uppercase;
   color: $color_bg;
+  background-color: $color_highlight;
+  border-radius: .25em;
+  @include uppercase;
   &.active, &:hover, &:focus {
     background-color: $color_hover;
   }
@@ -37,6 +38,7 @@ input[type='submit'] {
 
 input[type='range'] {
   width: 100%;
+  max-width: 294px;
 }
 
 .tags {
@@ -45,17 +47,19 @@ input[type='range'] {
     display: inline-block;
     border-radius: 1em;
     background-color: $color_bg;
-    border: 1px solid #FFF;
+    border: 2px solid #FFF;
     margin: .25em;
     padding: .75em .5em;
     cursor: pointer;
+    &:first-child, &.first-child {
+      margin-left: 0;
+    };
     &.active, &:hover, &:focus {
       background-color: $color_highlight;
       color: $color_bg;
     }
     input {
-      margin-right: .5em;
-     // display: none;
+      display: none;
     }
   }
 }

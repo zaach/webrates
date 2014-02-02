@@ -83,7 +83,7 @@ h1 {
   width: 96%;
   min-width: 280px;
   max-width: 1240px;
-  
+
   margin-right: auto;
   margin-left: auto;
   padding-left: 2%;
@@ -102,7 +102,7 @@ h1 {
     border-bottom: 3px solid $color_highlight;
   }
 }
- 
+
 .header {
   padding: 6em 0 10em 0;
   background-color: $color_highlight;
@@ -115,11 +115,10 @@ h1 {
 }
 
 .data_entry {
-  min-width: 320px;
+  width: 100%;
   max-width: 600px;
-  width: 288px;
   margin-top: -7em;
-  padding: 1.5em 2%;
+  padding: .5em 2%;
   background-color: #FFF;
 }
 
@@ -133,6 +132,10 @@ h1 {
   }
   label {
     cursor: pointer;
+    color: $color_medium;
+    &:hover, &.active {
+      color: $color_highlight;
+    }
   }
 }
 
@@ -156,12 +159,23 @@ h1 {
 
 .footer {
   clear: both;
+  font-size: .875em;
   margin-top: 6em;
   padding: 2em 0;
   background-color: $color_medium;
   color: $color_bg;
   a {
     color: $color_bg;
+    &:hover, &:focus, &:active {
+      color: $color_highlight;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .data_entry {
+    width: 96%;
+    padding: 1.5em 5%;
   }
 }
 
@@ -176,5 +190,11 @@ h1 {
   .container_graph {
     width: 65%;
     float: right;
+  }
+  .tags {
+    label {
+      padding: .25em .5em;
+      cursor: pointer;
+    }
   }
 }

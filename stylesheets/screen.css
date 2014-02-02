@@ -212,7 +212,7 @@ fieldset {
 /* line 8, ../sass/imports/_forms.scss */
 input[type='text'],
 input[type='number'] {
-  font-size: .875em;
+  font-size: 1.25em;
   padding: .5em;
   border: 2px solid #b7bac5;
   max-width: 5em;
@@ -238,45 +238,51 @@ input.input_big[type='number'] {
 /* line 26, ../sass/imports/_forms.scss */
 input[type='submit'] {
   font-size: 1.25em;
-  padding: .5em;
+  padding: .5em 1em;
   border: none;
+  color: #efefef;
   background-color: #0055aa;
+  border-radius: .25em;
   text-transform: uppercase;
   letter-spacing: .05em;
-  color: #efefef;
 }
-/* line 33, ../sass/imports/_forms.scss */
+/* line 34, ../sass/imports/_forms.scss */
 input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus {
   background-color: #029c5d;
 }
 
-/* line 38, ../sass/imports/_forms.scss */
+/* line 39, ../sass/imports/_forms.scss */
 input[type='range'] {
   width: 100%;
+  max-width: 294px;
 }
 
-/* line 43, ../sass/imports/_forms.scss */
+/* line 45, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
   border-radius: 1em;
   background-color: #efefef;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
   margin: .25em;
   padding: .75em .5em;
   cursor: pointer;
 }
-/* line 52, ../sass/imports/_forms.scss */
+/* line 54, ../sass/imports/_forms.scss */
+.tags label:first-child, .tags label.first-child {
+  margin-left: 0;
+}
+/* line 57, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
   background-color: #0055aa;
   color: #efefef;
 }
-/* line 56, ../sass/imports/_forms.scss */
+/* line 61, ../sass/imports/_forms.scss */
 .tags label input {
-  margin-right: .5em;
+  display: none;
 }
 
-/* line 63, ../sass/imports/_forms.scss */
+/* line 67, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -284,7 +290,7 @@ input[type='range'] {
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 68, ../sass/imports/_forms.scss */
+/* line 72, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;
@@ -438,77 +444,99 @@ h1 span {
 
 /* line 117, ../sass/imports/_main.scss */
 .data_entry {
-  min-width: 320px;
+  width: 100%;
   max-width: 600px;
-  width: 288px;
   margin-top: -7em;
-  padding: 1.5em 2%;
+  padding: .5em 2%;
   background-color: #FFF;
 }
 
-/* line 126, ../sass/imports/_main.scss */
+/* line 125, ../sass/imports/_main.scss */
 .currency_list {
   display: inline-block;
   padding-left: .5em;
   list-style: none;
   font-size: .75em;
 }
-/* line 131, ../sass/imports/_main.scss */
+/* line 130, ../sass/imports/_main.scss */
 .currency_list li {
   padding: .5em;
 }
-/* line 134, ../sass/imports/_main.scss */
+/* line 133, ../sass/imports/_main.scss */
 .currency_list label {
   cursor: pointer;
+  color: #b7bac5;
+}
+/* line 136, ../sass/imports/_main.scss */
+.currency_list label:hover, .currency_list label.active {
+  color: #0055aa;
 }
 
-/* line 139, ../sass/imports/_main.scss */
+/* line 142, ../sass/imports/_main.scss */
 .explore {
   overflow: hidden;
   padding: 3em 0;
 }
 
-/* line 146, ../sass/imports/_main.scss */
+/* line 149, ../sass/imports/_main.scss */
 .container_graph {
   height: 500px;
   background-color: #FFF;
 }
 
-/* line 151, ../sass/imports/_main.scss */
+/* line 154, ../sass/imports/_main.scss */
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
   min-width: 294px;
 }
 
-/* line 157, ../sass/imports/_main.scss */
+/* line 160, ../sass/imports/_main.scss */
 .footer {
   clear: both;
+  font-size: .875em;
   margin-top: 6em;
   padding: 2em 0;
   background-color: #b7bac5;
   color: #efefef;
 }
-/* line 163, ../sass/imports/_main.scss */
+/* line 167, ../sass/imports/_main.scss */
 .footer a {
   color: #efefef;
 }
+/* line 169, ../sass/imports/_main.scss */
+.footer a:hover, .footer a:focus, .footer a:active {
+  color: #0055aa;
+}
 
+@media (min-width: 500px) {
+  /* line 176, ../sass/imports/_main.scss */
+  .data_entry {
+    width: 96%;
+    padding: 1.5em 5%;
+  }
+}
 @media (min-width: 768px) {
-  /* line 169, ../sass/imports/_main.scss */
+  /* line 183, ../sass/imports/_main.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 172, ../sass/imports/_main.scss */
+  /* line 186, ../sass/imports/_main.scss */
   .container_filter {
     width: 30%;
     float: left;
   }
 
-  /* line 176, ../sass/imports/_main.scss */
+  /* line 190, ../sass/imports/_main.scss */
   .container_graph {
     width: 65%;
     float: right;
+  }
+
+  /* line 195, ../sass/imports/_main.scss */
+  .tags label {
+    padding: .25em .5em;
+    cursor: pointer;
   }
 }
