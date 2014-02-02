@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="webRatesApp" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:og="http://ogp.me/ns#"
+            xmlns:fb="http://www.facebook.com/2008/fbml"
+            ng-app="webRatesApp" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,9 +22,27 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+      <meta property="og:title" content="webrates.org - fair freelancer rates">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="http://webrates.org">
+      <meta property="og:image" content="http://webrates.org/img/fb.png">
+      <meta property="og:site_name" content="webrates.org - fair freelancer rates">
+      <meta property="fb:admins" content="USER_ID">
+      <meta property="fb:app_id" content="APP_ID">
+      <meta property="og:description" content="webrates.org is a website">
+
   </head>
 
   <body role="document">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=265825833436844";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Navagation / Topbar -->
     <div class="navbar" role="navigation">
@@ -32,6 +53,10 @@
             more transparent freelancer rates
           </span>
         </h1>
+        <div class="social">
+          <div class="fb-like" data-href="http://webrates.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+
+        </div>
       </div>
     </div>
 
@@ -49,11 +74,11 @@
 
       <form>
 
-        <p>
-          Help other freelancers and share the <strong>hourly rate</strong> your charged on your last job:
-        </p>
-
         <div class="form_group form_group_1">
+          <p>
+            Help other freelancers and share the <strong>hourly rate</strong> your charged on your last job:
+          </p>
+          
           <fieldset>
             <!-- <label class="fieldset_title">Your hourly rate</label> -->
             <input id="input-rate" class="input_big" type="number"
@@ -74,7 +99,11 @@
         </div>
 
         <div class="form_group form_group_2">
-        <p>Whoo, thank you! You can make this number even more useful by telling us a bit more about you and the job:</p>
+          <p class="form_text">
+            Whoo, thank you!
+            <br/>
+            Help make this number even more useful by telling us a bit more about you and the job:
+          </p>
 
           <fieldset class="tags">
             <legend class="fieldset_title">Your Job Title</legend>
