@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app lang="en">
+<html ng-app="webRatesApp" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-    <title>Theme Template for Bootstrap</title>
+    <title>Webrates – </title>
     <!-- Latest compiled and minified CSS -->
-  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  	<!-- Optional theme -->
-  	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-  	<!-- Latest compiled and minified JavaScript -->
-  	<script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
     <script type='text/javascript' src='scripts/main.js'></script>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -27,7 +27,7 @@
 
   <body role="document">
 
-    <!-- Navagation / Topbar --> 
+    <!-- Navagation / Topbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -37,7 +37,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Webrates</a>
+            <a class="navbar-brand" href="#">
+              Webrates
+            </a>
+            <span>
+              lorem ipsum
+            </span>
           </div>
       </div>
     </div>
@@ -45,9 +50,9 @@
     <div class="container theme-showcase" role="main">
       <div class="jumbotron">
         <div ng-hide="dataform">
-          <h1>Hello, wondering what you should be paid?</h1>
-          <p>This a description of what this site is about</p>
-          <p>
+          <h1>Title</h1>
+          <p class="intro">Negotiating a fair hourly rate for your freelance services is easier if you know what others in your field charge. Find out, and help making freelancer rates more transparent by submitting your own. It only takes a minute and is completely anonymous!</p>
+          <p class="cta">
             <a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Contribute &raquo;</a>
           </p>
         </div>
@@ -89,17 +94,19 @@
             <input type="text" placeholder="Other">
           </fieldset>
 
-          <input type="submit" class="btn btn-primary" ng-click="dataform = !dataform; thankyou = true">
+          <input type="submit"
+                 class="btn btn-primary"
+                 ng-click="dataform = !dataform; thankyou = true">
 
         </form>
 
         <!-- Show this when form is submited. -->
         <div ng-show="thankyou">
           <p>Thank you!</p>
-        </div>  
+        </div>
       </div>
    <div class="row">
-  
+
   <div class="col-md-4">
     <h1>Filters</h1>
 
@@ -148,7 +155,7 @@
   </div>
   </div>
 
-<!-- 
+<!--
       <div class="page-header">
         <h1>Navbars</h1>
       </div>
@@ -381,13 +388,26 @@
 
     </div> <!-- /container -->
 
+    </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script>
+      angular.module('webRatesApp', []).controller('MyCtrl', function ($scope, $http) {
+        $scope.data = {};
+        $scope.submitForm = function () {
+          $http.post('/url', $scope.data);
+        }
+      });
+    </script>
   </body>
 </html>
