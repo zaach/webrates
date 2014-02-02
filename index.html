@@ -28,7 +28,7 @@
     </style>
   </head>
 
-  <body role="document" ng-controller="MyCtrl">
+  <body role="document">
 
     <!-- Navagation / Topbar -->
     <div class="navbar" role="navigation">
@@ -52,7 +52,7 @@
     </header>
 
 
-    <div class="container data_entry" role="main">
+    <div class="container data_entry" role="main" ng-controller="MyCtrl">
 
       <form>
 
@@ -62,7 +62,7 @@
 
         <div class="form_group form_group_1">
           <fieldset>
-            <label class="fieldset_title">My hourly rate</label>
+            <label class="fieldset_title">Your hourly rate</label>
             <input class="input_big" type="number" ng-model="newForm.rate" size="5" min="0" max="400"/>
             <ul class="currency_list">
               <li>
@@ -83,7 +83,7 @@
         <div class="form_group form_group_2">
           <fieldset class="tags">
             <legend class="fieldset_title">Your Job Title</legend>
-            <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
+            <label class="first-child"><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Developer">Developer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Product">Product</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
@@ -91,17 +91,17 @@
 
           <fieldset class="tags">
             <legend class="fieldset_title">Your Gender</legend>
-            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
+            <label class="first-child"><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
           </fieldset>
 
-          <fieldset class="fieldset_inline">
+          <fieldset class="fieldset_inline"  style="margin-right: 2em">
             <label class="fieldset_title">Your Age</label>
             <input type="number" ng-model="newForm.age" size="3" min="13" max="80">
           </fieldset>
 
-          <fieldset class="fieldset_inline">
+          <fieldset class="fieldset_inline" style="max-width: 60%">
             <label class="fieldset_title">Your experience <i>in years</i></label>
             <input type="number" ng-model="newForm.experience" size="3" min="0" max="12">
           </fieldset>
@@ -109,7 +109,7 @@
           <fieldset class="tags">
             <legend class="fieldset_title">Location <i>of your client</i></legend>
 
-            <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
+            <label class="first-child"><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="New York">New York</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>
@@ -134,10 +134,9 @@
 
 
 
-    <div class="explore">
+    <div class="explore" ng-controller="QueryCtrl">
       <form oninput="filter_age_value.value = filter_age.valueAsNumber;
                      filter_exp_value.value = filter_exp.valueAsNumber">
-
       <div class="container">
         <div class="container_filter">
           <h3>Filters</h3>
@@ -149,17 +148,25 @@
 
           <fieldset class="tags">
             <legend class="fieldset_title">Job Title</legend>
-            <label><input type="radio" name="jobtitle" value="Designer">Designer</label>
-            <label><input type="radio" name="jobtitle" value="Developer">Developer</label>
-            <label><input type="radio" name="jobtitle" value="Product">Product</label>
-            <label><input type="radio" name="jobtitle" value="Marketing">Marketing</label>
+            <label class="first-child"><input type="radio" ng-model="filters.jobtitle" name="jobtitle" value="Designer">Designer</label>
+            <label><input type="radio" ng-model="filters.jobtitle" name="jobtitle" value="Developer">Developer</label>
+            <label><input type="radio" ng-model="filters.jobtitle" name="jobtitle" value="Product">Product</label>
+            <label><input type="radio" ng-model="filters.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
           </fieldset>
 
           <fieldset class="tags">
             <legend class="fieldset_title">Gender</legend>
-            <label><input type="radio" name="sex" value="Designer">Female</label>
-            <label><input type="radio" name="sex" value="Developer">Male</label>
-            <label><input type="radio" name="sex" value="Product">Other</label>
+            <labelclass="first-child"><input type="radio"
+                          ng-model="filters.sex"
+                          name="sex" value="Female">Female</label>
+
+            <label><input type="radio"
+                          ng-model="filters.sex"
+                          name="sex" value="Male">Male</label>
+
+            <label><input type="radio"
+                          ng-model="filters.sex"
+                          name="sex" value="Other">Other</label>
           </fieldset>
 
           <fieldset class="fieldset_inline">
@@ -170,7 +177,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="fieldset_inline">
+          <fieldset class="fieldset_inline" style="margin-right: 0">
             <label class="fieldset_title">Experience <i>in years</i></label>
             <div class="slider">
               <input id="filter_exp" type="range" name="experience" min="0" max="12" value=4>
@@ -180,18 +187,18 @@
 
           <fieldset class="tags">
             <legend class="fieldset_title">Location <i>of the client</i></legend>
-            <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
-            <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
-            <label><input type="radio" ng-model="newForm.location" name="location" value="New York">New York</label>
-            <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>
-            <label><input type="radio" ng-model="newForm.location" name="location" value="London">London</label>
-            <label><input type="radio" ng-model="newForm.location" name="location" value="Tokyo">Tokyo</label>
+            <label><input type="radio" ng-model="filters.location" name="location" value="San Francisco">San Francisco</label>
+            <label><input type="radio" ng-model="filters.location" name="location" value="Chicago">Chicago</label>
+            <label><input type="radio" ng-model="filters.location" name="location" value="New York">New York</label>
+            <label><input type="radio" ng-model="filters.location" name="location" value="L.A.">L.A.</label>
+            <label><input type="radio" ng-model="filters.location" name="location" value="London">London</label>
+            <label><input type="radio" ng-model="filters.location" name="location" value="Tokyo">Tokyo</label>
           </fieldset>
 
         </div>
       </form>
         <div class="container_graph">
-          <svg id="graph" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
+          <svg wr-chart wr-model="filteredData" id="graph" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
         </div>
       </div>
 
@@ -214,35 +221,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
-    <script src="scripts/main.js"></script>
-    <script>
-      angular.module('webRatesApp', ["firebase"])
-        .factory("rateService", ["$firebase", function($firebase) {
-          var ref = new Firebase("https://sweltering-fire-6680.firebaseio.com/rates");
-          return $firebase(ref);
-        }])
-        .controller('MyCtrl', function ($scope, rateService, cleanForm) {
-          $scope.data = rateService;
-          $scope.newForm = cleanForm();
-          var numericFields = ['age', 'experience', 'rate'];
-          $scope.submitForm = function () {
-            numericFields.forEach(function (field) {
-              $scope.newForm[field] = parseInt($scope.newForm[field], 10);
-            });
-            $scope.data.$add($scope.newForm);
-            $scope.newForm = cleanForm();
-          };
-        })
-        .constant('defaultFormData', {
-          age: 30,
-          experience: 2
-        })
-        .factory('cleanForm', function (defaultFormData) {
-          return function () {
-            return angular.copy(defaultFormData);
-          };
-        });
-    </script>
+    <script src="script/app.js"></script>
     <script>
       function checkRadioButtons() {
         $("input[type=radio]").parent().removeClass("active");
