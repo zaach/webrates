@@ -13,6 +13,7 @@ function renderHistogram(data) {
   var height = $container.innerHeight()
   // space at bottom for x axis labels
   var labelHeight = 25;
+  var paddingTop = 100;
 
   // plain list of pay rates
   var rates = data.map(function(d) {
@@ -27,7 +28,7 @@ function renderHistogram(data) {
   // list of cut off points for histogram bar ranges
   // so [10, 20, 30] (I think) gives two bars taking data from the
   // ranges 10 - 20 and 20 - 30
-  var thresholds = d3.range(10, 200, 10)
+  var thresholds = d3.range(0, 150, 15)
 
   console.log('thresholds', thresholds)
 
@@ -48,12 +49,9 @@ function renderHistogram(data) {
 
   var y = d3.scale.linear()
       .domain([d3.min(freqs), d3.max(freqs)])
-      .range([0, height])
+      .range([0, height - paddingTop])
   yScale = y
 
-  // var x = d3.scale.linear()
-  //     .domain([d3.min(thresholds), d3.max(rates)])
-  //     .range([0, width])
   var x = d3.scale.ordinal()
       .domain(d3.range(0, bins.length))
       .rangeRoundBands([0, width])
@@ -85,10 +83,9 @@ function renderHistogram(data) {
         return y(d.y)
       })
 
- graph.append("g")
+ var labels = graph.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + (height - labelHeight) + ")")
-    .call(xAxis);
 }
 
 function renderLineGraph(data) {
