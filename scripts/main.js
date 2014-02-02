@@ -5,14 +5,17 @@ d3.json('/scripts/mock-data.json', function(err, data) {
   console.log('Fetched data', data)
   debug = data
 
-  var width = 800
-  var height = 400
+  var $container = $('.container_graph')
+  var width = $container.innerWidth()
+  var height = $container.innerHeight()
 
   var rates = data.map(function(d) {
     return d.rate
   })
 
   var graph = d3.select('svg')
+      .attr('width', width)
+      .attr('height', height)
       .append('g')
 
   var x = d3.scale.linear()
@@ -23,7 +26,11 @@ d3.json('/scripts/mock-data.json', function(err, data) {
       .scale(x)
       .orient("bottom");
 
+  // list of cut off points for histogram bar ranges
+  // so [10, 20, 30] (I think) gives two bars taking data from the
+  // ranges 10 - 20 and 20 - 30
   var thresholds = d3.range(10, 200, 10)
+
   console.log('thresholds', thresholds)
 
   // d3.layout.historgram allows us to transform a plain array of data
@@ -53,13 +60,15 @@ d3.json('/scripts/mock-data.json', function(err, data) {
     // translate that sucka such that rects drawn at 0, 0 are in the correct place
     .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")" })
 
+  var barWidth = width / bins.length
+
   barGroups.append('rect')
       .attr("x", 1)
       .attr("width", function(d) {
-        return d.dx
+        return barWidth
       })
       .attr("height", function(d) {
-        console.log('y', d.y)
+        console.log('data point', d)
         console.log('height', height - y(d.y))
         return height - y(d.y)
       })
