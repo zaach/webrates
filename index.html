@@ -83,6 +83,12 @@
             <label><input type="radio" ng-model="newForm.location" name="location" value="Tokyo">Tokyo</label>
           </fieldset>
 
+          <fieldset>
+            <label>Hourly rate in US dollars: $</label>
+            <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
+            <input type="number" ng-model="newForm.rate" size="5">
+          </fieldset>
+
           <input type="submit"
                  class="btn btn-primary"
                  ng-click="submitForm();" value="Submit">
