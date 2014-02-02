@@ -323,19 +323,7 @@ h6,
     width: 750px;
   }
 }
-@media (min-width: 992px) {
-  /* line 97, ../sass/imports/_main.scss */
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  /* line 102, ../sass/imports/_main.scss */
-  .container {
-    width: 1170px;
-  }
-}
-/* line 107, ../sass/imports/_main.scss */
+/* line 98, ../sass/imports/_main.scss */
 .navbar {
   background-color: #FFF;
   position: fixed;
@@ -347,12 +335,38 @@ h6,
   padding-bottom: 1em;
   background-color: #FFF;
 }
-/* line 117, ../sass/imports/_main.scss */
+/* line 108, ../sass/imports/_main.scss */
 .navbar h1 {
   margin: 0;
   padding: .5em 0 1em 0;
 }
-/* line 121, ../sass/imports/_main.scss */
+/* line 112, ../sass/imports/_main.scss */
 .navbar .container {
   border-bottom: 3px solid;
+}
+
+/* line 117, ../sass/imports/_main.scss */
+.explore {
+  overflow: hidden;
+}
+
+/* line 121, ../sass/imports/_main.scss */
+.container_filter {
+  width: 30%;
+  float: left;
+}
+
+/* line 126, ../sass/imports/_main.scss */
+.container_graph {
+  width: 65%;
+  float: right;
+}
+
+/* line 131, ../sass/imports/_main.scss */
+.footer {
+  clear: both;
+  margin-top: 6em;
+  padding: 2em 0;
+  background-color: #1f30b0;
+  color: white;
 }
