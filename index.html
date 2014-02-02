@@ -400,14 +400,5 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
     <script src="scripts/main.js"></script>
-
-    <script>
-      angular.module('webRatesApp', []).controller('MyCtrl', function ($scope, $http) {
-        $scope.data = {};
-        $scope.submitForm = function () {
-          $http.post('/url', $scope.data);
-        }
-      });
-    </script>
   </body>
 </html>
