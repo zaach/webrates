@@ -116,9 +116,9 @@ h1 {
 
 .data_entry {
   width: 100%;
-  max-width: 600px;
+  max-width: 768px;
   margin-top: -7em;
-  padding: .5em 2%;
+  padding: .5em 2% 1.5em;
   background-color: #FFF;
 }
 
@@ -126,9 +126,12 @@ h1 {
   display: inline-block;
   padding-left: .5em;
   list-style: none;
-  font-size: .75em;
+  font-size: 1.25em;
   li {
-    padding: .5em;
+    padding: .25em;
+  }
+  input {
+    margin-right: .5em;
   }
   label {
     cursor: pointer;

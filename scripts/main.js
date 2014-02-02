@@ -44,14 +44,20 @@ function renderHistogram(data) {
 
   console.log('rates', rates)
   console.log('bins', bins)
+  console.log('freqs min + max', d3.min(freqs), d3.max(freqs))
 
   var y = d3.scale.linear()
       .domain([d3.min(freqs), d3.max(freqs)])
       .range([0, height])
+  yScale = y
 
-  var x = d3.scale.linear()
-      .domain([d3.min(thresholds), d3.max(rates)])
-      .range([0, width])
+  // var x = d3.scale.linear()
+  //     .domain([d3.min(thresholds), d3.max(rates)])
+  //     .range([0, width])
+  var x = d3.scale.ordinal()
+      .domain(d3.range(0, bins.length))
+      .rangeRoundBands([0, width])
+  xScale = x
 
   var xAxis = d3.svg.axis()
       .scale(x)
@@ -63,9 +69,9 @@ function renderHistogram(data) {
     .enter().append("g")
     .attr("class", "bar")
     // translate that sucka such that rects drawn at 0, 0 are in the correct place
-    .attr("transform", function(d) {
-      return "translate(" + x(d.x) + "," +
-          (y(d.y) - labelHeight) + ")"
+    .attr("transform", function(d, i) {
+      return "translate(" + x(i) + "," +
+          (height - y(d.y) - labelHeight) + ")"
     })
 
   var barWidth = Math.floor(width / bins.length)
@@ -73,10 +79,10 @@ function renderHistogram(data) {
   barGroups.append('rect')
       .attr("x", 1)
       .attr("width", function(d) {
-        return barWidth
+        return x.rangeBand()
       })
       .attr("height", function(d) {
-        return height - y(d.y)
+        return y(d.y)
       })
 
  graph.append("g")
