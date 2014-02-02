@@ -62,19 +62,21 @@
 
         <div class="form_group form_group_1">
           <fieldset>
-            <label class="fieldset_title">Your hourly rate</label>
-            <input class="input_big" type="number" ng-model="newForm.rate" size="5" />
+            <label class="fieldset_title">My hourly rate</label>
+            <input class="input_big" type="number" ng-model="newForm.rate" size="5" min="0" max="400"/>
             <ul class="currency_list">
               <li>
-                <label><input type="radio" name="currency" value="USD" ng-model="newForm.currency">&dollar;</label>
+                <label><input type="radio" name="currency" value="USD"
+                              ng-model="newForm.currency">&dollar;</label>
               </li>
               <li>
-                <label><input type="radio" name="currency" value="EUR" ng-model="newForm.currency">&euro;</label>
+                <label><input type="radio" name="currency" value="EUR"
+                              ng-model="newForm.currency">&euro;</label>
               </li>
             </ul>
           </fieldset>
         </div>
-      
+
 
         <p>Whoo, thank you! You can make this number even more useful by telling us a bit more about you and the job:</p>
 
@@ -96,14 +98,12 @@
 
           <fieldset class="fieldset_inline">
             <label class="fieldset_title">Your Age</label>
-            <!--<input type="range" ng-model="newForm.age" name="age" min="14" max="90">-->
-            <input type="number" ng-model="newForm.age" size="3">
+            <input type="number" ng-model="newForm.age" size="3" min="13" max="80">
           </fieldset>
 
           <fieldset class="fieldset_inline">
             <label class="fieldset_title">Your experience <i>in years</i></label>
-            <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
-            <input type="number" ng-model="newForm.experience" size="3">
+            <input type="number" ng-model="newForm.experience" size="3" min="0" max="12">
           </fieldset>
 
           <fieldset class="tags">
@@ -116,12 +116,12 @@
             <label><input type="radio" ng-model="newForm.location" name="location" value="London">London</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="Tokyo">Tokyo</label>
           </fieldset>
-          
+
           <input type="submit"
                  class="btn btn-primary"
                  ng-click="submitForm();" value="Submit">
         </div>
-        
+
 
       </form>
 
