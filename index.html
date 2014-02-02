@@ -8,10 +8,7 @@
     <meta name="author" content="">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
     <title>Webrates – </title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="stylesheets/screen.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
@@ -41,7 +38,7 @@
               Webrates
             </a>
             <span>
-              lorem ipsum
+              claim goes here
             </span>
           </div>
       </div>
@@ -50,7 +47,6 @@
     <div class="container theme-showcase" role="main">
       <div class="jumbotron">
         <div ng-hide="dataform">
-          <h1>Title</h1>
           <p class="intro">Negotiating a fair hourly rate for your freelance services is easier if you know what others in your field charge. Find out, and help making freelancer rates more transparent by submitting your own. It only takes a minute and is completely anonymous!</p>
           <p class="cta">
             <a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Contribute &raquo;</a>
@@ -145,12 +141,14 @@
     </fieldset>
 
     </div>
-  <div class="col-md-8">
-    <p>
-      This is where we present the data visualization.
-    </p>
+      <div class="col-md-8">
+        <div class="data-container">
+          <p>
+            This is where we present the data visualization.
+          </p>
+        </div>
 
-  </div>
+      </div>
   </div>
 
 <!--
