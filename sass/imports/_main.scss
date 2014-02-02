@@ -90,13 +90,6 @@ h1 {
   padding-right: 2%;
 }
 
-@media (min-width: 768px) {
-  body {
-    font-size: 100%;
-  }
-}
-
-
 .navbar {
   position: fixed;
   top: 0;
@@ -122,7 +115,7 @@ h1 {
 }
 
 .data_entry {
-  min-width: 288px;
+  min-width: 320px;
   max-width: 600px;
   width: 288px;
   margin-top: -7em;
@@ -145,23 +138,20 @@ h1 {
 
 .explore {
   overflow: hidden;
-  padding: 2em 0;
+  padding: 3em 0;
 }
 
 .container_filter {
-  width: 30%;
-  float: left;
+  
 }
-
 .container_graph {
-  width: 65%;
-  float: right;
+  background-color: #FFF;
 }
 
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
-  min-width: 288px;
+  min-width: 294px;
 }
 
 .footer {
@@ -172,5 +162,19 @@ h1 {
   color: $color_bg;
   a {
     color: $color_bg;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 100%;
+  }
+  .container_filter {
+    width: 30%;
+    float: left;
+  }
+  .container_graph {
+    width: 65%;
+    float: right;
   }
 }

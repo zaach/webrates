@@ -250,7 +250,12 @@ input[type='submit'].active, input[type='submit']:hover, input[type='submit']:fo
   background-color: #029c5d;
 }
 
-/* line 39, ../sass/imports/_forms.scss */
+/* line 38, ../sass/imports/_forms.scss */
+input[type='range'] {
+  width: 294px;
+}
+
+/* line 43, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
@@ -261,17 +266,17 @@ input[type='submit'].active, input[type='submit']:hover, input[type='submit']:fo
   padding: .75em .5em;
   cursor: pointer;
 }
-/* line 48, ../sass/imports/_forms.scss */
+/* line 52, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
   background-color: #0055aa;
   color: #efefef;
 }
-/* line 52, ../sass/imports/_forms.scss */
+/* line 56, ../sass/imports/_forms.scss */
 .tags label input {
   margin-right: .5em;
 }
 
-/* line 59, ../sass/imports/_forms.scss */
+/* line 63, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -279,7 +284,7 @@ input[type='submit'].active, input[type='submit']:hover, input[type='submit']:fo
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 64, ../sass/imports/_forms.scss */
+/* line 68, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;
@@ -403,13 +408,7 @@ h1 span {
   padding-right: 2%;
 }
 
-@media (min-width: 768px) {
-  /* line 94, ../sass/imports/_main.scss */
-  body {
-    font-size: 100%;
-  }
-}
-/* line 100, ../sass/imports/_main.scss */
+/* line 93, ../sass/imports/_main.scss */
 .navbar {
   position: fixed;
   top: 0;
@@ -419,27 +418,27 @@ h1 span {
   background-color: #0055aa;
   color: #FFF;
 }
-/* line 108, ../sass/imports/_main.scss */
+/* line 101, ../sass/imports/_main.scss */
 .navbar .container {
   border-bottom: 3px solid #0055aa;
 }
 
-/* line 113, ../sass/imports/_main.scss */
+/* line 106, ../sass/imports/_main.scss */
 .header {
   padding: 6em 0 10em 0;
   background-color: #0055aa;
   color: #FFF;
 }
 
-/* line 119, ../sass/imports/_main.scss */
+/* line 112, ../sass/imports/_main.scss */
 .intro {
   font-size: 1.25em;
   max-width: 600px;
 }
 
-/* line 124, ../sass/imports/_main.scss */
+/* line 117, ../sass/imports/_main.scss */
 .data_entry {
-  min-width: 288px;
+  min-width: 320px;
   max-width: 600px;
   width: 288px;
   margin-top: -7em;
@@ -447,48 +446,41 @@ h1 span {
   background-color: #FFF;
 }
 
-/* line 133, ../sass/imports/_main.scss */
+/* line 126, ../sass/imports/_main.scss */
 .currency_list {
   display: inline-block;
   padding-left: .5em;
   list-style: none;
   font-size: .75em;
 }
-/* line 138, ../sass/imports/_main.scss */
+/* line 131, ../sass/imports/_main.scss */
 .currency_list li {
   padding: .5em;
 }
-/* line 141, ../sass/imports/_main.scss */
+/* line 134, ../sass/imports/_main.scss */
 .currency_list label {
   cursor: pointer;
 }
 
-/* line 146, ../sass/imports/_main.scss */
+/* line 139, ../sass/imports/_main.scss */
 .explore {
   overflow: hidden;
-  padding: 2em 0;
+  padding: 3em 0;
+}
+
+/* line 147, ../sass/imports/_main.scss */
+.container_graph {
+  background-color: #FFF;
 }
 
 /* line 151, ../sass/imports/_main.scss */
-.container_filter {
-  width: 30%;
-  float: left;
-}
-
-/* line 156, ../sass/imports/_main.scss */
-.container_graph {
-  width: 65%;
-  float: right;
-}
-
-/* line 161, ../sass/imports/_main.scss */
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
-  min-width: 288px;
+  min-width: 294px;
 }
 
-/* line 167, ../sass/imports/_main.scss */
+/* line 157, ../sass/imports/_main.scss */
 .footer {
   clear: both;
   margin-top: 6em;
@@ -496,7 +488,26 @@ h1 span {
   background-color: #b7bac5;
   color: #efefef;
 }
-/* line 173, ../sass/imports/_main.scss */
+/* line 163, ../sass/imports/_main.scss */
 .footer a {
   color: #efefef;
+}
+
+@media (min-width: 768px) {
+  /* line 169, ../sass/imports/_main.scss */
+  body {
+    font-size: 100%;
+  }
+
+  /* line 172, ../sass/imports/_main.scss */
+  .container_filter {
+    width: 30%;
+    float: left;
+  }
+
+  /* line 176, ../sass/imports/_main.scss */
+  .container_graph {
+    width: 65%;
+    float: right;
+  }
 }
