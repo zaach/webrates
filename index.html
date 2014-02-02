@@ -46,40 +46,48 @@
       <div class="jumbotron">
         <div ng-hide="dataform">
           <h1>Hello, wondering what you should be paid?</h1>
-          <p>This a description of what this site is about... blah. This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Submit data! &raquo;</a></p>
+          <p>This a description of what this site is about</p>
+          <p>
+            <a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Contribute &raquo;</a>
+          </p>
         </div>
 
         <form ng-show="dataform">
-          <h1>Hello, world!</h1>
-          <p>Please fill out this info.</p>
-          <h3>Job Title</h3>
-            <li><input type="radio" name="jobtitle" value="Designer">Designer</input></li>
-            <li><input type="radio" name="jobtitle" value="Developer">Developer</input></li>
-            <li><input type="radio" name="jobtitle" value="Product">Product</input></li>
-            <li><input type="radio" name="jobtitle" value="Marketing">Marketing</input></li>
-          <h3>Gender</h3>
-            <li><input type="radio" name="sex" value="Male">Male</input></li>
-            <li><input type="radio" name="sex" value="Female">Female</input></li>
-            <li><input type="radio" name="sex" value="Other">Other</input></li>
+          <fieldset>
+            <legend>Job Title</legend>
+            <label><input type="radio" name="jobtitle" value="Designer">Designer</label>
+            <label><input type="radio" name="jobtitle" value="Developer">Developer</label>
+            <label><input type="radio" name="jobtitle" value="Product">Product</label>
+            <label><input type="radio" name="jobtitle" value="Marketing">Marketing</label>
+          </fieldset>
 
-          <h3>Age</h3>
-            <!-- <input type="text"> -->
-            <input type="range" name="age" min="1" max="10">
+          <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" name="sex" value="Designer">Female</label>
+            <label><input type="radio" name="sex" value="Developer">Male</label>
+            <label><input type="radio" name="sex" value="Product">Other</label>
+          </fieldset>
 
-          <h3>Experience</h3>
-            <!-- <input type="text"> -->
-            <input type="range" name="age" min="1" max="10">
+          <fieldset>
+            <label>Age</label>
+            <input type="range" name="age" min="14" max="90">
+          </fieldset>
 
-          <h3>Location of employer</h3>
-            <button type="button" class="btn btn-xs btn-default">San Francisco</button>
-            <button type="button" class="btn btn-xs btn-primary">Chicago</button>
-            <button type="button" class="btn btn-xs btn-success">New York</button>
-            <button type="button" class="btn btn-xs btn-info">L.A.</button>
-            <button type="button" class="btn btn-xs btn-warning">London</button>
-            <button type="button" class="btn btn-xs btn-danger">Tokyo</button>
+          <fieldset>
+            <label>Experience in years</label>
+            <input type="range" name="experience" min="0" max="12">
+          </fieldset>
+
+          <fieldset>
+            <legend>Location of employer</legend>
+            <button type="button" class="btn btn-xs">San Francisco</button>
+            <button type="button" class="btn btn-xs">Chicago</button>
+            <button type="button" class="btn btn-xs">New York</button>
+            <button type="button" class="btn btn-xs">L.A.</button>
+            <button type="button" class="btn btn-xs">London</button>
+            <button type="button" class="btn btn-xs">Tokyo</button>
             <input type="text" placeholder="Other">
-
+          </fieldset>
 
           <input type="submit" class="btn btn-primary" ng-click="dataform = !dataform; thankyou = true">
 
@@ -95,59 +103,44 @@
   <div class="col-md-4">
     <h1>Filters</h1>
 
-    <h3>Job Title</h3>
-     <li><input type="radio" name="jobtitle" value="Designer">Designer</input></li>
-     <li><input type="radio" name="jobtitle" value="Developer">Developer</input></li>
-     <li><input type="radio" name="jobtitle" value="Product">Product</input></li>
-     <li><input type="radio" name="jobtitle" value="Marketing">Marketing</input></li>
+    <fieldset>
+      <legend>Job Title</legend>
+      <label><input type="radio" name="jobtitle" value="Designer">Designer</label>
+      <label><input type="radio" name="jobtitle" value="Developer">Developer</label>
+      <label><input type="radio" name="jobtitle" value="Product">Product</label>
+      <label><input type="radio" name="jobtitle" value="Marketing">Marketing</label>
+    </fieldset>
 
-    <h3>Gender</h3>
-     <li><input type="radio" name="sex" value="Male">Male</input></li>
-     <li><input type="radio" name="sex" value="Female">Female</input></li>
-     <li><input type="radio" name="sex" value="Other">Other</input></li>
+    <fieldset>
+      <legend>Gender</legend>
+      <label><input type="radio" name="sex" value="Designer">Female</label>
+      <label><input type="radio" name="sex" value="Developer">Male</label>
+      <label><input type="radio" name="sex" value="Product">Other</label>
+    </fieldset>
 
-    <h3>Age</h3>
-      <!-- <input type="text"> -->
-      <input type="range" name="age" min="1" max="10">
+    <fieldset>
+      <label>Age</label>
+      <input type="range" name="age" min="14" max="90">
+    </fieldset>
 
-    <h3>Experience</h3>
-      <!-- <input type="text"> -->
-      <input type="range" name="age" min="1" max="10">
+    <fieldset>
+      <label>Experience in years</label>
+      <input type="range" name="experience" min="0" max="12">
+    </fieldset>
 
-    <h3>Location of employer</h3>
-      <button type="button" class="btn btn-xs btn-default">San Francisco</button>
-      <button type="button" class="btn btn-xs btn-primary">Chicago</button>
-      <button type="button" class="btn btn-xs btn-success">New York</button>
-      <button type="button" class="btn btn-xs btn-info">L.A.</button>
-      <button type="button" class="btn btn-xs btn-warning">London</button>
-      <button type="button" class="btn btn-xs btn-danger">Tokyo</button>
+    <fieldset>
+      <legend>Location of employer</legend>
+      <button type="button" class="btn btn-xs">San Francisco</button>
+      <button type="button" class="btn btn-xs">Berlin</button>
+      <button type="button" class="btn btn-xs">New York</button>
+      <button type="button" class="btn btn-xs">L.A.</button>
+      <button type="button" class="btn btn-xs">London</button>
+      <button type="button" class="btn btn-xs">Tokyo</button>
       <input type="text" placeholder="Other">
+    </fieldset>
 
-    <h3>Education</h3>
-
-
-
-
-
-<!--       <p>
-        Buttons go here.
-      </p>
-      <p>
-        <button type="button" class="btn btn-sm btn-default">Default</button>
-        <button type="button" class="btn btn-sm btn-primary">Primary</button>
-        <button type="button" class="btn btn-sm btn-success">Success</button>
-        <button type="button" class="btn btn-sm btn-info">Info</button>
-        <button type="button" class="btn btn-sm btn-warning">Warning</button>
-        <button type="button" class="btn btn-sm btn-danger">Danger</button>
-        <button type="button" class="btn btn-sm btn-link">Link</button>
-      </p>
-      <p>
-        
-      </p>-->
     </div>
   <div class="col-md-8">
-    <h1>Visualization here: </h1>
-
     <p>
       This is where we present the data visualization.
     </p>
