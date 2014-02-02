@@ -213,7 +213,7 @@ fieldset {
 .fieldset_inline {
   display: inline-block;
   max-width: 48%;
-  margin-right: 2em;
+  margin-right: 2%;
 }
 
 /* line 13, ../sass/imports/_forms.scss */
@@ -301,7 +301,7 @@ output {
   border-radius: 1em;
   background-color: #efefef;
   border: 2px solid #FFF;
-  margin: .25em;
+  margin: 0;
   padding: .75em .5em;
   cursor: pointer;
 }
@@ -499,7 +499,7 @@ h1 span {
   vertical-align: top;
   display: inline-block;
   margin: 0;
-  padding-left: .5em;
+  padding-left: 0;
   list-style: none;
   font-size: 1.25em;
 }
@@ -587,7 +587,8 @@ h1 span {
 
   /* line 202, ../sass/imports/_main.scss */
   .tags label {
-    padding: .25em .5em;
+    margin: .25em;
+    padding: .3em .5em;
     cursor: pointer;
   }
 }

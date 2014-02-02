@@ -83,7 +83,7 @@
         <div class="form_group form_group_2">
           <fieldset class="tags">
             <legend class="fieldset_title">Your Job Title</legend>
-            <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
+            <label class="first-child"><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Developer">Developer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Product">Product</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
@@ -91,17 +91,17 @@
 
           <fieldset class="tags">
             <legend class="fieldset_title">Your Gender</legend>
-            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
+            <label class="first-child"><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
           </fieldset>
 
-          <fieldset class="fieldset_inline">
+          <fieldset class="fieldset_inline"  style="margin-right: 2em">
             <label class="fieldset_title">Your Age</label>
             <input type="number" ng-model="newForm.age" size="3" min="13" max="80">
           </fieldset>
 
-          <fieldset class="fieldset_inline">
+          <fieldset class="fieldset_inline" style="max-width: 60%">
             <label class="fieldset_title">Your experience <i>in years</i></label>
             <input type="number" ng-model="newForm.experience" size="3" min="0" max="12">
           </fieldset>
@@ -109,7 +109,7 @@
           <fieldset class="tags">
             <legend class="fieldset_title">Location <i>of your client</i></legend>
 
-            <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
+            <label class="first-child"><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="New York">New York</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>
@@ -149,7 +149,7 @@
 
           <fieldset class="tags">
             <legend class="fieldset_title">Job Title</legend>
-            <label><input type="radio" name="jobtitle" value="Designer">Designer</label>
+            <label class="first-child"><input type="radio" name="jobtitle" value="Designer">Designer</label>
             <label><input type="radio" name="jobtitle" value="Developer">Developer</label>
             <label><input type="radio" name="jobtitle" value="Product">Product</label>
             <label><input type="radio" name="jobtitle" value="Marketing">Marketing</label>
@@ -157,7 +157,7 @@
 
           <fieldset class="tags">
             <legend class="fieldset_title">Gender</legend>
-            <label><input type="radio" name="sex" value="Designer">Female</label>
+            <label class="first-child"><input type="radio" name="sex" value="Designer">Female</label>
             <label><input type="radio" name="sex" value="Developer">Male</label>
             <label><input type="radio" name="sex" value="Product">Other</label>
           </fieldset>
@@ -170,7 +170,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="fieldset_inline">
+          <fieldset class="fieldset_inline" style="margin-right: 0">
             <label class="fieldset_title">Experience <i>in years</i></label>
             <div class="slider">
               <input id="filter_exp" type="range" name="experience" min="0" max="12" value=4>
@@ -180,7 +180,7 @@
 
           <fieldset class="tags">
             <legend class="fieldset_title">Location <i>of the client</i></legend>
-            <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
+            <label class="first-child"><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="New York">New York</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>

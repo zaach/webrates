@@ -7,7 +7,7 @@ fieldset {
 .fieldset_inline {
   display: inline-block;
   max-width: 48%;
-  margin-right: 2em;
+  margin-right: 2%;
 }
 
 .form_group {
@@ -79,7 +79,7 @@ output {
     border-radius: 1em;
     background-color: $color_bg;
     border: 2px solid #FFF;
-    margin: .25em;
+    margin: 0;
     padding: .75em .5em;
     cursor: pointer;
     &:first-child, &.first-child {

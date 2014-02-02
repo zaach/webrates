@@ -126,7 +126,7 @@ h1 {
   vertical-align: top;
   display: inline-block;
   margin: 0;
-  padding-left: .5em;
+  padding-left: 0;
   list-style: none;
   font-size: 1.25em;
   li {
@@ -200,7 +200,8 @@ h1 {
   }
   .tags {
     label {
-      padding: .25em .5em;
+      margin: .25em;
+      padding: .3em .5em;
       cursor: pointer;
     }
   }
