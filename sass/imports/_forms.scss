@@ -1,7 +1,20 @@
 fieldset {
   padding: 0;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1em 0;
   border: none;
+}
+
+.fieldset_inline {
+  display: inline-block;
+  max-width: 48%;
+  margin-right: 2em;
+}
+
+.form_group {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-top: 2px solid $color_bg;
+  border-bottom: 2px solid $color_bg;
 }
 
 input[type='text'],

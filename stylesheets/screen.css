@@ -205,11 +205,26 @@ textarea {
 /* line 1, ../sass/imports/_forms.scss */
 fieldset {
   padding: 0;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1em 0;
   border: none;
 }
 
-/* line 8, ../sass/imports/_forms.scss */
+/* line 7, ../sass/imports/_forms.scss */
+.fieldset_inline {
+  display: inline-block;
+  max-width: 48%;
+  margin-right: 2em;
+}
+
+/* line 13, ../sass/imports/_forms.scss */
+.form_group {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-top: 2px solid #efefef;
+  border-bottom: 2px solid #efefef;
+}
+
+/* line 21, ../sass/imports/_forms.scss */
 input[type='text'],
 input[type='number'] {
   font-size: 1.25em;
@@ -218,7 +233,7 @@ input[type='number'] {
   max-width: 5em;
   border-radius: .25em;
 }
-/* line 14, ../sass/imports/_forms.scss */
+/* line 27, ../sass/imports/_forms.scss */
 input[type='text'].active, input[type='text']:hover, input[type='text']:focus, input[type='text']:active,
 input[type='number'].active,
 input[type='number']:hover,
@@ -229,13 +244,13 @@ input[type='number']:active {
   outline: none;
 }
 
-/* line 21, ../sass/imports/_forms.scss */
+/* line 34, ../sass/imports/_forms.scss */
 input.input_big[type='number'] {
   font-size: 2em;
   text-align: center;
 }
 
-/* line 26, ../sass/imports/_forms.scss */
+/* line 39, ../sass/imports/_forms.scss */
 input[type='submit'] {
   font-size: 1.25em;
   padding: .5em 1em;
@@ -246,18 +261,18 @@ input[type='submit'] {
   text-transform: uppercase;
   letter-spacing: .05em;
 }
-/* line 34, ../sass/imports/_forms.scss */
+/* line 47, ../sass/imports/_forms.scss */
 input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus {
   background-color: #029c5d;
 }
 
-/* line 39, ../sass/imports/_forms.scss */
+/* line 52, ../sass/imports/_forms.scss */
 input[type='range'] {
   width: 100%;
   max-width: 294px;
 }
 
-/* line 45, ../sass/imports/_forms.scss */
+/* line 58, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
@@ -268,21 +283,21 @@ input[type='range'] {
   padding: .75em .5em;
   cursor: pointer;
 }
-/* line 54, ../sass/imports/_forms.scss */
+/* line 67, ../sass/imports/_forms.scss */
 .tags label:first-child, .tags label.first-child {
   margin-left: 0;
 }
-/* line 57, ../sass/imports/_forms.scss */
+/* line 70, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
   background-color: #0055aa;
   color: #efefef;
 }
-/* line 61, ../sass/imports/_forms.scss */
+/* line 74, ../sass/imports/_forms.scss */
 .tags label input {
   display: none;
 }
 
-/* line 67, ../sass/imports/_forms.scss */
+/* line 80, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -290,7 +305,7 @@ input[type='range'] {
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 72, ../sass/imports/_forms.scss */
+/* line 85, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;
@@ -445,9 +460,9 @@ h1 span {
 /* line 117, ../sass/imports/_main.scss */
 .data_entry {
   width: 100%;
-  max-width: 600px;
+  max-width: 768px;
   margin-top: -7em;
-  padding: .5em 2%;
+  padding: .5em 2% 1.5em;
   background-color: #FFF;
 }
 

@@ -60,62 +60,68 @@
           Help other freelancers and share the hourly rate your charged on your last job:
         </p>
 
-        <fieldset>
-          <label class="fieldset_title">My hourly rate</label>
-          <input class="input_big" type="number" ng-model="newForm.rate" size="5" />
-          <ul class="currency_list">
-            <li>
-              <label><input type="radio" name="currency" value="USD" ng-model="newForm.currency"> US Dollar</label>
-            </li>
-            <li>
-              <label><input type="radio" name="currency" value="EUR" ng-model="newForm.currency"> EURO</label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="form_group form_group_1">
+          <fieldset>
+            <label class="fieldset_title">My hourly rate</label>
+            <input class="input_big" type="number" ng-model="newForm.rate" size="5" />
+            <ul class="currency_list">
+              <li>
+                <label><input type="radio" name="currency" value="USD" ng-model="newForm.currency"> US Dollar</label>
+              </li>
+              <li>
+                <label><input type="radio" name="currency" value="EUR" ng-model="newForm.currency"> EURO</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      
 
         <p>Whoo, thank you! You can make this number even more useful by telling us a bit more about you and the job:</p>
 
-        <fieldset class="tags">
-          <legend class="fieldset_title">Your Job Title</legend>
-          <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
-          <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Developer">Developer</label>
-          <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Product">Product</label>
-          <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
-        </fieldset>
+        <div class="form_group form_group_2">
+          <fieldset class="tags">
+            <legend class="fieldset_title">Your Job Title</legend>
+            <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
+            <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Developer">Developer</label>
+            <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Product">Product</label>
+            <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
+          </fieldset>
 
-        <fieldset class="tags">
-          <legend class="fieldset_title">Your Gender</legend>
-          <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
-          <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
-          <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
-        </fieldset>
+          <fieldset class="tags">
+            <legend class="fieldset_title">Your Gender</legend>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
+          </fieldset>
 
-        <fieldset>
-          <label class="fieldset_title">Your Age</label>
-          <!--<input type="range" ng-model="newForm.age" name="age" min="14" max="90">-->
-          <input type="number" ng-model="newForm.age" size="3">
-        </fieldset>
+          <fieldset class="fieldset_inline">
+            <label class="fieldset_title">Your Age</label>
+            <!--<input type="range" ng-model="newForm.age" name="age" min="14" max="90">-->
+            <input type="number" ng-model="newForm.age" size="3">
+          </fieldset>
 
-        <fieldset>
-          <label class="fieldset_title">Your experience <i>in years</i></label>
-          <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
-          <input type="number" ng-model="newForm.experience" size="3">
-        </fieldset>
+          <fieldset class="fieldset_inline">
+            <label class="fieldset_title">Your experience <i>in years</i></label>
+            <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
+            <input type="number" ng-model="newForm.experience" size="3">
+          </fieldset>
 
-        <fieldset class="tags">
-          <legend class="fieldset_title">Location <i>of your client</i></legend>
+          <fieldset class="tags">
+            <legend class="fieldset_title">Location <i>of your client</i></legend>
 
-          <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
-          <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
-          <label><input type="radio" ng-model="newForm.location" name="location" value="New York">New York</label>
-          <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>
-          <label><input type="radio" ng-model="newForm.location" name="location" value="London">London</label>
-          <label><input type="radio" ng-model="newForm.location" name="location" value="Tokyo">Tokyo</label>
-        </fieldset>
-
-        <input type="submit"
-               class="btn btn-primary"
-               ng-click="submitForm();" value="Submit">
+            <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="New York">New York</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="London">London</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="Tokyo">Tokyo</label>
+          </fieldset>
+          
+          <input type="submit"
+                 class="btn btn-primary"
+                 ng-click="submitForm();" value="Submit">
+        </div>
+        
 
       </form>
 
@@ -154,12 +160,12 @@
             <label><input type="radio" name="sex" value="Product">Other</label>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="fieldset_inline">
             <label class="fieldset_title">Age</label>
             <input type="range" name="age" min="14" max="90">
           </fieldset>
 
-          <fieldset>
+          <fieldset class="fieldset_inline">
             <label class="fieldset_title">Experience <i>in years</i></label>
             <input type="range" name="experience" min="0" max="12">
           </fieldset>
