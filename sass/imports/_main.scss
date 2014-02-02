@@ -206,3 +206,9 @@ h1 {
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .navbar, header {
+    font-size: 1.25em;
+  }
+}

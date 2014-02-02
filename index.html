@@ -46,7 +46,7 @@
     <header class="header">
       <div class="container">
         <p class="intro">
-          Negotiating a fair hourly rate for your freelance services is easier if you know what others in your field charge. Find out, and help making freelancer rates more transparent by submitting your own. It only takes a minute and is completely anonymous.
+          Negotiating a fair <strong>hourly rate</strong> for your freelance services is easier if you know what others in your field charge. Find out, and help making freelancer rates more transparent by submitting your own. It only takes a minute and is completely anonymous.
         </p>
       </div>
     </header>
@@ -62,7 +62,7 @@
 
         <div class="form_group form_group_1">
           <fieldset>
-            <label class="fieldset_title">Your hourly rate</label>
+            <!-- <label class="fieldset_title">Your hourly rate</label> -->
             <input class="input_big" type="number" ng-model="newForm.rate" size="5" min="0" max="400"/>
             <ul class="currency_list">
               <li>
@@ -75,6 +75,9 @@
               </li>
             </ul>
           </fieldset>
+          
+          <input type="submit"
+                 ng-click="submitForm();" value="Submit">
         </div>
 
 
@@ -118,7 +121,6 @@
           </fieldset>
 
           <input type="submit"
-                 class="btn btn-primary"
                  ng-click="submitForm();" value="Submit">
         </div>
 
