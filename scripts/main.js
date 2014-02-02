@@ -18,20 +18,20 @@ d3.json('/scripts/mock-data.json', function(err, data) {
       .attr('height', height)
       .append('g')
 
-  var x = d3.scale.linear()
-      .domain([d3.min(rates), d3.max(rates)])
-      .range([0, width])
-
-  var xAxis = d3.svg.axis()
-      .scale(x)
-      .orient("bottom");
-
   // list of cut off points for histogram bar ranges
   // so [10, 20, 30] (I think) gives two bars taking data from the
   // ranges 10 - 20 and 20 - 30
   var thresholds = d3.range(10, 200, 10)
 
   console.log('thresholds', thresholds)
+
+  var x = d3.scale.linear()
+      .domain([d3.min(thresholds), d3.max(rates)])
+      .range([0, width])
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
 
   // d3.layout.historgram allows us to transform a plain array of data
   // into an array of sets or "bins" of data
