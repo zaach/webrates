@@ -14,6 +14,7 @@
     var auth = new FirebaseSimpleLogin(ref, function(error, user) {
       if (!error && user) {
         $('#login').hide();
+        $('#admin-stuff').show();
       } else if(error) {
         $('p.message').addClass('error').text(error);
       }
@@ -51,6 +52,10 @@
       border: 0 solid #600;
     }
 
+    #admin-stuff {
+      display: none;
+    }
+
   </style>
 </head>
 
@@ -69,7 +74,7 @@
   </p>
 
   <p class="message"></p>
-  <p>
+  <p id="admin-stuff">
     <button onclick="ref.remove()" id="delete" class="btn">Delete everything</button>
   </p>
 </div>
