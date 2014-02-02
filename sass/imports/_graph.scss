@@ -1,4 +1,8 @@
 svg .bar rect {
   fill: $color_highlight;
-  
+}
+
+svg .label {
+  text-anchor: middle;
+  font-size: 12px;
 }

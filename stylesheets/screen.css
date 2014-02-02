@@ -595,3 +595,9 @@ h1 span {
 svg .bar rect {
   fill: #0055aa;
 }
+
+/* line 5, ../sass/imports/_graph.scss */
+svg .label {
+  text-anchor: middle;
+  font-size: 12px;
+}
