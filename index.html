@@ -140,6 +140,7 @@
           $scope.data = rateService;
           $scope.newForm = {};
           $scope.submitForm = function () {
+            $scope.newForm.age = parseInt($scope.newForm.age, 10);
             $scope.data.$add($scope.newForm);
             $scope.newForm = {};
           };
