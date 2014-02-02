@@ -1,0 +1,23 @@
+fieldset {
+  margin-bottom: 1.5em;
+  border: none;
+}
+
+.tags {
+  label {
+    display: inline-block;
+    border-radius: 1em;
+    background: #eee;
+    padding: .25em;
+    cursor: pointer;
+    input {
+     // display: none;
+    }
+  }
+}
+
+.fieldset_title {
+  display: block;
+  @include uppercase;
+  color: $color_blue;
+}

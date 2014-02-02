@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-    <title>Webrates – </title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <title>Webrates – more transparent freelancer rates</title>
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified JavaScript -->
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,29 +31,20 @@
   <body role="document" ng-controller="MyCtrl">
 
     <!-- Navagation / Topbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-              Webrates
-            </a>
+    <div class="navbar" role="navigation">
+      <div class="container">
+          <h1>
+            Webrates
             <span>
-              lorem ipsum
+              – more transparent freelancer rates
             </span>
-          </div>
+          </h1>
       </div>
     </div>
 
-    <div class="container theme-showcase" role="main">
-      <div class="jumbotron">
-        <div>
-          <h1>Title</h1>
+    <div class="container" role="main">
+      <div class="page-header">
+        <div ng-hide="dataform">
           <p class="intro">Negotiating a fair hourly rate for your freelance services is easier if you know what others in your field charge. Find out, and help making freelancer rates more transparent by submitting your own. It only takes a minute and is completely anonymous!</p>
           <p class="cta">
             <!--<a href="#" ng-init="dataform = false" ng-click="dataform = !dataform" class="btn btn-primary btn-lg" role="button">Contribute &raquo;</a>-->
@@ -61,43 +52,51 @@
         </div>
 
         <form>
+
           <fieldset>
-            <legend>Job Title</legend>
+            <label>Hourly rate in US dollars: $</label>
+            <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
+            <input type="number" ng-model="newForm.rate" size="5">
+          </fieldset>
+
+          <fieldset class="tags">
+            <legend class="fieldset_title">Your Job Title</legend>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Developer">Developer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Product">Product</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
           </fieldset>
 
-          <!--<fieldset>-->
-            <!--<legend>Gender</legend>-->
-            <!--<label><input type="radio" name="sex" value="Designer">Female</label>-->
-            <!--<label><input type="radio" name="sex" value="Developer">Male</label>-->
-            <!--<label><input type="radio" name="sex" value="Product">Other</label>-->
-          <!--</fieldset>-->
+          <fieldset class="tags">
+            <legend class="fieldset_title">Your Gender</legend>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
+          </fieldset>
 
-          <!--<fieldset>-->
-            <!--<label>Age</label>-->
-            <!--<input type="range" name="age" min="14" max="90">-->
-          <!--</fieldset>-->
+          <fieldset>
+            <label class="fieldset_title">Your Age</label>
+            <!--<input type="range" ng-model="newForm.age" name="age" min="14" max="90">-->
+            <input type="number" ng-model="newForm.age" size="3">
+          </fieldset>
 
-          <!--<fieldset>-->
-            <!--<label>Experience in years</label>-->
-            <!--<input type="range" name="experience" min="0" max="12">-->
-          <!--</fieldset>-->
+          <fieldset>
+            <label class="fieldset_title">Your experience in years</label>
+            <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
+            <input type="number" ng-model="newForm.experience" size="3">
+          </fieldset>
 
-          <!--<fieldset>-->
-            <!--<legend>Location of employer</legend>-->
-            <!--<button type="button" class="btn btn-xs">San Francisco</button>-->
-            <!--<button type="button" class="btn btn-xs">Chicago</button>-->
-            <!--<button type="button" class="btn btn-xs">New York</button>-->
-            <!--<button type="button" class="btn btn-xs">L.A.</button>-->
-            <!--<button type="button" class="btn btn-xs">London</button>-->
-            <!--<button type="button" class="btn btn-xs">Tokyo</button>-->
-            <!--<input type="text" placeholder="Other">-->
-          <!--</fieldset>-->
+          <fieldset class="tags">
+            <legend class="fieldset_title">Location of employer</legend>
 
-oh hai
+            <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="New York">New York</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="London">London</label>
+            <label><input type="radio" ng-model="newForm.location" name="location" value="Tokyo">Tokyo</label>
+          </fieldset>
+
           <input type="submit"
                  class="btn btn-primary"
                  ng-click="submitForm();" value="Submit">
@@ -109,247 +108,64 @@ oh hai
           <p>Thank you!</p>
         </div>
       </div>
-   <div class="row">
+      <div class="explore">
 
-  <div class="col-md-8">
-    <p>
-      <svg id="graph-main" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
-    </p>
-  </div>
-  </div>
+        <div class="container_filter">
+          <h3>Filters</h3>
 
-<!--
-      <div class="page-header">
-        <h1>Navbars</h1>
-      </div>
+          <fieldset>
+            <legend>Job Title</legend>
+            <label><input type="radio" name="jobtitle" value="Designer">Designer</label>
+            <label><input type="radio" name="jobtitle" value="Developer">Developer</label>
+            <label><input type="radio" name="jobtitle" value="Product">Product</label>
+            <label><input type="radio" name="jobtitle" value="Marketing">Marketing</label>
+          </fieldset>
 
-      <div class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
+          <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" name="sex" value="Designer">Female</label>
+            <label><input type="radio" name="sex" value="Developer">Male</label>
+            <label><input type="radio" name="sex" value="Product">Other</label>
+          </fieldset>
+
+          <fieldset>
+            <label>Age</label>
+            <input type="range" name="age" min="14" max="90">
+          </fieldset>
+
+          <fieldset>
+            <label>Experience in years</label>
+            <input type="range" name="experience" min="0" max="12">
+          </fieldset>
+
+          <fieldset>
+            <legend>Location of employer</legend>
+            <button type="button" class="btn btn-xs">San Francisco</button>
+            <button type="button" class="btn btn-xs">Berlin</button>
+            <button type="button" class="btn btn-xs">New York</button>
+            <button type="button" class="btn btn-xs">L.A.</button>
+            <button type="button" class="btn btn-xs">London</button>
+            <button type="button" class="btn btn-xs">Tokyo</button>
+            <input type="text" placeholder="Other">
+          </fieldset>
+
+        </div>
+
+        <div class="container_graph">
+          <div>
+            This is where we present the data visualization.
           </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div> --><!--/.nav-collapse -->
-       <!--  </div>
+        </div>
+
       </div>
-
-      <div class="navbar navbar-inverse">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div> --><!--/.nav-collapse -->
-  <!--       </div>
-      </div> -->
-
-
-
-<!--       <div class="page-header">
-        <h1>Alerts</h1>
-      </div>
-      <div class="alert alert-success">
-        <strong>Well done!</strong> You successfully read this important alert message.
-      </div>
-      <div class="alert alert-info">
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-      </div>
-      <div class="alert alert-warning">
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-      </div>
-      <div class="alert alert-danger">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-      </div>
- -->
-
-
-      <!-- <div class="page-header">
-        <h1>Progress bars</h1>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
-        <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
-        <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
-      </div> -->
-
-
-
-      <!-- <div class="page-header">
-        <h1>List groups</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div> --><!-- /.col-sm-4 -->
-        <!-- <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
-              Cras justo odio
-            </a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-          </div>
-        </div> --><!-- /.col-sm-4 -->
-        <!-- <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-          </div>
-        </div> --><!-- /.col-sm-4 -->
-      <!-- </div>
-
-
-
-      <div class="page-header">
-        <h1>Panels</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div> --><!-- /.col-sm-4 -->
-        <!-- <div class="col-sm-4">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div> --><!-- /.col-sm-4 -->
-        <!-- <div class="col-sm-4">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div> --><!-- /.col-sm-4 -->
-     <!--  </div>
-
-
-
-      <div class="page-header">
-        <h1>Wells</h1>
-      </div>
-      <div class="well">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div> -->
-
 
     </div> <!-- /container -->
+
+    <footer class="footer">
+      <div class="container">
+        webrates is a <a href="http://onewebforall.us/">OneWebForAll.us</a> project. This project is brought to you by @kriesse @harthvader @zii @briantford @JakeHartnell @jeanie_4000 @sfrdmn.
+      </div>
+    </footer>
 
     </div>
     </div>
@@ -357,8 +173,7 @@ oh hai
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
@@ -369,12 +184,25 @@ oh hai
           var ref = new Firebase("https://sweltering-fire-6680.firebaseio.com/rates");
           return $firebase(ref);
         }])
-        .controller('MyCtrl', function ($scope, rateService) {
+        .controller('MyCtrl', function ($scope, rateService, cleanForm) {
           $scope.data = rateService;
-          $scope.newForm = {};
+          $scope.newForm = cleanForm();
+          var numericFields = ['age', 'experience'];
           $scope.submitForm = function () {
+            numericFields.forEach(function (field) {
+              $scope.newForm[field] = parseInt($scope.newForm[field], 10);
+            });
             $scope.data.$add($scope.newForm);
-            $scope.newForm = {};
+            $scope.newForm = cleanForm();
+          };
+        })
+        .constant('defaultFormData', {
+          age: 30,
+          experience: 2
+        })
+        .factory('cleanForm', function (defaultFormData) {
+          return function () {
+            return angular.copy(defaultFormData);
           };
         });
     </script>
