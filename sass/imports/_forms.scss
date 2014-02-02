@@ -76,6 +76,12 @@ input[type='range'] {
     }
   }
 }
+.tags_big {
+  label {
+    font-size: 1em;
+    padding: .75em 1.5em;
+  }
+}
 
 .fieldset_title {
   display: block;

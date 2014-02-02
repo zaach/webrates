@@ -126,9 +126,12 @@ h1 {
   display: inline-block;
   padding-left: .5em;
   list-style: none;
-  font-size: .75em;
+  font-size: 1.25em;
   li {
-    padding: .5em;
+    padding: .25em;
+  }
+  input {
+    margin-right: .5em;
   }
   label {
     cursor: pointer;
