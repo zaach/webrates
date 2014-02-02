@@ -208,19 +208,27 @@ textarea {
 }
 
 /* Colors */
-/* line 1, ../sass/imports/forms.scss */
+/* line 1, ../sass/imports/_forms.scss */
 fieldset {
   margin-bottom: 1.5em;
   border: none;
 }
 
-/* line 7, ../sass/imports/forms.scss */
+/* line 7, ../sass/imports/_forms.scss */
 .tags label {
   display: inline-block;
   border-radius: 1em;
   background: #eee;
   padding: .25em;
   cursor: pointer;
+}
+
+/* line 19, ../sass/imports/_forms.scss */
+.fieldset_title {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #1f30b0;
 }
 
 /* line 1, ../sass/imports/_main.scss */
@@ -246,7 +254,7 @@ html {
 
 /* line 16, ../sass/imports/_main.scss */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: #333333;
   background-color: white;

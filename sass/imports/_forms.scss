@@ -15,3 +15,9 @@ fieldset {
     }
   }
 }
+
+.fieldset_title {
+  display: block;
+  @include uppercase;
+  color: $color_blue;
+}

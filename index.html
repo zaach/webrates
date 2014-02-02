@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
     <title>Webrates – more transparent freelancer rates</title>
     <link rel="stylesheet" href="stylesheets/screen.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <!-- Latest compiled and minified JavaScript -->
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -52,7 +53,7 @@
           </fieldset>
 
           <fieldset class="tags">
-            <legend>Your Job Title</legend>
+            <legend class="fieldset_title">Your Job Title</legend>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Developer">Developer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Product">Product</label>
@@ -60,26 +61,26 @@
           </fieldset>
 
           <fieldset class="tags">
-            <legend>Your Gender</legend>
+            <legend class="fieldset_title">Your Gender</legend>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
           </fieldset>
 
           <fieldset>
-            <label>Your Age</label>
+            <label class="fieldset_title">Your Age</label>
             <!--<input type="range" ng-model="newForm.age" name="age" min="14" max="90">-->
             <input type="number" ng-model="newForm.age" size="3">
           </fieldset>
 
           <fieldset>
-            <label>Your experience in years</label>
+            <label class="fieldset_title">Your experience in years</label>
             <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
             <input type="number" ng-model="newForm.experience" size="3">
           </fieldset>
 
           <fieldset class="tags">
-            <legend>Location of employer</legend>
+            <legend class="fieldset_title">Location of employer</legend>
 
             <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="Chicago">Chicago</label>
