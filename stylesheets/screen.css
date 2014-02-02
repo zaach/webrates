@@ -370,3 +370,7 @@ h6,
   background-color: #1f30b0;
   color: white;
 }
+/* line 137, ../sass/imports/_main.scss */
+.footer a {
+  color: white;
+}
