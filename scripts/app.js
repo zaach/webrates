@@ -57,13 +57,14 @@ angular.module('webRatesApp', ["firebase"])
           // space at bottom for x axis labels
           var labelHeight = 25;
           var paddingTop = 100;
+          var spacing = 0.25;
 
           // plain list of pay rates
           var rates = data.map(function(d) {
             return d.rate
           })
 
-          var graph = d3.select('svg')
+          var graph = d3.select(elt.children()[0])
               .attr('width', width)
               .attr('height', height)
               .append('g')
@@ -97,7 +98,7 @@ angular.module('webRatesApp', ["firebase"])
 
           var x = d3.scale.ordinal()
               .domain(d3.range(0, bins.length))
-              .rangeRoundBands([0, width])
+              .rangeRoundBands([0, width], spacing)
           xScale = x
 
           var xAxis = d3.svg.axis()
