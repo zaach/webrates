@@ -33,7 +33,7 @@ function renderHistogram(data) {
   console.log('thresholds', thresholds)
 
   // d3.layout.historgram allows us to transform a plain array of data
-  // into an array of sets or "bins" of data
+  // into an array of sets or 'bins' of data
   // soo, takes our pay rate list and groups all the common pay rates together
   var bins = d3.layout.histogram()
     .bins(thresholds)(rates)
@@ -59,33 +59,50 @@ function renderHistogram(data) {
 
   var xAxis = d3.svg.axis()
       .scale(x)
-      .orient("bottom");
+      .orient('bottom');
 
   var barGroups = graph.selectAll('.bar')
     .data(bins)
     // each bar will be in an svg group
-    .enter().append("g")
-    .attr("class", "bar")
+    .enter().append('g')
+    .attr('class', 'bar')
     // translate that sucka such that rects drawn at 0, 0 are in the correct place
-    .attr("transform", function(d, i) {
-      return "translate(" + x(i) + "," +
-          (height - y(d.y) - labelHeight) + ")"
+    .attr('transform', function(d, i) {
+      return 'translate(' + x(i) + ',' +
+          (height - y(d.y) - labelHeight) + ')'
     })
 
-  var barWidth = Math.floor(width / bins.length)
-
   barGroups.append('rect')
-      .attr("x", 1)
-      .attr("width", function(d) {
+      .attr('x', 1)
+      .attr('width', function(d) {
         return x.rangeBand()
       })
-      .attr("height", function(d) {
+      .attr('height', function(d) {
         return y(d.y)
       })
 
- var labels = graph.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + (height - labelHeight) + ")")
+ var labels = graph.append('g')
+    .attr('class', 'labels')
+    .attr('transform', 'translate(0,' + (height) + ')')
+
+  labels.selectAll('.label')
+      .data(bins)
+      .enter()
+      .append('text')
+      .attr('width', function(d, i) {
+        return x.rangeBand()
+      })
+      .attr('transform', function(d, i) {
+        return 'translate(' + x(i) + ', 0)'
+      })
+      .text(function(d, i) {
+        if (i === 0)
+          return '< $' + thresholds[i]
+        else if (i === thresholds.length - 1)
+          return '> $' + thresholds[i]
+        else
+          return '$' + thresholds[i] + ' - ' + '$' + thresholds[i + 1]
+      })
 }
 
 function renderLineGraph(data) {
