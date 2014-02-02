@@ -224,16 +224,6 @@
     <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script>
-      function checkRadioButtons() {
-        $("input[type=radio]").parent().removeClass("active");
-        $("input[type=radio]:checked").parent().addClass("active");
-      }
-
-      $(function() {
-        checkRadioButtons();
-        $("input[type=radio]").on("change", checkRadioButtons);
-      })
-    </script>
+    <script src="scripts/tweaks.js"></script>
   </body>
 </html>
