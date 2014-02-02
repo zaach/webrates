@@ -247,10 +247,11 @@ input[type='number']:active {
 /* line 34, ../sass/imports/_forms.scss */
 input.input_big[type='number'] {
   font-size: 2em;
+  width: 3.5em;
   text-align: center;
 }
 
-/* line 39, ../sass/imports/_forms.scss */
+/* line 40, ../sass/imports/_forms.scss */
 input[type='submit'] {
   font-size: 1.25em;
   padding: .5em 1em;
@@ -261,18 +262,18 @@ input[type='submit'] {
   text-transform: uppercase;
   letter-spacing: .05em;
 }
-/* line 47, ../sass/imports/_forms.scss */
+/* line 48, ../sass/imports/_forms.scss */
 input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus {
   background-color: #029c5d;
 }
 
-/* line 52, ../sass/imports/_forms.scss */
+/* line 53, ../sass/imports/_forms.scss */
 input[type='range'] {
   width: 100%;
   max-width: 294px;
 }
 
-/* line 58, ../sass/imports/_forms.scss */
+/* line 59, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
@@ -283,27 +284,27 @@ input[type='range'] {
   padding: .75em .5em;
   cursor: pointer;
 }
-/* line 67, ../sass/imports/_forms.scss */
+/* line 68, ../sass/imports/_forms.scss */
 .tags label:first-child, .tags label.first-child {
   margin-left: 0;
 }
-/* line 70, ../sass/imports/_forms.scss */
+/* line 71, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
   background-color: #0055aa;
   color: #efefef;
 }
-/* line 74, ../sass/imports/_forms.scss */
+/* line 75, ../sass/imports/_forms.scss */
 .tags label input {
   display: none;
 }
 
-/* line 80, ../sass/imports/_forms.scss */
+/* line 81, ../sass/imports/_forms.scss */
 .tags_big label {
   font-size: 1em;
   padding: .75em 1.5em;
 }
 
-/* line 86, ../sass/imports/_forms.scss */
+/* line 87, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -311,7 +312,7 @@ input[type='range'] {
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 91, ../sass/imports/_forms.scss */
+/* line 92, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;
@@ -474,49 +475,51 @@ h1 span {
 
 /* line 125, ../sass/imports/_main.scss */
 .currency_list {
+  vertical-align: top;
   display: inline-block;
+  margin: 0;
   padding-left: .5em;
   list-style: none;
   font-size: 1.25em;
 }
-/* line 130, ../sass/imports/_main.scss */
+/* line 132, ../sass/imports/_main.scss */
 .currency_list li {
   padding: .25em;
 }
-/* line 133, ../sass/imports/_main.scss */
+/* line 135, ../sass/imports/_main.scss */
 .currency_list input {
   margin-right: .5em;
 }
-/* line 136, ../sass/imports/_main.scss */
+/* line 138, ../sass/imports/_main.scss */
 .currency_list label {
   cursor: pointer;
   color: #b7bac5;
 }
-/* line 139, ../sass/imports/_main.scss */
+/* line 141, ../sass/imports/_main.scss */
 .currency_list label:hover, .currency_list label.active {
   color: #0055aa;
 }
 
-/* line 145, ../sass/imports/_main.scss */
+/* line 147, ../sass/imports/_main.scss */
 .explore {
   overflow: hidden;
   padding: 3em 0;
 }
 
-/* line 152, ../sass/imports/_main.scss */
+/* line 154, ../sass/imports/_main.scss */
 .container_graph {
   height: 500px;
   background-color: #FFF;
 }
 
-/* line 157, ../sass/imports/_main.scss */
+/* line 159, ../sass/imports/_main.scss */
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
   min-width: 294px;
 }
 
-/* line 163, ../sass/imports/_main.scss */
+/* line 165, ../sass/imports/_main.scss */
 .footer {
   clear: both;
   font-size: .875em;
@@ -525,41 +528,41 @@ h1 span {
   background-color: #b7bac5;
   color: #efefef;
 }
-/* line 170, ../sass/imports/_main.scss */
+/* line 172, ../sass/imports/_main.scss */
 .footer a {
   color: #efefef;
 }
-/* line 172, ../sass/imports/_main.scss */
+/* line 174, ../sass/imports/_main.scss */
 .footer a:hover, .footer a:focus, .footer a:active {
   color: #0055aa;
 }
 
 @media (min-width: 500px) {
-  /* line 179, ../sass/imports/_main.scss */
+  /* line 181, ../sass/imports/_main.scss */
   .data_entry {
     width: 96%;
     padding: 1.5em 5%;
   }
 }
 @media (min-width: 768px) {
-  /* line 186, ../sass/imports/_main.scss */
+  /* line 188, ../sass/imports/_main.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 189, ../sass/imports/_main.scss */
+  /* line 191, ../sass/imports/_main.scss */
   .container_filter {
     width: 30%;
     float: left;
   }
 
-  /* line 193, ../sass/imports/_main.scss */
+  /* line 195, ../sass/imports/_main.scss */
   .container_graph {
     width: 65%;
     float: right;
   }
 
-  /* line 198, ../sass/imports/_main.scss */
+  /* line 200, ../sass/imports/_main.scss */
   .tags label {
     padding: .25em .5em;
     cursor: pointer;
