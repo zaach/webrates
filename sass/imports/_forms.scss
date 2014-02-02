@@ -8,17 +8,19 @@ input[type='text'],
 input[type='number'] {
   font-size: .875em;
   padding: .5em;
-  border: 1px solid $color_medium;
+  border: 2px solid $color_medium;
   max-width: 5em;
   border-radius: .25em;
-  &.active, &:hover, &:focus {
-    border-color: $color_medium;
-    color: $color_medium;
+  &.active, &:hover, &:focus, &:active {
+    border-color: $color_hover;
+    color: $color_hover;
+    outline: none;
   }
 }
 
 input.input_big[type='number'] {
-  font-size: 1.5em;
+  font-size: 2em;
+  text-align: center;
 }
 
 input[type='submit'] {
@@ -29,8 +31,12 @@ input[type='submit'] {
   @include uppercase;
   color: $color_bg;
   &.active, &:hover, &:focus {
-    background-color: $color_medium;
+    background-color: $color_hover;
   }
+}
+
+input[type='range'] {
+  width: 294px;
 }
 
 .tags {
@@ -41,7 +47,7 @@ input[type='submit'] {
     background-color: $color_bg;
     border: 1px solid #FFF;
     margin: .25em;
-    padding: .25em .5em;
+    padding: .75em .5em;
     cursor: pointer;
     &.active, &:hover, &:focus {
       background-color: $color_highlight;

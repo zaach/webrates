@@ -30,17 +30,15 @@ textarea {
 }
 a {
   color: $color_medium;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
-  color: $color_medium;
+  color: $color_hover;
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: none;
 }
 figure {
   margin: 0;
@@ -92,13 +90,6 @@ h1 {
   padding-right: 2%;
 }
 
-@media (min-width: 768px) {
-  body {
-    font-size: 100%;
-  }
-}
-
-
 .navbar {
   position: fixed;
   top: 0;
@@ -124,6 +115,9 @@ h1 {
 }
 
 .data_entry {
+  min-width: 320px;
+  max-width: 600px;
+  width: 288px;
   margin-top: -7em;
   padding: 1.5em 2%;
   background-color: #FFF;
@@ -134,27 +128,30 @@ h1 {
   padding-left: .5em;
   list-style: none;
   font-size: .75em;
+  li {
+    padding: .5em;
+  }
+  label {
+    cursor: pointer;
+  }
 }
 
 .explore {
   overflow: hidden;
-  padding: 2em 0;
+  padding: 3em 0;
 }
 
 .container_filter {
-  width: 30%;
-  float: left;
+  
 }
-
 .container_graph {
-  width: 65%;
-  float: right;
+  background-color: #FFF;
 }
 
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
-  min-width: 288px;
+  min-width: 294px;
 }
 
 .footer {
@@ -165,5 +162,19 @@ h1 {
   color: $color_bg;
   a {
     color: $color_bg;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 100%;
+  }
+  .container_filter {
+    width: 30%;
+    float: left;
+  }
+  .container_graph {
+    width: 65%;
+    float: right;
   }
 }
