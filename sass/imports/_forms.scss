@@ -3,14 +3,45 @@ fieldset {
   border: none;
 }
 
+input[type='text'],
+input[type="number"] {
+  font-size: 1.25em;
+  padding: .5em;
+  border: 1px solid #b8cbcc;
+  max-width: 5em;
+  &.active, &:hover, &:focus {
+    border-color: $color_blue;
+    color: $color_blue;
+  }
+}
+
+input[type='submit'] {
+  font-size: 1.25em;
+  padding: .5em;
+  border: none;
+  background-color: $color_red;
+  @include uppercase;
+  color: $color_bg;
+  &.active, &:hover, &:focus {
+    background-color: $color_blue;
+  }
+}
+
 .tags {
   label {
+    font-size: 1.25em;
     display: inline-block;
     border-radius: 1em;
     background: #eee;
-    padding: .25em;
+    margin: .1em;
+    padding: .25em .5em;
     cursor: pointer;
+    &.active, &:hover, &:focus {
+      background-color: $color_red;
+      color: $color_bg;
+    }
     input {
+      margin-right: .5em;
      // display: none;
     }
   }
