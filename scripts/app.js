@@ -64,7 +64,7 @@ angular.module('webRatesApp', ["firebase"])
             return d.rate
           })
 
-          var graph = d3.select('svg')
+          var graph = d3.select(elt.children()[0])
               .attr('width', width)
               .attr('height', height)
               .append('g')
