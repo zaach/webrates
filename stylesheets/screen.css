@@ -220,14 +220,14 @@ fieldset {
 .form_group {
   margin: 1em 0 2em 0;
   padding: 1em 0;
-  border-top: 2px solid #efefef;
-  border-bottom: 2px solid #efefef;
+  text-align: center;
 }
 
-/* line 19, ../sass/imports/_forms.scss */
+/* line 18, ../sass/imports/_forms.scss */
 .form_group_1 {
+  border-top: 2px solid #efefef;
+  border-bottom: 2px solid #efefef;
   padding-top: 1.5em;
-  text-align: center;
 }
 /* line 22, ../sass/imports/_forms.scss */
 .form_group_1 fieldset {
@@ -238,7 +238,12 @@ fieldset {
   display: inline-block;
 }
 
-/* line 31, ../sass/imports/_forms.scss */
+/* line 30, ../sass/imports/_forms.scss */
+.form_text {
+  color: #029c5d;
+}
+
+/* line 35, ../sass/imports/_forms.scss */
 input[type='text'],
 input[type='number'] {
   font-size: 1.25em;
@@ -248,7 +253,7 @@ input[type='number'] {
   border-radius: .25em;
   text-align: center;
 }
-/* line 38, ../sass/imports/_forms.scss */
+/* line 42, ../sass/imports/_forms.scss */
 input[type='text'].active, input[type='text']:hover, input[type='text']:focus, input[type='text']:active,
 input[type='number'].active,
 input[type='number']:hover,
@@ -259,13 +264,13 @@ input[type='number']:active {
   outline: none;
 }
 
-/* line 45, ../sass/imports/_forms.scss */
+/* line 49, ../sass/imports/_forms.scss */
 input.input_big[type='number'] {
   font-size: 2em;
   width: 3.5em;
 }
 
-/* line 50, ../sass/imports/_forms.scss */
+/* line 54, ../sass/imports/_forms.scss */
 input[type='submit'], .submit {
   font-size: 2em;
   padding: .5em 1em;
@@ -276,31 +281,31 @@ input[type='submit'], .submit {
   text-transform: uppercase;
   letter-spacing: .05em;
 }
-/* line 58, ../sass/imports/_forms.scss */
+/* line 62, ../sass/imports/_forms.scss */
 input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus, .submit.active, .submit:hover, .submit:focus {
   background-color: #029c5d;
 }
 
-/* line 63, ../sass/imports/_forms.scss */
+/* line 67, ../sass/imports/_forms.scss */
 .slider {
   background: #FFF;
   border-radius: 1em;
   padding: .75em .5em;
   vertical-align: middle;
 }
-/* line 68, ../sass/imports/_forms.scss */
+/* line 72, ../sass/imports/_forms.scss */
 .slider input, .slider output {
   vertical-align: middle;
 }
 
-/* line 73, ../sass/imports/_forms.scss */
+/* line 77, ../sass/imports/_forms.scss */
 input[type='range'] {
   width: 76%;
   max-width: 294px;
   display: inline-block;
 }
 
-/* line 78, ../sass/imports/_forms.scss */
+/* line 82, ../sass/imports/_forms.scss */
 output {
   width: 18%;
   margin-left: 2%;
@@ -308,7 +313,7 @@ output {
   color: #0055aa;
 }
 
-/* line 86, ../sass/imports/_forms.scss */
+/* line 90, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
@@ -319,27 +324,27 @@ output {
   padding: .75em .5em;
   cursor: pointer;
 }
-/* line 95, ../sass/imports/_forms.scss */
+/* line 99, ../sass/imports/_forms.scss */
 .tags label:first-child, .tags label.first-child {
   margin-left: 0;
 }
-/* line 98, ../sass/imports/_forms.scss */
+/* line 102, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
   background-color: #0055aa;
   color: #efefef;
 }
-/* line 102, ../sass/imports/_forms.scss */
+/* line 106, ../sass/imports/_forms.scss */
 .tags label input {
   display: none;
 }
 
-/* line 108, ../sass/imports/_forms.scss */
+/* line 112, ../sass/imports/_forms.scss */
 .tags_big label {
   font-size: 1em;
   padding: .75em 1.5em;
 }
 
-/* line 114, ../sass/imports/_forms.scss */
+/* line 118, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -347,7 +352,7 @@ output {
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 119, ../sass/imports/_forms.scss */
+/* line 123, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;

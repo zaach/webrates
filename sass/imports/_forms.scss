@@ -13,18 +13,22 @@ fieldset {
 .form_group {
   margin: 1em 0 2em 0;
   padding: 1em 0;
-  border-top: 2px solid $color_bg;
-  border-bottom: 2px solid $color_bg;
+  text-align: center;
 }
 .form_group_1 {
+  border-top: 2px solid $color_bg;
+  border-bottom: 2px solid $color_bg;
   padding-top: 1.5em;
-  text-align: center;
   fieldset {
     margin-right: 2em;
   }
   fieldset, input[type='submit'], .submit {
     display: inline-block;
   }
+}
+
+.form_text {
+  color: $color_hover;
 }
 
 input[type='text'],
