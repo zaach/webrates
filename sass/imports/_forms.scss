@@ -36,7 +36,7 @@ input[type='number'] {
   font-size: 1.25em;
   padding: .5em;
   border: 2px solid $color_medium;
-  max-width: 5em;
+  max-width: 10em;
   border-radius: .25em;
   text-align: center;
   &.active, &:hover, &:focus, &:active {
