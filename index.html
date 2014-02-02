@@ -25,29 +25,19 @@
   <body role="document" ng-controller="MyCtrl">
 
     <!-- Navagation / Topbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <!--
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button> 
-             -->
-            <a class="navbar-brand" href="#">
-              Webrates
-            </a>
+    <div class="navbar" role="navigation">
+      <div class="container">
+          <h1>
+            Webrates
             <span>
-              claim goes here
+              – more transparent freelancer rates
             </span>
-          </div>
+          </h1>
       </div>
     </div>
 
-    <div class="container theme-showcase" role="main">
-      <div class="jumbotron">
+    <div class="container" role="main">
+      <div class="page-header">
         <div ng-hide="dataform">
           <h1>hello there</h1>
           <p class="intro">Negotiating a fair hourly rate for your freelance services is easier if you know what others in your field charge. Find out, and help making freelancer rates more transparent by submitting your own. It only takes a minute and is completely anonymous!</p>
@@ -106,49 +96,49 @@
           <p>Thank you!</p>
         </div>
       </div>
-   <div class="row">
+      <div class="row">
 
-  <div class="col-md-4">
-    <h1>Filters</h1>
+        <div class="filter-container">
+          <h3>Filters</h3>
 
-    <fieldset>
-      <legend>Job Title</legend>
-      <label><input type="radio" name="jobtitle" value="Designer">Designer</label>
-      <label><input type="radio" name="jobtitle" value="Developer">Developer</label>
-      <label><input type="radio" name="jobtitle" value="Product">Product</label>
-      <label><input type="radio" name="jobtitle" value="Marketing">Marketing</label>
-    </fieldset>
+          <fieldset>
+            <legend>Job Title</legend>
+            <label><input type="radio" name="jobtitle" value="Designer">Designer</label>
+            <label><input type="radio" name="jobtitle" value="Developer">Developer</label>
+            <label><input type="radio" name="jobtitle" value="Product">Product</label>
+            <label><input type="radio" name="jobtitle" value="Marketing">Marketing</label>
+          </fieldset>
 
-    <fieldset>
-      <legend>Gender</legend>
-      <label><input type="radio" name="sex" value="Designer">Female</label>
-      <label><input type="radio" name="sex" value="Developer">Male</label>
-      <label><input type="radio" name="sex" value="Product">Other</label>
-    </fieldset>
+          <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" name="sex" value="Designer">Female</label>
+            <label><input type="radio" name="sex" value="Developer">Male</label>
+            <label><input type="radio" name="sex" value="Product">Other</label>
+          </fieldset>
 
-    <fieldset>
-      <label>Age</label>
-      <input type="range" name="age" min="14" max="90">
-    </fieldset>
+          <fieldset>
+            <label>Age</label>
+            <input type="range" name="age" min="14" max="90">
+          </fieldset>
 
-    <fieldset>
-      <label>Experience in years</label>
-      <input type="range" name="experience" min="0" max="12">
-    </fieldset>
+          <fieldset>
+            <label>Experience in years</label>
+            <input type="range" name="experience" min="0" max="12">
+          </fieldset>
 
-    <fieldset>
-      <legend>Location of employer</legend>
-      <button type="button" class="btn btn-xs">San Francisco</button>
-      <button type="button" class="btn btn-xs">Berlin</button>
-      <button type="button" class="btn btn-xs">New York</button>
-      <button type="button" class="btn btn-xs">L.A.</button>
-      <button type="button" class="btn btn-xs">London</button>
-      <button type="button" class="btn btn-xs">Tokyo</button>
-      <input type="text" placeholder="Other">
-    </fieldset>
+          <fieldset>
+            <legend>Location of employer</legend>
+            <button type="button" class="btn btn-xs">San Francisco</button>
+            <button type="button" class="btn btn-xs">Berlin</button>
+            <button type="button" class="btn btn-xs">New York</button>
+            <button type="button" class="btn btn-xs">L.A.</button>
+            <button type="button" class="btn btn-xs">London</button>
+            <button type="button" class="btn btn-xs">Tokyo</button>
+            <input type="text" placeholder="Other">
+          </fieldset>
 
-    </div>
-      <div class="col-md-8">
+        </div>
+
         <div class="data-container">
           <p>
             This is where we present the data visualization.
@@ -156,8 +146,6 @@
         </div>
 
       </div>
-
-  </div>
 
     </div> <!-- /container -->
 
