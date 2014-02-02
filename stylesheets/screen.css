@@ -149,27 +149,28 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+  outline: none;
 }
 
-/* line 111, ../sass/imports/_base.scss */
+/* line 112, ../sass/imports/_base.scss */
 input {
   line-height: normal;
 }
 
-/* line 115, ../sass/imports/_base.scss */
+/* line 116, ../sass/imports/_base.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 120, ../sass/imports/_base.scss */
+/* line 121, ../sass/imports/_base.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 123, ../sass/imports/_base.scss */
+/* line 124, ../sass/imports/_base.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -177,25 +178,25 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 130, ../sass/imports/_base.scss */
+/* line 131, ../sass/imports/_base.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 133, ../sass/imports/_base.scss */
+/* line 135, ../sass/imports/_base.scss */
 fieldset {
   border: none;
   padding: 0;
 }
 
-/* line 137, ../sass/imports/_base.scss */
+/* line 139, ../sass/imports/_base.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 141, ../sass/imports/_base.scss */
+/* line 143, ../sass/imports/_base.scss */
 textarea {
   overflow: auto;
 }
@@ -213,40 +214,43 @@ input[type='text'],
 input[type='number'] {
   font-size: .875em;
   padding: .5em;
-  border: 1px solid #b7bac5;
+  border: 2px solid #b7bac5;
   max-width: 5em;
   border-radius: .25em;
 }
 /* line 14, ../sass/imports/_forms.scss */
-input[type='text'].active, input[type='text']:hover, input[type='text']:focus,
+input[type='text'].active, input[type='text']:hover, input[type='text']:focus, input[type='text']:active,
 input[type='number'].active,
 input[type='number']:hover,
-input[type='number']:focus {
-  border-color: #b7bac5;
-  color: #b7bac5;
+input[type='number']:focus,
+input[type='number']:active {
+  border-color: #029c5d;
+  color: #029c5d;
+  outline: none;
 }
 
-/* line 20, ../sass/imports/_forms.scss */
+/* line 21, ../sass/imports/_forms.scss */
 input.input_big[type='number'] {
-  font-size: 1.5em;
+  font-size: 2em;
+  text-align: center;
 }
 
-/* line 24, ../sass/imports/_forms.scss */
+/* line 26, ../sass/imports/_forms.scss */
 input[type='submit'] {
   font-size: 1.25em;
   padding: .5em;
   border: none;
-  background-color: #ff1d5d;
+  background-color: #0055aa;
   text-transform: uppercase;
   letter-spacing: .05em;
   color: #efefef;
 }
-/* line 31, ../sass/imports/_forms.scss */
+/* line 33, ../sass/imports/_forms.scss */
 input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus {
-  background-color: #b7bac5;
+  background-color: #029c5d;
 }
 
-/* line 37, ../sass/imports/_forms.scss */
+/* line 39, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
@@ -254,20 +258,20 @@ input[type='submit'].active, input[type='submit']:hover, input[type='submit']:fo
   background-color: #efefef;
   border: 1px solid #FFF;
   margin: .25em;
-  padding: .25em .5em;
+  padding: .75em .5em;
   cursor: pointer;
 }
-/* line 46, ../sass/imports/_forms.scss */
+/* line 48, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
-  background-color: #ff1d5d;
+  background-color: #0055aa;
   color: #efefef;
 }
-/* line 50, ../sass/imports/_forms.scss */
+/* line 52, ../sass/imports/_forms.scss */
 .tags label input {
   margin-right: .5em;
 }
 
-/* line 57, ../sass/imports/_forms.scss */
+/* line 59, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -275,7 +279,7 @@ input[type='submit'].active, input[type='submit']:hover, input[type='submit']:fo
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 62, ../sass/imports/_forms.scss */
+/* line 64, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;
@@ -324,41 +328,39 @@ textarea {
 /* line 31, ../sass/imports/_main.scss */
 a {
   color: #b7bac5;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* line 36, ../sass/imports/_main.scss */
 a:hover,
 a:focus {
-  color: #b7bac5;
+  color: #029c5d;
   text-decoration: underline;
 }
 
 /* line 40, ../sass/imports/_main.scss */
 a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: none;
 }
 
-/* line 45, ../sass/imports/_main.scss */
+/* line 43, ../sass/imports/_main.scss */
 figure {
   margin: 0;
 }
 
-/* line 48, ../sass/imports/_main.scss */
+/* line 46, ../sass/imports/_main.scss */
 img {
   vertical-align: middle;
 }
 
-/* line 51, ../sass/imports/_main.scss */
+/* line 49, ../sass/imports/_main.scss */
 .img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* line 60, ../sass/imports/_main.scss */
+/* line 58, ../sass/imports/_main.scss */
 h1,
 h2,
 h3,
@@ -370,7 +372,7 @@ h5 {
   color: inherit;
 }
 
-/* line 67, ../sass/imports/_main.scss */
+/* line 65, ../sass/imports/_main.scss */
 h1 {
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -378,19 +380,19 @@ h1 {
   padding: .75em 0;
   font-size: 1.25em;
 }
-/* line 72, ../sass/imports/_main.scss */
+/* line 70, ../sass/imports/_main.scss */
 h1 span {
   font-size: .5em;
   display: inline-block;
 }
 
-/* line 79, ../sass/imports/_main.scss */
+/* line 77, ../sass/imports/_main.scss */
 .img_flex {
   width: 100%;
   height: auto;
 }
 
-/* line 84, ../sass/imports/_main.scss */
+/* line 82, ../sass/imports/_main.scss */
 .container {
   width: 96%;
   min-width: 280px;
@@ -402,80 +404,91 @@ h1 span {
 }
 
 @media (min-width: 768px) {
-  /* line 96, ../sass/imports/_main.scss */
+  /* line 94, ../sass/imports/_main.scss */
   body {
     font-size: 100%;
   }
 }
-/* line 102, ../sass/imports/_main.scss */
+/* line 100, ../sass/imports/_main.scss */
 .navbar {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
-  background-color: #ff1d5d;
+  background-color: #0055aa;
   color: #FFF;
 }
-/* line 110, ../sass/imports/_main.scss */
+/* line 108, ../sass/imports/_main.scss */
 .navbar .container {
-  border-bottom: 3px solid #ff1d5d;
+  border-bottom: 3px solid #0055aa;
 }
 
-/* line 115, ../sass/imports/_main.scss */
+/* line 113, ../sass/imports/_main.scss */
 .header {
   padding: 6em 0 10em 0;
-  background-color: #ff1d5d;
+  background-color: #0055aa;
   color: #FFF;
 }
 
-/* line 121, ../sass/imports/_main.scss */
+/* line 119, ../sass/imports/_main.scss */
 .intro {
   font-size: 1.25em;
   max-width: 600px;
 }
 
-/* line 126, ../sass/imports/_main.scss */
+/* line 124, ../sass/imports/_main.scss */
 .data_entry {
+  min-width: 288px;
+  max-width: 600px;
+  width: 288px;
   margin-top: -7em;
   padding: 1.5em 2%;
   background-color: #FFF;
 }
 
-/* line 132, ../sass/imports/_main.scss */
+/* line 133, ../sass/imports/_main.scss */
 .currency_list {
   display: inline-block;
   padding-left: .5em;
   list-style: none;
   font-size: .75em;
 }
+/* line 138, ../sass/imports/_main.scss */
+.currency_list li {
+  padding: .5em;
+}
+/* line 141, ../sass/imports/_main.scss */
+.currency_list label {
+  cursor: pointer;
+}
 
-/* line 139, ../sass/imports/_main.scss */
+/* line 146, ../sass/imports/_main.scss */
 .explore {
   overflow: hidden;
   padding: 2em 0;
 }
 
-/* line 144, ../sass/imports/_main.scss */
+/* line 151, ../sass/imports/_main.scss */
 .container_filter {
   width: 30%;
   float: left;
 }
 
-/* line 149, ../sass/imports/_main.scss */
+/* line 156, ../sass/imports/_main.scss */
 .container_graph {
   width: 65%;
   float: right;
 }
 
-/* line 154, ../sass/imports/_main.scss */
+/* line 161, ../sass/imports/_main.scss */
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
   min-width: 288px;
 }
 
-/* line 160, ../sass/imports/_main.scss */
+/* line 167, ../sass/imports/_main.scss */
 .footer {
   clear: both;
   margin-top: 6em;
@@ -483,7 +496,7 @@ h1 span {
   background-color: #b7bac5;
   color: #efefef;
 }
-/* line 166, ../sass/imports/_main.scss */
+/* line 173, ../sass/imports/_main.scss */
 .footer a {
   color: #efefef;
 }

@@ -30,17 +30,15 @@ textarea {
 }
 a {
   color: $color_medium;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
-  color: $color_medium;
+  color: $color_hover;
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: none;
 }
 figure {
   margin: 0;
@@ -124,6 +122,9 @@ h1 {
 }
 
 .data_entry {
+  min-width: 288px;
+  max-width: 600px;
+  width: 288px;
   margin-top: -7em;
   padding: 1.5em 2%;
   background-color: #FFF;
@@ -134,6 +135,12 @@ h1 {
   padding-left: .5em;
   list-style: none;
   font-size: .75em;
+  li {
+    padding: .5em;
+  }
+  label {
+    cursor: pointer;
+  }
 }
 
 .explore {
