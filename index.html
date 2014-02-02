@@ -10,9 +10,7 @@
     <title>Webrates – </title>
     <link rel="stylesheet" href="stylesheets/screen.css">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
-    <script type='text/javascript' src='scripts/main.js'></script>
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -155,8 +153,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
@@ -167,12 +164,25 @@
           var ref = new Firebase("https://sweltering-fire-6680.firebaseio.com/rates");
           return $firebase(ref);
         }])
-        .controller('MyCtrl', function ($scope, rateService) {
+        .controller('MyCtrl', function ($scope, rateService, cleanForm) {
           $scope.data = rateService;
-          $scope.newForm = {};
+          $scope.newForm = cleanForm();
+          var numericFields = ['age', 'experience'];
           $scope.submitForm = function () {
+            numericFields.forEach(function (field) {
+              $scope.newForm[field] = parseInt($scope.newForm[field], 10);
+            });
             $scope.data.$add($scope.newForm);
-            $scope.newForm = {};
+            $scope.newForm = cleanForm();
+          };
+        })
+        .constant('defaultFormData', {
+          age: 30,
+          experience: 2
+        })
+        .factory('cleanForm', function (defaultFormData) {
+          return function () {
+            return angular.copy(defaultFormData);
           };
         });
     </script>
