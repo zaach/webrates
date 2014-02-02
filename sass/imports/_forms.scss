@@ -38,8 +38,9 @@ input[type='submit'] {
     font-size: .875em;
     display: inline-block;
     border-radius: 1em;
-    background: #eee;
-    margin: .1em;
+    background-color: $color_bg;
+    border: 1px solid #FFF;
+    margin: .25em;
     padding: .25em .5em;
     cursor: pointer;
     &.active, &:hover, &:focus {
