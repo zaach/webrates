@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Admin</title>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
+  <script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.2.3/firebase-simple-login.js'></script>
+  <script type='text/javascript' src='https://login.persona.org/include.js'></script>
+  <link rel="stylesheet" href="stylesheets/screen.css">
+  <script>
+    var ref = new Firebase("https://sweltering-fire-6680.firebaseio.com/rates");
+    var auth = new FirebaseSimpleLogin(ref, function(error, user) {
+      if (!error && user) {
+        $('#login').hide();
+      } else if(error) {
+        $('p.message').addClass('error').text(error);
+      }
+    });
+
+    function login() {
+      auth.login('persona', {
+        rememberMe: true
+      });
+    }
+
+    function removeAll() {
+      ref.remove(onComplete);
+    }
+
+    function onComplete(error) {
+      if (error) {
+        $('p.message').addClass('error').text(error);
+      } else {
+        $('p.message').removeClass('error').text("Success!");
+      }
+    };
+
+  </script>
+  <style>
+    .error {
+      color: #900;
+      font-size: 2em;
+    }
+
+    #delete {
+      background-color: red;
+      color: white;
+      font-size: 2em;
+      border: 0 solid #600;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1>Admin wOrLd!</h1>
+  </div>
+</header>
+
+<div class="container data_entry" role="main">
+  <p id="login">
+    <button onclick="login()" class="btn">Log in with your email</button><br />
+    Contact zaach or harthvader for access.
+  </p>
+
+  <p class="message"></p>
+  <p>
+    <button onclick="ref.remove()" id="delete" class="btn">Delete everything</button>
+  </p>
+</div>
+
+</body>
+</html>
