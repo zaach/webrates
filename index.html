@@ -85,12 +85,12 @@
                    ng-model="newForm.rate" size="5" min="0" max="400"/>
             <ul class="currency_list">
               <li>
-                <label><input type="radio" name="currency" value="USD"
-                              ng-model="newForm.currency">&dollar;</label>
+                <label><input id="input-usd" type="radio" name="currency" value="USD"
+                              ng-model="newForm.currency" checked/>&dollar;</label>
               </li>
               <li>
-                <label><input type="radio" name="currency" value="EUR"
-                              ng-model="newForm.currency">&euro;</label>
+                <label><input id="input-euro" type="radio" name="currency" value="EUR"
+                              ng-model="newForm.currency"/>&euro;</label>
               </li>
             </ul>
           </fieldset>
