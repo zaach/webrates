@@ -1,0 +1,20 @@
+body {
+  color: $color_blue;
+}
+
+.navbar-inverse {
+  background-color: $color_blue;
+  color: #FFF;
+}
+
+.data-container {
+  min-height: 12em;
+  background-color: $color_blue;
+  color: #FFF;
+}
+
+// forms
+
+fieldset {
+  margin-bottom: 1.5em;
+}
