@@ -1,7 +1,10 @@
 $(function() {
 
 d3.json('/scripts/mock-data.json', function(err, data) {
+  renderHistogram(data)
+})
 
+function renderHistogram(data) {
   console.log('Fetched data', data)
   debug = data
 
@@ -80,35 +83,34 @@ d3.json('/scripts/mock-data.json', function(err, data) {
     .attr("class", "x axis")
     .attr("transform", "translate(0," + (height - labelHeight) + ")")
     .call(xAxis);
+}
 
-  function renderLineGraph(data) {
-    var x = d3.scale.linear()
-        .domain([0, data.length])
-        .range([0, width])
+function renderLineGraph(data) {
+  var x = d3.scale.linear()
+      .domain([0, data.length])
+      .range([0, width])
 
-    var y = d3.scale.linear()
-        .domain([0, d3.max(data.map(function(d) { return d.rate }))])
-        .range([0, width])
+  var y = d3.scale.linear()
+      .domain([0, d3.max(data.map(function(d) { return d.rate }))])
+      .range([0, width])
 
-    // generates function which takes array of data and returns svg path attribute nonsense
-    var line = d3.svg.line()
-        .x(function(d, i) {
-          return x(i)
-        })
-        .y(function(d) {
-          return y(d.rate)
-        })
-        // interpolation technique for smoothiness of our linez
-        .interpolate('basis')
+  // generates function which takes array of data and returns svg path attribute nonsense
+  var line = d3.svg.line()
+      .x(function(d, i) {
+        return x(i)
+      })
+      .y(function(d) {
+        return y(d.rate)
+      })
+      // interpolation technique for smoothiness of our linez
+      .interpolate('basis')
 
-    // toss the entire data set at d3 and have it generate
-    // a single line out of it
-    graph.append('svg:path')
-      .datum(data)
-      .attr('class', 'line')
-      .attr('d', line)
-  }
-
-});
+  // toss the entire data set at d3 and have it generate
+  // a single line out of it
+  graph.append('svg:path')
+    .datum(data)
+    .attr('class', 'line')
+    .attr('d', line)
+}
 
 });
