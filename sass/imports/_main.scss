@@ -101,6 +101,14 @@ h1 {
   .container {
     border-bottom: 3px solid $color_highlight;
   }
+  h1 {
+    float: left;
+  }
+}
+
+.social {
+  float: right;
+  padding: 1em 0;
 }
 
 .header {

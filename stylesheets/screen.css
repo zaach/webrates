@@ -485,21 +485,31 @@ h1 span {
 .navbar .container {
   border-bottom: 3px solid #0055aa;
 }
+/* line 104, ../sass/imports/_main.scss */
+.navbar h1 {
+  float: left;
+}
 
-/* line 106, ../sass/imports/_main.scss */
+/* line 109, ../sass/imports/_main.scss */
+.social {
+  float: right;
+  padding: 1em 0;
+}
+
+/* line 114, ../sass/imports/_main.scss */
 .header {
   padding: 6em 0 13em 0;
   background-color: #0055aa;
   color: #FFF;
 }
 
-/* line 112, ../sass/imports/_main.scss */
+/* line 120, ../sass/imports/_main.scss */
 .intro {
   font-size: 1.25em;
   max-width: 600px;
 }
 
-/* line 117, ../sass/imports/_main.scss */
+/* line 125, ../sass/imports/_main.scss */
 .data_entry {
   width: 100%;
   max-width: 768px;
@@ -508,7 +518,7 @@ h1 span {
   background-color: #FFF;
 }
 
-/* line 125, ../sass/imports/_main.scss */
+/* line 133, ../sass/imports/_main.scss */
 .currency_list {
   vertical-align: top;
   display: inline-block;
@@ -517,44 +527,44 @@ h1 span {
   list-style: none;
   font-size: 1.25em;
 }
-/* line 132, ../sass/imports/_main.scss */
+/* line 140, ../sass/imports/_main.scss */
 .currency_list li {
   padding: .25em;
 }
-/* line 135, ../sass/imports/_main.scss */
+/* line 143, ../sass/imports/_main.scss */
 .currency_list input {
   margin-right: .5em;
 }
-/* line 138, ../sass/imports/_main.scss */
+/* line 146, ../sass/imports/_main.scss */
 .currency_list label {
   display: block;
   cursor: pointer;
   color: #b7bac5;
 }
-/* line 142, ../sass/imports/_main.scss */
+/* line 150, ../sass/imports/_main.scss */
 .currency_list label:hover, .currency_list label.active {
   color: #0055aa;
 }
 
-/* line 148, ../sass/imports/_main.scss */
+/* line 156, ../sass/imports/_main.scss */
 .explore {
   overflow: hidden;
   padding: 3em 0;
 }
 
-/* line 155, ../sass/imports/_main.scss */
+/* line 163, ../sass/imports/_main.scss */
 .container_graph {
   height: 240px;
 }
 
-/* line 159, ../sass/imports/_main.scss */
+/* line 167, ../sass/imports/_main.scss */
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
   min-width: 294px;
 }
 
-/* line 165, ../sass/imports/_main.scss */
+/* line 173, ../sass/imports/_main.scss */
 .footer {
   clear: both;
   font-size: .875em;
@@ -563,35 +573,35 @@ h1 span {
   background-color: #b7bac5;
   color: #efefef;
 }
-/* line 172, ../sass/imports/_main.scss */
+/* line 180, ../sass/imports/_main.scss */
 .footer a {
   color: #efefef;
 }
-/* line 174, ../sass/imports/_main.scss */
+/* line 182, ../sass/imports/_main.scss */
 .footer a:hover, .footer a:focus, .footer a:active {
   color: #0055aa;
 }
 
 @media (min-width: 500px) {
-  /* line 181, ../sass/imports/_main.scss */
+  /* line 189, ../sass/imports/_main.scss */
   .data_entry {
     width: 96%;
     padding: 1.5em 5%;
   }
 }
 @media (min-width: 768px) {
-  /* line 188, ../sass/imports/_main.scss */
+  /* line 196, ../sass/imports/_main.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 191, ../sass/imports/_main.scss */
+  /* line 199, ../sass/imports/_main.scss */
   .container_filter {
     width: 30%;
     float: left;
   }
 
-  /* line 195, ../sass/imports/_main.scss */
+  /* line 203, ../sass/imports/_main.scss */
   .container_graph {
     padding-top: 2em;
     height: 500px;
@@ -599,19 +609,19 @@ h1 span {
     float: right;
   }
 
-  /* line 202, ../sass/imports/_main.scss */
+  /* line 210, ../sass/imports/_main.scss */
   .tags label {
     margin: .25em;
     padding: .3em .5em;
   }
 
-  /* line 208, ../sass/imports/_main.scss */
+  /* line 216, ../sass/imports/_main.scss */
   .tags_big label {
     padding: .75em 1.5em;
   }
 }
 @media (min-width: 1024px) {
-  /* line 215, ../sass/imports/_main.scss */
+  /* line 223, ../sass/imports/_main.scss */
   .navbar, header {
     font-size: 1.25em;
   }
