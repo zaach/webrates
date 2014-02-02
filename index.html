@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
-    <script type='text/javascript' src='scripts/main.js'></script>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -23,6 +19,13 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+      svg .line {
+        stroke: red;
+        stroke-width: 5;
+        fill: none;
+      }
+    </style>
   </head>
 
   <body role="document" ng-controller="MyCtrl">
@@ -360,7 +363,6 @@ oh hai
     <script src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/mock-data.js"></script>
     <script>
       angular.module('webRatesApp', ["firebase"])
         .factory("rateService", ["$firebase", function($firebase) {
