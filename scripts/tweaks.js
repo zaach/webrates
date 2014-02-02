@@ -16,7 +16,7 @@ $(function() {
   });
 
   $("#submit-rate").on("click", function() {
-    $("#input-rate").attr('required', true);
+    //$("#input-rate").attr('required', true);
     $(".form_group_2").show();
   });
 
