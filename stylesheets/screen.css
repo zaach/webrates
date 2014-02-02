@@ -211,6 +211,16 @@ textarea {
 /* line 1, ../sass/imports/forms.scss */
 fieldset {
   margin-bottom: 1.5em;
+  border: none;
+}
+
+/* line 7, ../sass/imports/forms.scss */
+.tags label {
+  display: inline-block;
+  border-radius: 1em;
+  background: #eee;
+  padding: .25em;
+  cursor: pointer;
 }
 
 /* line 1, ../sass/imports/_main.scss */

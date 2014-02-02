@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-    <title>Webrates – </title>
+    <title>Webrates – more transparent freelancer rates</title>
     <link rel="stylesheet" href="stylesheets/screen.css">
     <!-- Latest compiled and minified JavaScript -->
 
@@ -44,34 +44,41 @@
         </div>
 
         <form>
+
           <fieldset>
-            <legend>Job Title</legend>
+            <label>Hourly rate in US dollars: $</label>
+            <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
+            <input type="number" ng-model="newForm.rate" size="5">
+          </fieldset>
+
+          <fieldset class="tags">
+            <legend>Your Job Title</legend>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Designer">Designer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Developer">Developer</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Product">Product</label>
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
           </fieldset>
 
-          <fieldset>
-            <legend>Gender</legend>
+          <fieldset class="tags">
+            <legend>Your Gender</legend>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
             <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
           </fieldset>
 
           <fieldset>
-            <label>Age</label>
+            <label>Your Age</label>
             <!--<input type="range" ng-model="newForm.age" name="age" min="14" max="90">-->
             <input type="number" ng-model="newForm.age" size="3">
           </fieldset>
 
           <fieldset>
-            <label>Experience in years</label>
+            <label>Your experience in years</label>
             <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
             <input type="number" ng-model="newForm.experience" size="3">
           </fieldset>
 
-          <fieldset>
+          <fieldset class="tags">
             <legend>Location of employer</legend>
 
             <label><input type="radio" ng-model="newForm.location" name="location" value="San Francisco">San Francisco</label>
@@ -80,12 +87,6 @@
             <label><input type="radio" ng-model="newForm.location" name="location" value="L.A.">L.A.</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="London">London</label>
             <label><input type="radio" ng-model="newForm.location" name="location" value="Tokyo">Tokyo</label>
-          </fieldset>
-
-          <fieldset>
-            <label>Hourly rate in US dollars: $</label>
-            <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
-            <input type="number" ng-model="newForm.rate" size="5">
           </fieldset>
 
           <input type="submit"
