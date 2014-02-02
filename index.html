@@ -135,6 +135,8 @@
 
 
     <div class="explore">
+      <form oninput="filter_age_value.value = filter_age.valueAsNumber;
+                     filter_exp_value.value = filter_exp.valueAsNumber">
 
       <div class="container">
         <div class="container_filter">
@@ -162,12 +164,14 @@
 
           <fieldset class="fieldset_inline">
             <label class="fieldset_title">Age</label>
-            <input type="range" name="age" min="14" max="90">
+            <input id="filter_age" type="range" name="age" min="13" max="80" value=30>
+            <output name="filter_age_value" for="age">30</output>
           </fieldset>
 
           <fieldset class="fieldset_inline">
             <label class="fieldset_title">Experience <i>in years</i></label>
-            <input type="range" name="experience" min="0" max="12">
+            <input id="filter_exp" type="range" name="experience" min="0" max="12" value=4>
+            <output name="filter_exp_value" for="experience">4</output>
           </fieldset>
 
           <fieldset class="tags">
@@ -181,7 +185,7 @@
           </fieldset>
 
         </div>
-
+      </form>
         <div class="container_graph">
           <svg id="graph" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
         </div>
