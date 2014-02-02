@@ -205,7 +205,7 @@ textarea {
 /* line 1, ../sass/imports/_forms.scss */
 fieldset {
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0 0 1.5em 0;
   border: none;
 }
 
@@ -518,7 +518,7 @@ h1 span {
 /* line 126, ../sass/imports/_main.scss */
 .data_entry {
   width: 100%;
-  max-width: 768px;
+  max-width: 810px;
   margin-top: -10em;
   padding: .5em 2% 1.5em;
   background-color: #FFF;
