@@ -252,7 +252,7 @@ input[type='submit'].active, input[type='submit']:hover, input[type='submit']:fo
 
 /* line 38, ../sass/imports/_forms.scss */
 input[type='range'] {
-  width: 294px;
+  width: 100%;
 }
 
 /* line 43, ../sass/imports/_forms.scss */
@@ -468,8 +468,9 @@ h1 span {
   padding: 3em 0;
 }
 
-/* line 147, ../sass/imports/_main.scss */
+/* line 146, ../sass/imports/_main.scss */
 .container_graph {
+  height: 500px;
   background-color: #FFF;
 }
 
