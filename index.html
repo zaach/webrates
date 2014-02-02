@@ -62,14 +62,13 @@
 
         <fieldset>
           <label class="fieldset_title">My hourly rate</label>
-          <!--<input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">-->
           <input class="input_big" type="number" ng-model="newForm.rate" size="5" />
           <ul class="currency_list">
             <li>
-              <label><input type="radio" name="currency" value="USD"> US Dollar</label>
+              <label><input type="radio" name="currency" value="USD" ng-model="newForm.currency"> US Dollar</label>
             </li>
             <li>
-              <label><input type="radio" name="currency" value="EUR"> EURO</label>
+              <label><input type="radio" name="currency" value="EUR" ng-model="newForm.currency"> EURO</label>
             </li>
           </ul>
         </fieldset>
@@ -211,7 +210,7 @@
         .controller('MyCtrl', function ($scope, rateService, cleanForm) {
           $scope.data = rateService;
           $scope.newForm = cleanForm();
-          var numericFields = ['age', 'experience'];
+          var numericFields = ['age', 'experience', 'rate'];
           $scope.submitForm = function () {
             numericFields.forEach(function (field) {
               $scope.newForm[field] = parseInt($scope.newForm[field], 10);
