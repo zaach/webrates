@@ -93,16 +93,7 @@ h6,
     width: 750px;
   }
 }
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+
 
 .navbar {
   background-color: #FFF;
@@ -123,6 +114,24 @@ h6,
   }
 }
 
+.explore {
+  overflow: hidden;
+}
 
+.container_filter {
+  width: 30%;
+  float: left;
+}
 
+.container_graph {
+  width: 65%;
+  float: right;
+}
 
+.footer {
+  clear: both;
+  margin-top: 6em;
+  padding: 2em 0;
+  background-color: $color_blue;
+  color: $color_bg;
+}
