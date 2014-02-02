@@ -66,35 +66,34 @@
             <label><input type="radio" ng-model="newForm.jobtitle" name="jobtitle" value="Marketing">Marketing</label>
           </fieldset>
 
-          <!--<fieldset>-->
-            <!--<legend>Gender</legend>-->
-            <!--<label><input type="radio" name="sex" value="Designer">Female</label>-->
-            <!--<label><input type="radio" name="sex" value="Developer">Male</label>-->
-            <!--<label><input type="radio" name="sex" value="Product">Other</label>-->
-          <!--</fieldset>-->
+          <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Female">Female</label>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Male">Male</label>
+            <label><input type="radio" ng-model="newForm.sex" name="sex" value="Other">Other</label>
+          </fieldset>
 
-          <!--<fieldset>-->
-            <!--<label>Age</label>-->
-            <!--<input type="range" name="age" min="14" max="90">-->
-          <!--</fieldset>-->
+          <fieldset>
+            <label>Age</label>
+            <input type="range" ng-model="newForm.age" name="age" min="14" max="90">
+          </fieldset>
 
-          <!--<fieldset>-->
-            <!--<label>Experience in years</label>-->
-            <!--<input type="range" name="experience" min="0" max="12">-->
-          <!--</fieldset>-->
+          <fieldset>
+            <label>Experience in years</label>
+            <input type="range" ng-model="newForm.experience" name="experience" min="0" max="12">
+          </fieldset>
 
-          <!--<fieldset>-->
-            <!--<legend>Location of employer</legend>-->
-            <!--<button type="button" class="btn btn-xs">San Francisco</button>-->
-            <!--<button type="button" class="btn btn-xs">Chicago</button>-->
-            <!--<button type="button" class="btn btn-xs">New York</button>-->
-            <!--<button type="button" class="btn btn-xs">L.A.</button>-->
-            <!--<button type="button" class="btn btn-xs">London</button>-->
-            <!--<button type="button" class="btn btn-xs">Tokyo</button>-->
-            <!--<input type="text" placeholder="Other">-->
-          <!--</fieldset>-->
+          <fieldset>
+            <legend>Location of employer</legend>
 
-oh hai
+            <label><input type="radio" ng-model="newForm.location" name="jobtitle" value="San Francisco">San Francisco</label>
+            <label><input type="radio" ng-model="newForm.location" name="jobtitle" value="Chicago">Chicago</label>
+            <label><input type="radio" ng-model="newForm.location" name="jobtitle" value="New York">New York</label>
+            <label><input type="radio" ng-model="newForm.location" name="jobtitle" value="L.A.">L.A.</label>
+            <label><input type="radio" ng-model="newForm.location" name="jobtitle" value="London">London</label>
+            <label><input type="radio" ng-model="newForm.location" name="jobtitle" value="Tokyo">Tokyo</label>
+          </fieldset>
+
           <input type="submit"
                  class="btn btn-primary"
                  ng-click="submitForm();" value="Submit">
