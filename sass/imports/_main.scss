@@ -152,8 +152,7 @@ h1 {
 .container_filter {
 }
 .container_graph {
-  height: 500px;
-  background-color: #FFF;
+  height: 240px;
 }
 
 .graph_placeholder {
@@ -193,6 +192,8 @@ h1 {
     float: left;
   }
   .container_graph {
+    padding-top: 2em;
+    height: 500px;
     width: 65%;
     float: right;
   }
