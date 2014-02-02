@@ -9,6 +9,7 @@ d3.json('/scripts/mock-data.json', function(err, data) {
   var width = $container.innerWidth()
   var height = $container.innerHeight()
 
+  // plain list of pay rates
   var rates = data.map(function(d) {
     return d.rate
   })
@@ -40,7 +41,7 @@ d3.json('/scripts/mock-data.json', function(err, data) {
     .bins(thresholds)(rates)
 
   // plain list of bin sizes
-  var frequency = bins.map(function(d) {
+  var freqs = bins.map(function(d) {
     return d.length
   })
 
@@ -48,9 +49,10 @@ d3.json('/scripts/mock-data.json', function(err, data) {
   console.log('bins', bins)
 
   var y = d3.scale.linear()
-      .domain([d3.min(frequency), d3.max(frequency)])
+      .domain([d3.min(freqs), d3.max(freqs)])
       .range([0, height])
 
+  var paddingBottom = 25;
 
   var barGroups = graph.selectAll('.bar')
     .data(bins)
@@ -58,9 +60,12 @@ d3.json('/scripts/mock-data.json', function(err, data) {
     .enter().append("g")
     .attr("class", "bar")
     // translate that sucka such that rects drawn at 0, 0 are in the correct place
-    .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")" })
+    .attr("transform", function(d) {
+      return "translate(" + x(d.x) + "," +
+          (y(d.y) - paddingBottom) + ")"
+    })
 
-  var barWidth = width / bins.length
+  var barWidth = Math.floor(width / bins.length)
 
   barGroups.append('rect')
       .attr("x", 1)
@@ -75,7 +80,7 @@ d3.json('/scripts/mock-data.json', function(err, data) {
 
  graph.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0," + (height - paddingBottom) + ")")
     .call(xAxis);
 
   function renderLineGraph(data) {
