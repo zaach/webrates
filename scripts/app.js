@@ -51,7 +51,7 @@ angular.module('webRatesApp', ["firebase"])
           console.log('Fetched data', data)
           debug = data
 
-          var $container = $('.container_graph')
+          var $container = elt;
           var width = $container.innerWidth()
           var height = $container.innerHeight()
           // space at bottom for x axis labels

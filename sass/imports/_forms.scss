@@ -16,6 +16,16 @@ fieldset {
   border-top: 2px solid $color_bg;
   border-bottom: 2px solid $color_bg;
 }
+.form_group_1 {
+  padding-top: 1.5em;
+  text-align: center;
+  fieldset {
+    margin-right: 2em;
+  }
+  fieldset, input[type='submit'] {
+    display: inline-block;
+  }
+}
 
 input[type='text'],
 input[type='number'] {
@@ -38,7 +48,7 @@ input.input_big[type='number'] {
 }
 
 input[type='submit'] {
-  font-size: 1.25em;
+  font-size: 2em;
   padding: .5em 1em;
   border: none;
   color: $color_bg;
