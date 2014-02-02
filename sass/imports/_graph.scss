@@ -1,4 +1,7 @@
 svg .bar rect {
   fill: $color_highlight;
-  
+}
+
+svg g {
+  fill: $color_medium;
 }

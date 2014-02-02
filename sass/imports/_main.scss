@@ -202,7 +202,11 @@ h1 {
     label {
       margin: .25em;
       padding: .3em .5em;
-      cursor: pointer;
+    }
+  }
+  .tags_big {
+    label {
+      padding: .75em 1.5em;
     }
   }
 }

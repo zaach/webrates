@@ -603,11 +603,15 @@ h1 span {
   .tags label {
     margin: .25em;
     padding: .3em .5em;
-    cursor: pointer;
+  }
+
+  /* line 208, ../sass/imports/_main.scss */
+  .tags_big label {
+    padding: .75em 1.5em;
   }
 }
 @media (min-width: 1024px) {
-  /* line 211, ../sass/imports/_main.scss */
+  /* line 215, ../sass/imports/_main.scss */
   .navbar, header {
     font-size: 1.25em;
   }
@@ -615,4 +619,9 @@ h1 span {
 /* line 1, ../sass/imports/_graph.scss */
 svg .bar rect {
   fill: #0055aa;
+}
+
+/* line 5, ../sass/imports/_graph.scss */
+svg g {
+  fill: #b7bac5;
 }
