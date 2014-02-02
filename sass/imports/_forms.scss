@@ -22,7 +22,7 @@ fieldset {
   fieldset {
     margin-right: 2em;
   }
-  fieldset, input[type='submit'] {
+  fieldset, input[type='submit'], .submit {
     display: inline-block;
   }
 }
@@ -47,7 +47,7 @@ input.input_big[type='number'] {
   width: 3.5em;
 }
 
-input[type='submit'] {
+input[type='submit'], .submit {
   font-size: 2em;
   padding: .5em 1em;
   border: none;

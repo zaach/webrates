@@ -234,7 +234,7 @@ fieldset {
   margin-right: 2em;
 }
 /* line 25, ../sass/imports/_forms.scss */
-.form_group_1 fieldset, .form_group_1 input[type='submit'] {
+.form_group_1 fieldset, .form_group_1 input[type='submit'], .form_group_1 .submit {
   display: inline-block;
 }
 
@@ -266,7 +266,7 @@ input.input_big[type='number'] {
 }
 
 /* line 50, ../sass/imports/_forms.scss */
-input[type='submit'] {
+input[type='submit'], .submit {
   font-size: 2em;
   padding: .5em 1em;
   border: none;
@@ -277,7 +277,7 @@ input[type='submit'] {
   letter-spacing: .05em;
 }
 /* line 58, ../sass/imports/_forms.scss */
-input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus {
+input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus, .submit.active, .submit:hover, .submit:focus {
   background-color: #029c5d;
 }
 
