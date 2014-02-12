@@ -1,23 +1,23 @@
-/* line 1, ../sass/imports/_base.scss */
+/* line 1, ../sass/imports/_reset.scss */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 6, ../sass/imports/_base.scss */
+/* line 6, ../sass/imports/_reset.scss */
 body {
   margin: 0;
 }
 
-/* line 9, ../sass/imports/_base.scss */
+/* line 9, ../sass/imports/_reset.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 23, ../sass/imports/_base.scss */
+/* line 23, ../sass/imports/_reset.scss */
 article,
 aside,
 details,
@@ -33,7 +33,7 @@ summary {
   display: block;
 }
 
-/* line 29, ../sass/imports/_base.scss */
+/* line 29, ../sass/imports/_reset.scss */
 audio,
 canvas,
 progress,
@@ -42,79 +42,80 @@ video {
   vertical-align: baseline;
 }
 
-/* line 33, ../sass/imports/_base.scss */
+/* line 33, ../sass/imports/_reset.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 38, ../sass/imports/_base.scss */
+/* line 38, ../sass/imports/_reset.scss */
 [hidden],
 template {
   display: none;
 }
 
-/* line 41, ../sass/imports/_base.scss */
+/* line 41, ../sass/imports/_reset.scss */
 a {
   background: transparent;
 }
 
-/* line 45, ../sass/imports/_base.scss */
+/* line 45, ../sass/imports/_reset.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 48, ../sass/imports/_base.scss */
+/* line 48, ../sass/imports/_reset.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 52, ../sass/imports/_base.scss */
+/* line 52, ../sass/imports/_reset.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 55, ../sass/imports/_base.scss */
+/* line 55, ../sass/imports/_reset.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 59, ../sass/imports/_base.scss */
+/* line 59, ../sass/imports/_reset.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 63, ../sass/imports/_base.scss */
+/* line 63, ../sass/imports/_reset.scss */
 small {
   font-size: 80%;
 }
 
-/* line 67, ../sass/imports/_base.scss */
+/* line 67, ../sass/imports/_reset.scss */
 img {
   border: 0;
 }
 
-/* line 70, ../sass/imports/_base.scss */
+/* line 70, ../sass/imports/_reset.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 73, ../sass/imports/_base.scss */
+/* line 73, ../sass/imports/_reset.scss */
 figure {
   margin: 1em 40px;
 }
 
-/* line 76, ../sass/imports/_base.scss */
+/* line 76, ../sass/imports/_reset.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 86, ../sass/imports/_base.scss */
+/* Colors */
+/* line 6, ../sass/imports/_forms.scss */
 button,
 input,
 optgroup,
@@ -125,18 +126,18 @@ textarea {
   margin: 0;
 }
 
-/* line 91, ../sass/imports/_base.scss */
+/* line 11, ../sass/imports/_forms.scss */
 button {
   overflow: visible;
 }
 
-/* line 95, ../sass/imports/_base.scss */
+/* line 15, ../sass/imports/_forms.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 101, ../sass/imports/_base.scss */
+/* line 21, ../sass/imports/_forms.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -145,13 +146,13 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 106, ../sass/imports/_base.scss */
+/* line 26, ../sass/imports/_forms.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 110, ../sass/imports/_base.scss */
+/* line 30, ../sass/imports/_forms.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -159,25 +160,25 @@ input::-moz-focus-inner {
   outline: none;
 }
 
-/* line 115, ../sass/imports/_base.scss */
+/* line 35, ../sass/imports/_forms.scss */
 input {
   line-height: normal;
 }
 
-/* line 119, ../sass/imports/_base.scss */
+/* line 39, ../sass/imports/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 124, ../sass/imports/_base.scss */
+/* line 44, ../sass/imports/_forms.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 127, ../sass/imports/_base.scss */
+/* line 47, ../sass/imports/_forms.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -185,72 +186,71 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 134, ../sass/imports/_base.scss */
+/* line 54, ../sass/imports/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 138, ../sass/imports/_base.scss */
+/* line 58, ../sass/imports/_forms.scss */
 fieldset {
   border: none;
   padding: 0;
 }
 
-/* line 142, ../sass/imports/_base.scss */
+/* line 62, ../sass/imports/_forms.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 146, ../sass/imports/_base.scss */
+/* line 66, ../sass/imports/_forms.scss */
 textarea {
   overflow: auto;
 }
 
-/* Colors */
-/* line 1, ../sass/imports/_forms.scss */
+/* line 70, ../sass/imports/_forms.scss */
 fieldset {
   padding: 0;
   margin: 0 0 1.5em 0;
   border: none;
 }
 
-/* line 7, ../sass/imports/_forms.scss */
+/* line 76, ../sass/imports/_forms.scss */
 .fieldset_inline {
   display: inline-block;
   max-width: 48%;
   margin-right: 2%;
 }
 
-/* line 13, ../sass/imports/_forms.scss */
+/* line 82, ../sass/imports/_forms.scss */
 .form_group {
   margin: 1em 0 2em 0;
   padding: 1em 0;
   text-align: center;
 }
 
-/* line 18, ../sass/imports/_forms.scss */
+/* line 87, ../sass/imports/_forms.scss */
 .form_group_1 {
   border-top: 2px solid #efefef;
   border-bottom: 2px solid #efefef;
   padding-top: 1.5em;
 }
-/* line 22, ../sass/imports/_forms.scss */
+/* line 91, ../sass/imports/_forms.scss */
 .form_group_1 fieldset {
   margin-right: 2em;
 }
-/* line 25, ../sass/imports/_forms.scss */
+/* line 94, ../sass/imports/_forms.scss */
 .form_group_1 fieldset, .form_group_1 input[type='submit'], .form_group_1 .submit {
   display: inline-block;
 }
 
-/* line 30, ../sass/imports/_forms.scss */
+/* line 99, ../sass/imports/_forms.scss */
 .form_text {
   color: #029c5d;
 }
 
-/* line 35, ../sass/imports/_forms.scss */
+/* line 104, ../sass/imports/_forms.scss */
 input[type='text'],
 input[type='number'] {
   font-size: 1.25em;
@@ -260,7 +260,7 @@ input[type='number'] {
   border-radius: .25em;
   text-align: center;
 }
-/* line 42, ../sass/imports/_forms.scss */
+/* line 111, ../sass/imports/_forms.scss */
 input[type='text'].active, input[type='text']:hover, input[type='text']:focus, input[type='text']:active,
 input[type='number'].active,
 input[type='number']:hover,
@@ -271,13 +271,13 @@ input[type='number']:active {
   outline: none;
 }
 
-/* line 49, ../sass/imports/_forms.scss */
+/* line 118, ../sass/imports/_forms.scss */
 input.input_big[type='number'] {
   font-size: 2em;
   width: 3.5em;
 }
 
-/* line 54, ../sass/imports/_forms.scss */
+/* line 123, ../sass/imports/_forms.scss */
 input[type='submit'], .submit {
   font-size: 2em;
   padding: .5em 1em;
@@ -288,31 +288,31 @@ input[type='submit'], .submit {
   text-transform: uppercase;
   letter-spacing: .05em;
 }
-/* line 62, ../sass/imports/_forms.scss */
+/* line 131, ../sass/imports/_forms.scss */
 input[type='submit'].active, input[type='submit']:hover, input[type='submit']:focus, .submit.active, .submit:hover, .submit:focus {
   background-color: #029c5d;
 }
 
-/* line 67, ../sass/imports/_forms.scss */
+/* line 136, ../sass/imports/_forms.scss */
 .slider {
   background: #FFF;
   border-radius: 1em;
   padding: .75em .5em;
   vertical-align: middle;
 }
-/* line 72, ../sass/imports/_forms.scss */
+/* line 141, ../sass/imports/_forms.scss */
 .slider input, .slider output {
   vertical-align: middle;
 }
 
-/* line 77, ../sass/imports/_forms.scss */
+/* line 146, ../sass/imports/_forms.scss */
 input[type='range'] {
   width: 76%;
   max-width: 294px;
   display: inline-block;
 }
 
-/* line 82, ../sass/imports/_forms.scss */
+/* line 151, ../sass/imports/_forms.scss */
 output {
   width: 18%;
   margin-left: 2%;
@@ -320,7 +320,7 @@ output {
   color: #0055aa;
 }
 
-/* line 90, ../sass/imports/_forms.scss */
+/* line 159, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
@@ -331,27 +331,27 @@ output {
   padding: .75em .5em;
   cursor: pointer;
 }
-/* line 99, ../sass/imports/_forms.scss */
+/* line 168, ../sass/imports/_forms.scss */
 .tags label:first-child, .tags label.first-child {
   margin-left: 0;
 }
-/* line 102, ../sass/imports/_forms.scss */
+/* line 171, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
   background-color: #0055aa;
   color: #efefef;
 }
-/* line 106, ../sass/imports/_forms.scss */
+/* line 175, ../sass/imports/_forms.scss */
 .tags label input {
   display: none;
 }
 
-/* line 112, ../sass/imports/_forms.scss */
+/* line 181, ../sass/imports/_forms.scss */
 .tags_big label {
   font-size: 1em;
   padding: .75em 1.5em;
 }
 
-/* line 118, ../sass/imports/_forms.scss */
+/* line 187, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -359,7 +359,7 @@ output {
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 123, ../sass/imports/_forms.scss */
+/* line 192, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;
