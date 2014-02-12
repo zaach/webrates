@@ -10,7 +10,14 @@ body {
   margin: 0;
 }
 
-/* line 20, ../sass/imports/_base.scss */
+/* line 9, ../sass/imports/_base.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 23, ../sass/imports/_base.scss */
 article,
 aside,
 details,
@@ -26,7 +33,7 @@ summary {
   display: block;
 }
 
-/* line 26, ../sass/imports/_base.scss */
+/* line 29, ../sass/imports/_base.scss */
 audio,
 canvas,
 progress,
@@ -35,79 +42,79 @@ video {
   vertical-align: baseline;
 }
 
-/* line 30, ../sass/imports/_base.scss */
+/* line 33, ../sass/imports/_base.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 35, ../sass/imports/_base.scss */
+/* line 38, ../sass/imports/_base.scss */
 [hidden],
 template {
   display: none;
 }
 
-/* line 38, ../sass/imports/_base.scss */
+/* line 41, ../sass/imports/_base.scss */
 a {
   background: transparent;
 }
 
-/* line 42, ../sass/imports/_base.scss */
+/* line 45, ../sass/imports/_base.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 45, ../sass/imports/_base.scss */
+/* line 48, ../sass/imports/_base.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 49, ../sass/imports/_base.scss */
+/* line 52, ../sass/imports/_base.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 52, ../sass/imports/_base.scss */
+/* line 55, ../sass/imports/_base.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 56, ../sass/imports/_base.scss */
+/* line 59, ../sass/imports/_base.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 60, ../sass/imports/_base.scss */
+/* line 63, ../sass/imports/_base.scss */
 small {
   font-size: 80%;
 }
 
-/* line 64, ../sass/imports/_base.scss */
+/* line 67, ../sass/imports/_base.scss */
 img {
   border: 0;
 }
 
-/* line 67, ../sass/imports/_base.scss */
+/* line 70, ../sass/imports/_base.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 70, ../sass/imports/_base.scss */
+/* line 73, ../sass/imports/_base.scss */
 figure {
   margin: 1em 40px;
 }
 
-/* line 73, ../sass/imports/_base.scss */
+/* line 76, ../sass/imports/_base.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 83, ../sass/imports/_base.scss */
+/* line 86, ../sass/imports/_base.scss */
 button,
 input,
 optgroup,
@@ -118,18 +125,18 @@ textarea {
   margin: 0;
 }
 
-/* line 88, ../sass/imports/_base.scss */
+/* line 91, ../sass/imports/_base.scss */
 button {
   overflow: visible;
 }
 
-/* line 92, ../sass/imports/_base.scss */
+/* line 95, ../sass/imports/_base.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 98, ../sass/imports/_base.scss */
+/* line 101, ../sass/imports/_base.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -138,13 +145,13 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 103, ../sass/imports/_base.scss */
+/* line 106, ../sass/imports/_base.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 107, ../sass/imports/_base.scss */
+/* line 110, ../sass/imports/_base.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -152,25 +159,25 @@ input::-moz-focus-inner {
   outline: none;
 }
 
-/* line 112, ../sass/imports/_base.scss */
+/* line 115, ../sass/imports/_base.scss */
 input {
   line-height: normal;
 }
 
-/* line 116, ../sass/imports/_base.scss */
+/* line 119, ../sass/imports/_base.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 121, ../sass/imports/_base.scss */
+/* line 124, ../sass/imports/_base.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 124, ../sass/imports/_base.scss */
+/* line 127, ../sass/imports/_base.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -178,25 +185,25 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 131, ../sass/imports/_base.scss */
+/* line 134, ../sass/imports/_base.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 135, ../sass/imports/_base.scss */
+/* line 138, ../sass/imports/_base.scss */
 fieldset {
   border: none;
   padding: 0;
 }
 
-/* line 139, ../sass/imports/_base.scss */
+/* line 142, ../sass/imports/_base.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 143, ../sass/imports/_base.scss */
+/* line 146, ../sass/imports/_base.scss */
 textarea {
   overflow: auto;
 }
@@ -451,24 +458,25 @@ h1 {
   letter-spacing: .05em;
   margin: 0;
   padding: .75em 0;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  max-width: 55%;
 }
-/* line 70, ../sass/imports/_main.scss */
+/* line 71, ../sass/imports/_main.scss */
 h1 span {
   font-size: .5em;
   display: inline-block;
 }
 
-/* line 77, ../sass/imports/_main.scss */
+/* line 78, ../sass/imports/_main.scss */
 .img_flex {
   width: 100%;
   height: auto;
 }
 
-/* line 82, ../sass/imports/_main.scss */
+/* line 83, ../sass/imports/_main.scss */
 .container {
-  width: 96%;
-  min-width: 280px;
+  width: 100%%;
+  min-width: 320px;
   max-width: 1240px;
   margin-right: auto;
   margin-left: auto;
@@ -476,7 +484,7 @@ h1 span {
   padding-right: 2%;
 }
 
-/* line 93, ../sass/imports/_main.scss */
+/* line 94, ../sass/imports/_main.scss */
 .navbar {
   position: fixed;
   top: 0;
@@ -486,36 +494,36 @@ h1 span {
   background-color: #0055aa;
   color: #FFF;
 }
-/* line 101, ../sass/imports/_main.scss */
+/* line 102, ../sass/imports/_main.scss */
 .navbar .container {
   border-bottom: 3px solid #0055aa;
 }
-/* line 104, ../sass/imports/_main.scss */
+/* line 105, ../sass/imports/_main.scss */
 .navbar h1 {
   float: left;
 }
 
-/* line 109, ../sass/imports/_main.scss */
+/* line 110, ../sass/imports/_main.scss */
 .social {
   float: right;
-  padding: 1em 0;
+  padding: 1.25em 0;
 }
 
-/* line 114, ../sass/imports/_main.scss */
+/* line 115, ../sass/imports/_main.scss */
 .header {
   padding: 6em 0 13em 0;
   background-color: #0055aa;
   color: #FFF;
 }
 
-/* line 120, ../sass/imports/_main.scss */
+/* line 121, ../sass/imports/_main.scss */
 .intro {
   font-size: 1.25em;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* line 126, ../sass/imports/_main.scss */
+/* line 127, ../sass/imports/_main.scss */
 .data_entry {
   width: 100%;
   max-width: 810px;
@@ -524,7 +532,7 @@ h1 span {
   background-color: #FFF;
 }
 
-/* line 134, ../sass/imports/_main.scss */
+/* line 135, ../sass/imports/_main.scss */
 .currency_list {
   vertical-align: top;
   display: inline-block;
@@ -533,44 +541,44 @@ h1 span {
   list-style: none;
   font-size: 1.25em;
 }
-/* line 141, ../sass/imports/_main.scss */
+/* line 142, ../sass/imports/_main.scss */
 .currency_list li {
   padding: .25em;
 }
-/* line 144, ../sass/imports/_main.scss */
+/* line 145, ../sass/imports/_main.scss */
 .currency_list input {
   margin-right: .5em;
 }
-/* line 147, ../sass/imports/_main.scss */
+/* line 148, ../sass/imports/_main.scss */
 .currency_list label {
   display: block;
   cursor: pointer;
   color: #b7bac5;
 }
-/* line 151, ../sass/imports/_main.scss */
+/* line 152, ../sass/imports/_main.scss */
 .currency_list label:hover, .currency_list label.active {
   color: #0055aa;
 }
 
-/* line 157, ../sass/imports/_main.scss */
+/* line 158, ../sass/imports/_main.scss */
 .explore {
   overflow: hidden;
   padding: 3em 0;
 }
 
-/* line 164, ../sass/imports/_main.scss */
+/* line 165, ../sass/imports/_main.scss */
 .container_graph {
   height: 240px;
 }
 
-/* line 168, ../sass/imports/_main.scss */
+/* line 169, ../sass/imports/_main.scss */
 .graph_placeholder {
   background-color: #FFF;
   min-height: 20em;
   min-width: 294px;
 }
 
-/* line 174, ../sass/imports/_main.scss */
+/* line 175, ../sass/imports/_main.scss */
 .footer {
   clear: both;
   font-size: .875em;
@@ -579,35 +587,41 @@ h1 span {
   background-color: #b7bac5;
   color: #efefef;
 }
-/* line 181, ../sass/imports/_main.scss */
+/* line 182, ../sass/imports/_main.scss */
 .footer a {
   color: #efefef;
 }
-/* line 183, ../sass/imports/_main.scss */
+/* line 184, ../sass/imports/_main.scss */
 .footer a:hover, .footer a:focus, .footer a:active {
   color: #0055aa;
 }
 
 @media (min-width: 500px) {
-  /* line 190, ../sass/imports/_main.scss */
+  /* line 191, ../sass/imports/_main.scss */
   .data_entry {
     width: 96%;
     padding: 1.5em 5%;
   }
 }
 @media (min-width: 768px) {
-  /* line 197, ../sass/imports/_main.scss */
+  /* line 198, ../sass/imports/_main.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 200, ../sass/imports/_main.scss */
+  /* line 201, ../sass/imports/_main.scss */
+  h1 {
+    font-size: 1.75em;
+    max-width: 85%;
+  }
+
+  /* line 205, ../sass/imports/_main.scss */
   .container_filter {
     width: 30%;
     float: right;
   }
 
-  /* line 204, ../sass/imports/_main.scss */
+  /* line 209, ../sass/imports/_main.scss */
   .container_graph {
     padding-top: 2em;
     height: 500px;
@@ -615,19 +629,19 @@ h1 span {
     float: left;
   }
 
-  /* line 211, ../sass/imports/_main.scss */
+  /* line 216, ../sass/imports/_main.scss */
   .tags label {
     margin: .25em;
     padding: .3em .5em;
   }
 
-  /* line 217, ../sass/imports/_main.scss */
+  /* line 222, ../sass/imports/_main.scss */
   .tags_big label {
     padding: .75em 1.5em;
   }
 }
 @media (min-width: 1024px) {
-  /* line 224, ../sass/imports/_main.scss */
+  /* line 229, ../sass/imports/_main.scss */
   .navbar, header {
     font-size: 1.25em;
   }

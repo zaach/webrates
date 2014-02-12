@@ -66,7 +66,8 @@ h1 {
   @include uppercase;
   margin: 0;
   padding: .75em 0;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  max-width: 55%;
   span {
     font-size: .5em;
     display: inline-block;
@@ -80,8 +81,8 @@ h1 {
 }
 
 .container {
-  width: 96%;
-  min-width: 280px;
+  width: 100%%;
+  min-width: 320px;
   max-width: 1240px;
 
   margin-right: auto;
@@ -108,7 +109,7 @@ h1 {
 
 .social {
   float: right;
-  padding: 1em 0;
+  padding: 1.25em 0;
 }
 
 .header {
@@ -196,6 +197,10 @@ h1 {
 @media (min-width: 768px) {
   body {
     font-size: 100%;
+  }
+  h1 {
+    font-size: 1.75em;
+    max-width: 85%;
   }
   .container_filter {
     width: 30%;
