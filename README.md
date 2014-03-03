@@ -49,5 +49,19 @@ Features:
 * [angel.co](http://angel.co)
 * [yourrate.co](http://www.yourrate.co/)
 
+## Developing
+
+The app is just static HTML; all you need to do is serve the local directory.
+Note that we're developing on the `gh-pages` branch.
+
+1. fork this repo
+2. `git clone`
+3. `git checkout gh-pages`
+4. `python -m SimpleHTTPServer`
+
+Stylesheets are written with [Compass](http://compass-style.org/)+[SASS](http://sass-lang.com/), compiled, and checked into this repo.
+If you want to make a change, see the `sass/` directory.
+You can generate the CSS files with `compass compile`.
+
 ## License
 MIT
