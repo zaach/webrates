@@ -45,6 +45,7 @@ Features:
 
 * [angel.co](http://angel.co)
 * [yourrate.co](http://www.yourrate.co/)
+* [alistapart survey 2011](http://archive.aneventapart.com/alasurvey2011/00.html)
 * [eeoc.gov](http://www.eeoc.gov/laws/types/index.cfm) Relevant Resource for Types and Categorization of Discrimination
   
 ## Developing
