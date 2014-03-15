@@ -44,6 +44,16 @@ angular.module('webRatesApp', ["firebase"])
     $scope.$watch('pristineData', filterData, true);
     $scope.$watch('filters', filterData, true);
   })
+  .directive('integer', function() {
+    return {
+      require: 'ngModel',
+      link: function(scope, elm, attrs, ctrl) {
+        ctrl.$parsers.unshift(function(viewValue) {
+          return parseInt(viewValue, 10);
+        });
+      }
+    };
+  })
   .directive('wrChart', function () {
     return {
       scope: {
