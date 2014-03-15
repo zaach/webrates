@@ -7,7 +7,6 @@ $(function() {
   checkRadioButtons();
   $("input[type=radio]").on("change", checkRadioButtons);
 
-
   $(".form_group_2").hide();
   $("#submit-rate").prop('disabled', true);
 
@@ -25,7 +24,4 @@ $(function() {
     //$("#input-rate").attr('required', true);
     $(".form_group_2").show();
   });
-
-  // checked attr in html didn't work
-  $("#input-usd").prop('checked', true);
 })
