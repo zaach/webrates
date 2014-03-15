@@ -75,9 +75,9 @@ angular.module('webRatesApp', ["firebase"])
       controller: function($scope, $element, $attrs) {
         $scope.$containerEl = $element.parent();
         $scope.initChart = function() {
-          $scope.chart = new CoolChart(d3, $element[0])
-          window.chart = $scope.chart
-          $scope.onResize() // triggers initial render
+          $scope.chart = new CoolChart(d3, $element[0]);
+          window.chart = $scope.chart;
+          $scope.onResize(); // triggers initial render
         }
         /**
          * We want graph size to depend on container size so we can
