@@ -6,13 +6,20 @@ angular.module('webRatesApp', ["firebase"])
   .controller('MyCtrl', function ($scope, rateService, cleanForm) {
     $scope.data = rateService;
     $scope.newForm = cleanForm();
+
     var numericFields = ['age', 'experience', 'rate'];
+
+    $scope.showForm = function () {
+      $scope.thankyou = false;
+    };
+
     $scope.submitForm = function () {
       numericFields.forEach(function (field) {
         $scope.newForm[field] = parseInt($scope.newForm[field], 10);
       });
-      $scope.data.$add($scope.newForm);
+      //$scope.data.$add($scope.newForm);
       $scope.newForm = cleanForm();
+      $scope.thankyou = true;
     };
   })
   .controller('QueryCtrl', function ($scope, rateService, $http) {
