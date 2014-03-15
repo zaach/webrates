@@ -15,6 +15,12 @@ $(function() {
     $("#submit-rate").prop('disabled', false);
   });
 
+  $("#input-rate, #submit-rate").on("keyup", function(e) {
+    if (e.which === 13) {
+      $(".form_group_2").show();
+    }
+  });
+
   $("#submit-rate").on("click", function() {
     //$("#input-rate").attr('required', true);
     $(".form_group_2").show();

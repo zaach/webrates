@@ -24,31 +24,29 @@ Demographics:
   - Developer
   - Product
   - Marketing (?)
-* Education
-  - Degrees, Schools ?
 
 
 ## Stretch ideas
 
-Additional demographic criteria:
-* Orientation
-* Existing or new code base ?
-* Natural Languages
-* Tech used
-  - Programming Languages
-  - Frameworks
-  - Database Software
+* Education
+  - Degrees, Schools ?
+* Disability
+* Nationality
+* Pregnancy / Kids or no kids
+* Race / Ethnicity
+* Religion
 
 Features:
 * Follow up with an email
 * API
 
 
-## Prior Art
+## Resources, similar projects
 
 * [angel.co](http://angel.co)
 * [yourrate.co](http://www.yourrate.co/)
-
+* [eeoc.gov](http://www.eeoc.gov/laws/types/index.cfm) Relevant Resource for Types and Categorization of Discrimination
+  
 ## Developing
 
 The app is just static HTML; all you need to do is serve the local directory.
