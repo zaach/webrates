@@ -17,7 +17,7 @@ angular.module('webRatesApp', ["firebase"])
       numericFields.forEach(function (field) {
         $scope.newForm[field] = parseInt($scope.newForm[field], 10);
       });
-      //$scope.data.$add($scope.newForm);
+      $scope.data.$add($scope.newForm);
       $scope.newForm = cleanForm();
       $scope.thankyou = true;
     };
