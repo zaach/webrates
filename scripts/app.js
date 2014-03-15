@@ -29,15 +29,7 @@ angular.module('webRatesApp', ["firebase"])
     $scope.filteredData = [];
 
     function filterData () {
-      var keys = Object.keys($scope.pristineData)
-                       .filter(function(el) {
-                         return !(/\$/.test(el));
-                       });
-      if(!keys.length) {
-        return;
-      }
-
-      $scope.filteredData = keys.map(function(el) {
+      $scope.filteredData = rateService.$getIndex().map(function(el) {
         return $scope.pristineData[el];
       });
 
@@ -48,8 +40,13 @@ angular.module('webRatesApp', ["firebase"])
       });
     }
 
-    $scope.$watch('pristineData', filterData, true);
     $scope.$watch('filters', filterData, true);
+    // set initial data on first load
+    rateService.$on("loaded", function() {
+      // catch live updates without having to filter
+      rateService.$on("change", filterData);
+      filterData();
+    });
   })
   .directive('integer', function() {
     return {
