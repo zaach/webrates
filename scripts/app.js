@@ -1,12 +1,6 @@
 angular.module('webRatesApp', ["firebase"])
   .factory("rateService", ["$firebase", function($firebase) {
     var ref = new Firebase("https://sweltering-fire-6680.firebaseio.com/rates");
-    var messages = [];
-    ref.on("child_added", function(snapshot) {
-      messages.push(snapshot.val());
-      return messages;
-    });
-
     return $firebase(ref);
   }])
   .controller('MyCtrl', function ($scope, rateService, cleanForm) {
@@ -48,7 +42,11 @@ angular.module('webRatesApp', ["firebase"])
 
     $scope.$watch('filters', filterData, true);
     // set initial data on first load
-    rateService.$on("loaded", filterData);
+    rateService.$on("loaded", function() {
+      // catch live updates without having to filter
+      rateService.$on("change", filterData);
+      filterData();
+    });
   })
   .directive('integer', function() {
     return {
