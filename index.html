@@ -72,7 +72,7 @@
 
     <div class="container data_entry" role="main" ng-controller="MyCtrl">
 
-      <form>
+      <form ng-hide="thankyou">
 
         <div class="form_group form_group_1">
           <p>
@@ -149,8 +149,8 @@
       </form>
 
       <!-- Show this when form is submited. -->
-      <div ng-show="thankyou">
-        <p>Thanks for sharing your hourly rate. This will help others do charge fair prices for their work. <a href="">Submit another hourly rate</a></p>
+      <div ng-show="thankyou" class="thanks">
+        <p>Thanks for sharing your hourly rate! This will help others do charge fair prices for their work. <a ng-click="showForm();" href="#">Submit another hourly rate</a></p>
       </div>
 
     </div> <!-- /container -->
