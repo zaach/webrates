@@ -6,28 +6,40 @@ angular.module('webRatesApp', ["firebase"])
   .controller('MyCtrl', function ($scope, rateService, cleanForm) {
     $scope.data = rateService;
     $scope.newForm = cleanForm();
+
     var numericFields = ['age', 'experience', 'rate'];
+
+    $scope.showForm = function () {
+      $scope.thankyou = false;
+    };
+
     $scope.submitForm = function () {
       numericFields.forEach(function (field) {
         $scope.newForm[field] = parseInt($scope.newForm[field], 10);
       });
       $scope.data.$add($scope.newForm);
       $scope.newForm = cleanForm();
+      $scope.thankyou = true;
     };
   })
   .controller('QueryCtrl', function ($scope, rateService, $http) {
-
     $scope.filters = {};
 
-    // get mock data for now
-    $http.get('/scripts/mock-data.json').success(function (data) {
-      $scope.filteredData = $scope.pristineData = data;
-    });
-
-    $scope.filteredData = $scope.pristineData = [];
+    $scope.pristineData = rateService;
+    $scope.filteredData = [];
 
     function filterData () {
-      $scope.filteredData = $scope.pristineData.slice(0);
+      var keys = Object.keys($scope.pristineData)
+                       .filter(function(el) {
+                         return !(/\$/.test(el));
+                       });
+      if(!keys.length) {
+        return;
+      }
+
+      $scope.filteredData = keys.map(function(el) {
+        return $scope.pristineData[el];
+      });
 
       Object.keys($scope.filters).forEach(function (prop) {
         $scope.filteredData = $scope.filteredData.filter(function (datum) {
@@ -36,7 +48,18 @@ angular.module('webRatesApp', ["firebase"])
       });
     }
 
+    $scope.$watch('pristineData', filterData, true);
     $scope.$watch('filters', filterData, true);
+  })
+  .directive('integer', function() {
+    return {
+      require: 'ngModel',
+      link: function(scope, elm, attrs, ctrl) {
+        ctrl.$parsers.unshift(function(viewValue) {
+          return parseInt(viewValue, 10);
+        });
+      }
+    };
   })
   .directive('wrChart', function () {
     return {
