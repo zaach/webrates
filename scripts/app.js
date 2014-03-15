@@ -1,6 +1,12 @@
 angular.module('webRatesApp', ["firebase"])
   .factory("rateService", ["$firebase", function($firebase) {
     var ref = new Firebase("https://sweltering-fire-6680.firebaseio.com/rates");
+    var messages = [];
+    ref.on("child_added", function(snapshot) {
+      messages.push(snapshot.val());
+      return messages;
+    });
+
     return $firebase(ref);
   }])
   .controller('MyCtrl', function ($scope, rateService, cleanForm) {
@@ -29,15 +35,7 @@ angular.module('webRatesApp', ["firebase"])
     $scope.filteredData = [];
 
     function filterData () {
-      var keys = Object.keys($scope.pristineData)
-                       .filter(function(el) {
-                         return !(/\$/.test(el));
-                       });
-      if(!keys.length) {
-        return;
-      }
-
-      $scope.filteredData = keys.map(function(el) {
+      $scope.filteredData = rateService.$getIndex().map(function(el) {
         return $scope.pristineData[el];
       });
 
@@ -48,8 +46,19 @@ angular.module('webRatesApp', ["firebase"])
       });
     }
 
-    $scope.$watch('pristineData', filterData, true);
     $scope.$watch('filters', filterData, true);
+    // set initial data on first load
+    rateService.$on("loaded", filterData);
+  })
+  .directive('integer', function() {
+    return {
+      require: 'ngModel',
+      link: function(scope, elm, attrs, ctrl) {
+        ctrl.$parsers.unshift(function(viewValue) {
+          return parseInt(viewValue, 10);
+        });
+      }
+    };
   })
   .directive('integer', function() {
     return {
