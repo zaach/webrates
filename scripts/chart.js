@@ -12,6 +12,7 @@
   CoolChart.RATE_MAX = 120
   CoolChart.BIN_WIDTH = 15
   CoolChart.CURRENCY = '$'
+  CoolChart.CIRCLE_SIZE = 0.8 // ratio of circle diameter to bar width
 
   function CoolChart(d3, svgEl) {
     this.d3 = d3
@@ -101,21 +102,52 @@
     var barsEnter = bars.enter()
     var barsExit = bars.exit()
 
-    barsEnter
+    // enter selection for bar groups
+    var barGEnter = barsEnter
         .append('g')
         .attr('class', 'bar')
+    barGEnter
         .append('rect')
         .attr('x', 1)
-    bars
-        .attr('transform', function(d, i) {
+    // enter selection for circle groups
+    var circleGEnter = barGEnter
+        .append('g')
+    circleGEnter.append('circle')
+    circleGEnter.append('text')
+
+    bars.attr('transform', function(d, i) {
           return translate(x(i), height - y(d.y) - labelHeight)
         })
-        .select('rect')
-        .attr('width', function(d) {
-          return x.rangeBand()
-        })
+    var rects = bars.select('rect')
+        .attr('width', x.rangeBand())
         .attr('height', function(d) {
           return y(d.y)
+        })
+    // display value of each frequency in lil circles
+    var radius = (x.rangeBand() / 2) * CoolChart.CIRCLE_SIZE
+    var diameter = radius * 2
+    // if the bar height falls below the height of the circle
+    // the circle should not be rendered below the bar
+    var getCircleDy = function(d) {
+      var height = y(d.y)
+      if (height < x.rangeBand()) {
+        return height - radius
+      } else {
+        return x.rangeBand() / 2
+      }
+    }
+    var circles = bars.select('circle')
+        .attr('r', radius)
+        .attr('cx', x.rangeBand() / 2)
+        .attr('cy', getCircleDy)
+    var text = bars.select('text')
+        .attr('text-anchor', 'middle')
+        .attr('y', getCircleDy)
+        // centers baseline, if line-height changes this probably needs to change
+        .attr('dy', '0.3em')
+        .attr('x', x.rangeBand() / 2)
+        .text(function(d) {
+          return d.y
         })
 
     labelGroup.attr('transform', translate(0, height))

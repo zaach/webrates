@@ -656,12 +656,27 @@ svg .bar rect {
   fill: #0055aa;
 }
 
-/* line 5, ../sass/imports/_graph.scss */
+/* line 4, ../sass/imports/_graph.scss */
+svg .bar circle {
+  fill: rgba(0, 0, 0, 0.05);
+}
+
+/* line 7, ../sass/imports/_graph.scss */
+svg .bar text {
+  opacity: 1;
+}
+
+/* line 10, ../sass/imports/_graph.scss */
+svg .bar:hover circle {
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+/* line 13, ../sass/imports/_graph.scss */
 svg g {
   fill: #b7bac5;
 }
 
-/* line 8, ../sass/imports/_graph.scss */
+/* line 16, ../sass/imports/_graph.scss */
 svg .label {
   text-anchor: middle;
   font-size: 12px;

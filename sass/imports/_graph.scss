@@ -1,7 +1,15 @@
 svg .bar rect {
   fill: $color_highlight;
 }
-
+svg .bar circle {
+  fill: rgba(0, 0, 0, 0.05);
+}
+svg .bar text {
+  opacity: 1;
+}
+svg .bar:hover circle {
+  fill: rgba(0, 0, 0, 0.1);
+}
 svg g {
   fill: $color_medium;
 }
