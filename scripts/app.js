@@ -16,18 +16,23 @@ angular.module('webRatesApp', ["firebase"])
     };
   })
   .controller('QueryCtrl', function ($scope, rateService, $http) {
-
     $scope.filters = {};
 
-    // get mock data for now
-    $http.get('/scripts/mock-data.json').success(function (data) {
-      $scope.filteredData = $scope.pristineData = data;
-    });
-
-    $scope.filteredData = $scope.pristineData = [];
+    $scope.pristineData = rateService;
+    $scope.filteredData = [];
 
     function filterData () {
-      $scope.filteredData = $scope.pristineData.slice(0);
+      var keys = Object.keys($scope.pristineData)
+                       .filter(function(el) {
+                         return !(/\$/.test(el));
+                       });
+      if(!keys.length) {
+        return;
+      }
+
+      $scope.filteredData = keys.map(function(el) {
+        return $scope.pristineData[el];
+      });
 
       Object.keys($scope.filters).forEach(function (prop) {
         $scope.filteredData = $scope.filteredData.filter(function (datum) {
@@ -36,6 +41,7 @@ angular.module('webRatesApp', ["firebase"])
       });
     }
 
+    $scope.$watch('pristineData', filterData, true);
     $scope.$watch('filters', filterData, true);
   })
   .directive('wrChart', function () {
