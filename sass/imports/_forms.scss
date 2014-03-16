@@ -133,6 +133,19 @@ input[type='submit'], .submit {
   }
 }
 
+.reset {
+  font-size: 1.5em;
+  padding: .5em 1em;
+  border: none;
+  color: $color_bg;
+  background-color: $color_highlight;
+  border-radius: .25em;
+  @include uppercase;
+  &.active, &:hover, &:focus {
+    background-color: $color_hover;
+  }
+}
+
 .slider {
   background: #FFF;
   border-radius: 1em;

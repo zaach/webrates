@@ -294,25 +294,41 @@ input[type='submit'].active, input[type='submit']:hover, input[type='submit']:fo
 }
 
 /* line 136, ../sass/imports/_forms.scss */
+.reset {
+  font-size: 1.5em;
+  padding: .5em 1em;
+  border: none;
+  color: #efefef;
+  background-color: #0055aa;
+  border-radius: .25em;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+/* line 144, ../sass/imports/_forms.scss */
+.reset.active, .reset:hover, .reset:focus {
+  background-color: #029c5d;
+}
+
+/* line 149, ../sass/imports/_forms.scss */
 .slider {
   background: #FFF;
   border-radius: 1em;
   padding: .75em .5em;
   vertical-align: middle;
 }
-/* line 141, ../sass/imports/_forms.scss */
+/* line 154, ../sass/imports/_forms.scss */
 .slider input, .slider output {
   vertical-align: middle;
 }
 
-/* line 146, ../sass/imports/_forms.scss */
+/* line 159, ../sass/imports/_forms.scss */
 input[type='range'] {
   width: 76%;
   max-width: 294px;
   display: inline-block;
 }
 
-/* line 151, ../sass/imports/_forms.scss */
+/* line 164, ../sass/imports/_forms.scss */
 output {
   width: 18%;
   margin-left: 2%;
@@ -320,7 +336,7 @@ output {
   color: #0055aa;
 }
 
-/* line 159, ../sass/imports/_forms.scss */
+/* line 172, ../sass/imports/_forms.scss */
 .tags label {
   font-size: .875em;
   display: inline-block;
@@ -331,27 +347,27 @@ output {
   padding: .75em .5em;
   cursor: pointer;
 }
-/* line 168, ../sass/imports/_forms.scss */
+/* line 181, ../sass/imports/_forms.scss */
 .tags label:first-child, .tags label.first-child {
   margin-left: 0;
 }
-/* line 171, ../sass/imports/_forms.scss */
+/* line 184, ../sass/imports/_forms.scss */
 .tags label.active, .tags label:hover, .tags label:focus {
   background-color: #0055aa;
   color: #efefef;
 }
-/* line 175, ../sass/imports/_forms.scss */
+/* line 188, ../sass/imports/_forms.scss */
 .tags label input {
   display: none;
 }
 
-/* line 181, ../sass/imports/_forms.scss */
+/* line 194, ../sass/imports/_forms.scss */
 .tags_big label {
   font-size: 1em;
   padding: .75em 1.5em;
 }
 
-/* line 187, ../sass/imports/_forms.scss */
+/* line 200, ../sass/imports/_forms.scss */
 .fieldset_title {
   display: block;
   font-size: .875em;
@@ -359,7 +375,7 @@ output {
   letter-spacing: .05em;
   color: #b7bac5;
 }
-/* line 192, ../sass/imports/_forms.scss */
+/* line 205, ../sass/imports/_forms.scss */
 .fieldset_title i {
   font-style: normal;
   font-size: .75em;

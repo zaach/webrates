@@ -22,8 +22,8 @@ angular.module('webRatesApp', ["firebase"])
       $scope.thankyou = true;
     };
   })
-  .controller('QueryCtrl', function ($scope, rateService, $http) {
-    $scope.filters = {};
+  .controller('QueryCtrl', function ($scope, rateService, cleanFilters, $http) {
+    $scope.filters = cleanFilters();
 
     $scope.pristineData = rateService;
     $scope.filteredData = [];
@@ -47,6 +47,10 @@ angular.module('webRatesApp', ["firebase"])
       rateService.$on("change", filterData);
       filterData();
     });
+
+    $scope.clearFilters = function () {
+      $scope.filters = cleanFilters();
+    };
   })
   .directive('integer', function() {
     return {
@@ -105,9 +109,18 @@ angular.module('webRatesApp', ["firebase"])
     experience: 2,
     currency: 'USD'
   })
+  .constant('defaultFilters', {
+    age: 30,
+    experience: 2
+  })
   .factory('cleanForm', function (defaultFormData) {
     return function () {
       return angular.copy(defaultFormData);
+    };
+  })
+  .factory('cleanFilters', function (defaultFilters) {
+    return function () {
+      return angular.copy(defaultFilters);
     };
   });
 
