@@ -6,7 +6,6 @@ angular.module('webRatesApp', ["firebase"])
   .controller('MyCtrl', function ($scope, rateService, cleanForm) {
     $scope.data = rateService;
     $scope.newForm = cleanForm();
-    $scope.newForm.currency = 'USD';
 
     var numericFields = ['age', 'experience', 'rate'];
 
@@ -103,7 +102,8 @@ angular.module('webRatesApp', ["firebase"])
   })
   .constant('defaultFormData', {
     age: 30,
-    experience: 2
+    experience: 2,
+    currency: 'USD'
   })
   .factory('cleanForm', function (defaultFormData) {
     return function () {
